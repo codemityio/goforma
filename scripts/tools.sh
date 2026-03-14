@@ -11,13 +11,17 @@ mkdir -p tmp var
 
 case "$1" in
 
+"prep")
+  scripts/tools.sh install
+  go install github.com/"${VENDOR}"/auxilium@latest
+  go install github.com/"${VENDOR}"/notatio@latest
+  ;;
+
 "cmd")
   docker run --rm \
-    --user $(id -u):$(id -g) \
     --name "${BASE_NAME}-cmd" \
     -e DEBUG \
-    -e GOCACHE="${PWD}/tmp" \
-    -e XDG_CACHE_HOME="${PWD}/tmp" \
+    -e GOBIN="${PWD}/bin" \
     -v "${PWD}:${PWD}" \
     -w "${PWD}" \
     "${VENDOR}"/golang-dev:latest sh -c "${COMMAND}"
@@ -121,6 +125,12 @@ EOF
 "diff")
   (git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]) || {
     echo "error: changes detected..."
+    echo "---- Unstaged changes ----"
+    git diff
+    echo "---- Staged changes ----"
+    git diff --cached
+    echo "---- Untracked files ----"
+    git ls-files --others --exclude-standard
     exit 1
   }
   ;;
@@ -131,7 +141,7 @@ EOF
   ;;
 
 "next")
-# get latest v-tag (supports vX.Y.Z and vX.Y.Z-preN) and bump prerelease or patch
+  # get latest v-tag (supports vX.Y.Z and vX.Y.Z-preN) and bump prerelease or patch
   latest=$(git tag -l "v*" | sort -V | tail -n1)
 
   if [[ $latest =~ ^v([0-9]+\.[0-9]+\.[0-9]+)-([a-zA-Z]+)([0-9]+)$ ]]; then
@@ -159,22 +169,10 @@ EOF
 " -o bin/app .
   ;;
 
-"build")
-  docker image build \
-    --target=final \
-    --build-arg VENDOR \
-    --build-arg BASE_IMAGE_VERSION=latest \
-    --build-arg NAME="${BASE_NAME}" \
-    --build-arg VERSION=$(scripts/tools.sh version) \
-    --build-arg BUILD_TIME="$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
-    -t "${IMAGE_NAME}:latest" \
-    -f Dockerfile .
-  ;;
-
 "install")
   go install -ldflags "\
-    -X 'main.name=${BASE_NAME}' \
--X 'main.version=$(scripts/tools.sh version)' \
+-X 'main.name=${BASE_NAME}' \
+-X 'main.version=latest' \
 -X 'main.copyright=${VENDOR}' \
 -X 'main.authorName=${VENDOR}' \
 -X 'main.buildTime=$(date -u +"%Y-%m-%dT%H:%M:%SZ")'\

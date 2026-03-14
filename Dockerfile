@@ -16,8 +16,7 @@ COPY "pkg" "pkg"
 COPY "go.*" "."
 COPY "*.go" "."
 
-RUN mkdir -p bin \
-    && go build \
+RUN go build \
   -ldflags "\
 -X 'main.name=${NAME}' \
 -X 'main.version=${VERSION}' \

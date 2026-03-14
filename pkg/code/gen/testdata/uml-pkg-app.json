@@ -1,0 +1,5992 @@
+{
+  "Var": [
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "VarFuncGenerics",
+      "Type": {
+        "Label": "AnyFunction[int, string]",
+        "Links": [
+          {
+            "Name": "int",
+            "Underlying": "int",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "AnyFunction",
+            "Underlying": "func(context.Context, *I) (*O, error)",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.AnyFunction[int, string]",
+      "Params": {
+        "Label": "[int int, string string]",
+        "List": [
+          {
+            "Name": "int",
+            "Constrain": {
+              "Label": "int",
+              "Links": [
+                {
+                  "Name": "int",
+                  "Underlying": "int",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "string",
+            "Constrain": {
+              "Label": "string",
+              "Links": [
+                {
+                  "Name": "string",
+                  "Underlying": "string",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "VarFuncGenericsCustomTypes",
+      "Type": {
+        "Label": "AnyFunction[CustomFloat64, CustomComplex128]",
+        "Links": [
+          {
+            "Name": "CustomFloat64",
+            "Underlying": "float64",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "CustomComplex128",
+            "Underlying": "complex128",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "AnyFunction",
+            "Underlying": "func(context.Context, *I) (*O, error)",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.AnyFunction[code/pkg/example.CustomFloat64, code/pkg/example.CustomComplex128]",
+      "Params": {
+        "Label": "[CustomFloat64 CustomFloat64, CustomComplex128 CustomComplex128]",
+        "List": [
+          {
+            "Name": "CustomFloat64",
+            "Constrain": {
+              "Label": "CustomFloat64",
+              "Links": [
+                {
+                  "Name": "CustomFloat64",
+                  "Underlying": "float64",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "CustomComplex128",
+            "Constrain": {
+              "Label": "CustomComplex128",
+              "Links": [
+                {
+                  "Name": "CustomComplex128",
+                  "Underlying": "complex128",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "varNotExported",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "string",
+      "Params": null,
+      "IsExported": false,
+      "Doc": "/*\n\t\tvarNotExported is a value with extensive document.\n\t*/\n"
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "IntStringSwap",
+      "Type": null,
+      "TypeInfo": "func(first int, second string) (string, int)",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "StringValueWithoutExplicitType",
+      "Type": null,
+      "TypeInfo": "string",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "BooleanValueWithoutExplicitType",
+      "Type": null,
+      "TypeInfo": "bool",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFloat64Value",
+      "Type": {
+        "Label": "CustomFloat64",
+        "Links": [
+          {
+            "Name": "CustomFloat64",
+            "Underlying": "float64",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFloat64",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomComplex128Value",
+      "Type": {
+        "Label": "CustomComplex128",
+        "Links": [
+          {
+            "Name": "CustomComplex128",
+            "Underlying": "complex128",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomComplex128",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomComplex128ValueWithoutExplicitType",
+      "Type": null,
+      "TypeInfo": "complex128",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Config",
+      "Type": {
+        "Label": "config.JWT",
+        "Links": [
+          {
+            "Name": "JWT",
+            "Underlying": "struct{ID string \"env:\\\"HTTP_JWT_ID\\\"       json:\\\"id\\\"\"; KeyPath string \"env:\\\"HTTP_JWT_KEY_PATH\\\" json:\\\"keyPath\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/config.JWT",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ConfigWithAlias",
+      "Type": {
+        "Label": "config.JWT",
+        "Links": [
+          {
+            "Name": "JWT",
+            "Underlying": "struct{ID string \"env:\\\"HTTP_JWT_ID\\\"       json:\\\"id\\\"\"; KeyPath string \"env:\\\"HTTP_JWT_KEY_PATH\\\" json:\\\"keyPath\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/config.JWT",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "App",
+      "Type": {
+        "Label": "cli.Command",
+        "Links": [
+          {
+            "Name": "Command",
+            "Underlying": "struct{Name string; Aliases []string; Usage string; UsageText string; Description string; Args bool; ArgsUsage string; Category string; BashComplete github.com/urfave/cli/v2.BashCompleteFunc; Before github.com/urfave/cli/v2.BeforeFunc; After github.com/urfave/cli/v2.AfterFunc; Action github.com/urfave/cli/v2.ActionFunc; OnUsageError github.com/urfave/cli/v2.OnUsageErrorFunc; Subcommands []*github.com/urfave/cli/v2.Command; Flags []github.com/urfave/cli/v2.Flag; flagCategories github.com/urfave/cli/v2.FlagCategories; SkipFlagParsing bool; HideHelp bool; HideHelpCommand bool; Hidden bool; UseShortOptionHandling bool; HelpName string; commandNamePath []string; CustomHelpTemplate string; categories github.com/urfave/cli/v2.CommandCategories; isRoot bool; separator github.com/urfave/cli/v2.separatorSpec}",
+            "PackageName": "cli",
+            "PackagePath": "github.com/urfave/cli/v2",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "github.com/urfave/cli/v2.Command",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/var.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "AppUntyped",
+      "Type": null,
+      "TypeInfo": "github.com/urfave/cli/v2.Command",
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    }
+  ],
+  "Type": [
+    {
+      "FilePath": "pkg/example/five.go",
+      "FileLine": 8,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Five",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.Five[I code/pkg/example.Input, O code/pkg/example.Output, EI code/pkg/integration.ExternalInput, EO code/pkg/integration.ExternalOutput]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I Input, O Output, EI integration.ExternalInput, EO integration.ExternalOutput]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EI",
+            "Constrain": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EO",
+            "Constrain": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [
+        {
+          "Name": "Input",
+          "Type": {
+            "Label": "Input",
+            "Links": [
+              {
+                "Name": "Input",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "output",
+          "Type": {
+            "Label": "Output",
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Doc": ""
+        },
+        {
+          "Name": "CustomMethod",
+          "Type": {
+            "Label": "CustomFunction[I, O]",
+            "Links": [
+              {
+                "Name": "I",
+                "Underlying": "code/pkg/example.Input",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "O",
+                "Underlying": "code/pkg/example.Output",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "CustomFunction",
+                "Underlying": "func(context.Context, I) (O, error)",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "ExternalCustomMethod",
+          "Type": {
+            "Label": "integration.ExternalCustomFunction[EI, EO]",
+            "Links": [
+              {
+                "Name": "EI",
+                "Underlying": "code/pkg/integration.ExternalInput",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "EO",
+                "Underlying": "code/pkg/integration.ExternalOutput",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "ExternalCustomFunction",
+                "Underlying": "func(context.Context, I) (O, error)",
+                "PackageName": "integration",
+                "PackagePath": "code/pkg/integration",
+                "PackageAlias": "intg"
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": "ExternalCustomMethod an example field code doc block.\n\nWith a new line separation between line of text.\n"
+        }
+      ],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/four.go",
+      "FileLine": 9,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Four",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.Four[I code/pkg/example.Input, O code/pkg/example.Output, EI code/pkg/integration.ExternalInput, EO code/pkg/integration.ExternalOutput]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I Input, O Output, EI integration.ExternalInput, EO integration.ExternalOutput]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EI",
+            "Constrain": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EO",
+            "Constrain": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [
+        {
+          "Name": "Input",
+          "Type": {
+            "Label": "Input",
+            "Links": [
+              {
+                "Name": "Input",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "output",
+          "Type": {
+            "Label": "Output",
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Doc": ""
+        },
+        {
+          "Name": "CustomMethod",
+          "Type": {
+            "Label": "CustomFunction[I, O]",
+            "Links": [
+              {
+                "Name": "I",
+                "Underlying": "code/pkg/example.Input",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "O",
+                "Underlying": "code/pkg/example.Output",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "CustomFunction",
+                "Underlying": "func(context.Context, I) (O, error)",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "ExternalCustomMethod",
+          "Type": {
+            "Label": "integration.ExternalCustomFunction[EI, EO]",
+            "Links": [
+              {
+                "Name": "EI",
+                "Underlying": "code/pkg/integration.ExternalInput",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "EO",
+                "Underlying": "code/pkg/integration.ExternalOutput",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "ExternalCustomFunction",
+                "Underlying": "func(context.Context, I) (O, error)",
+                "PackageName": "integration",
+                "PackagePath": "code/pkg/integration",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": "ExternalCustomMethod an example field code doc block.\n\nWith a new line separation between line of text.\n"
+        }
+      ],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/generics.go",
+      "FileLine": 10,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "AnyFunction",
+      "Type": {
+        "Label": "func(context.Context, *I) (*O, error)",
+        "Links": [
+          {
+            "Name": "Context",
+            "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+            "PackageName": "context",
+            "PackagePath": "context",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "any",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "any",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.AnyFunction[I, O any]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I any, O any]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "any",
+              "Links": [
+                {
+                  "Name": "any",
+                  "Underlying": "any",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "any",
+              "Links": [
+                {
+                  "Name": "any",
+                  "Underlying": "any",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/generics.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFunction",
+      "Type": {
+        "Label": "func(context.Context, I) (O, error)",
+        "Links": [
+          {
+            "Name": "Context",
+            "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+            "PackageName": "context",
+            "PackagePath": "context",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "code/pkg/example.Input",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "code/pkg/example.Output",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFunction[I code/pkg/example.Input, O code/pkg/example.Output]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I Input, O Output]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/generics.go",
+      "FileLine": 14,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFunctionGenericsSlices",
+      "Type": {
+        "Label": "func(context.Context, I) (O, error)",
+        "Links": [
+          {
+            "Name": "Context",
+            "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+            "PackageName": "context",
+            "PackagePath": "context",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "[]*code/pkg/example.Input",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "[]code/pkg/example.Output",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFunctionGenericsSlices[I []*code/pkg/example.Input, O []code/pkg/example.Output]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I []*Input, O []Output]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "[]*Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "[]Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/generics.go",
+      "FileLine": 16,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFunctionGenericsSlicesExternalTypes",
+      "Type": {
+        "Label": "func(context.Context, I) (O, error)",
+        "Links": [
+          {
+            "Name": "Context",
+            "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+            "PackageName": "context",
+            "PackagePath": "context",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "[]*code/pkg/integration.ExternalInput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "[]code/pkg/integration.ExternalOutput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFunctionGenericsSlicesExternalTypes[I []*code/pkg/integration.ExternalInput, O []code/pkg/integration.ExternalOutput]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I []*integration.ExternalInput, O []integration.ExternalOutput]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "[]*integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "[]integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/generics.go",
+      "FileLine": 18,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFunctionGenericsMaps",
+      "Type": {
+        "Label": "func(context.Context, I) (O, error)",
+        "Links": [
+          {
+            "Name": "Context",
+            "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+            "PackageName": "context",
+            "PackagePath": "context",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "[]*code/pkg/example.Input",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "map[string]code/pkg/example.Output",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFunctionGenericsMaps[I []*code/pkg/example.Input, O map[string]code/pkg/example.Output]",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": {
+        "Label": "[I []*Input, O map[string]Output]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "[]*Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "map[string]Output",
+              "Links": [
+                {
+                  "Name": "string",
+                  "Underlying": "string",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/interface.go",
+      "FileLine": 8,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "EmbeddableInterface",
+      "Type": {
+        "Label": "interface",
+        "Links": [
+          {
+            "Name": "interface",
+            "Underlying": "interface",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.EmbeddableInterface",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/interface.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CompositionInterfaceWithoutUsage",
+      "Type": {
+        "Label": "interface",
+        "Links": [
+          {
+            "Name": "interface",
+            "Underlying": "interface",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CompositionInterfaceWithoutUsage",
+      "Interfaces": [],
+      "Embedded": [
+        {
+          "Label": "EmbeddableInterface",
+          "Links": [
+            {
+              "Name": "EmbeddableInterface",
+              "Underlying": "interface{String() string}",
+              "PackageName": "example",
+              "PackagePath": "code/pkg/example",
+              "PackageAlias": ""
+            }
+          ]
+        },
+        {
+          "Label": "integration.BytesLoader",
+          "Links": [
+            {
+              "Name": "BytesLoader",
+              "Underlying": "interface{LoadByte(context.Context, []byte) error}",
+              "PackageName": "integration",
+              "PackagePath": "code/pkg/integration",
+              "PackageAlias": ""
+            }
+          ]
+        },
+        {
+          "Label": "[]integration.EnvLoader",
+          "Links": [
+            {
+              "Name": "EnvLoader",
+              "Underlying": "interface{LoadEnv(ctx context.Context) error}",
+              "PackageName": "integration",
+              "PackagePath": "code/pkg/integration",
+              "PackageAlias": "intg"
+            }
+          ]
+        }
+      ],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "AdditionalFunction",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Alt": "(CustomString, CustomString, CustomString, []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "AnotherAdditionalFunction",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Alt": "(CustomString, CustomString, CustomString, []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": "AnotherAdditionalFunction field doc.\n"
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/interface.go",
+      "FileLine": 21,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CompositionInterfaceWithUsage",
+      "Type": {
+        "Label": "interface",
+        "Links": [
+          {
+            "Name": "interface",
+            "Underlying": "interface",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CompositionInterfaceWithUsage",
+      "Interfaces": [],
+      "Embedded": [
+        {
+          "Label": "EmbeddableInterface",
+          "Links": [
+            {
+              "Name": "EmbeddableInterface",
+              "Underlying": "interface{String() string}",
+              "PackageName": "example",
+              "PackagePath": "code/pkg/example",
+              "PackageAlias": ""
+            }
+          ]
+        },
+        {
+          "Label": "integration.BytesLoader",
+          "Links": [
+            {
+              "Name": "BytesLoader",
+              "Underlying": "interface{LoadByte(context.Context, []byte) error}",
+              "PackageName": "integration",
+              "PackagePath": "code/pkg/integration",
+              "PackageAlias": ""
+            }
+          ]
+        }
+      ],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "Function",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Alt": "(CustomString, CustomString, CustomString, []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "AnotherAdditionalFunction",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Alt": "(CustomString, CustomString, CustomString, []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": "AnotherAdditionalFunction field doc.\n"
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/one.go",
+      "FileLine": 3,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "One",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.One",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "FunctionOne",
+          "Signature": {
+            "Label": "(b bool, i int) (bool)",
+            "Alt": "(bool, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionTwo",
+          "Signature": {
+            "Label": "(a bool, b bool, c bool, i int) (bool)",
+            "Alt": "(bool, bool, bool, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionThree",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, i int) (bool)",
+            "Alt": "(CustomString, CustomString, CustomString, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionWithReturnListParametrized",
+          "Signature": {
+            "Label": "() (a []byte, b []byte, c []byte, err error)",
+            "Alt": "() (a []byte, b []byte, c []byte, err error)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "err",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/three.go",
+      "FileLine": 3,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Three",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.Three",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "Input",
+          "Type": {
+            "Label": "Input",
+            "Links": [
+              {
+                "Name": "Input",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "output",
+          "Type": {
+            "Label": "Output",
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Doc": ""
+        }
+      ],
+      "Methods": [
+        {
+          "Name": "FunctionOne",
+          "Signature": {
+            "Label": "(b bool, i int) (bool)",
+            "Alt": "(bool, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "functionTwo",
+          "Signature": {
+            "Label": "(a Input, b Input, c Input, i int) (bool)",
+            "Alt": "(Input, Input, Input, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "Input",
+                  "Links": [
+                    {
+                      "Name": "Input",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "Input",
+                  "Links": [
+                    {
+                      "Name": "Input",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "Input",
+                  "Links": [
+                    {
+                      "Name": "Input",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Input",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": false,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionThree",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, i int) (bool)",
+            "Alt": "(CustomString, CustomString, CustomString, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionWithReturnList",
+          "Signature": {
+            "Label": "() (Output, *Output, error)",
+            "Alt": "() (Output, *Output, error)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "*Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "functionWithReturnListParametrized",
+          "Signature": {
+            "Label": "() (a Output, b Output, c Output, err error)",
+            "Alt": "() (a Output, b Output, c Output, err error)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "err",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": false,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/two.go",
+      "FileLine": 3,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Two",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.Two",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "FunctionOne",
+          "Signature": {
+            "Label": "(b bool, i int) (bool)",
+            "Alt": "(bool, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionTwo",
+          "Signature": {
+            "Label": "(a Input, b Input, c Input, i int) (bool)",
+            "Alt": "(Input, Input, Input, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "Input",
+                  "Links": [
+                    {
+                      "Name": "Input",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "Input",
+                  "Links": [
+                    {
+                      "Name": "Input",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "Input",
+                  "Links": [
+                    {
+                      "Name": "Input",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Input",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionThree",
+          "Signature": {
+            "Label": "(a CustomString, b CustomString, c CustomString, i int) (bool)",
+            "Alt": "(CustomString, CustomString, CustomString, int) (bool)",
+            "Arguments": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "i",
+                "Type": {
+                  "Label": "int",
+                  "Links": [
+                    {
+                      "Name": "int",
+                      "Underlying": "int",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "bool",
+                  "Links": [
+                    {
+                      "Name": "bool",
+                      "Underlying": "bool",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "int",
+                "Underlying": "int",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "bool",
+                "Underlying": "bool",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionWithReturnList",
+          "Signature": {
+            "Label": "() (Output, *Output, error)",
+            "Alt": "() (Output, *Output, error)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "*Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "FunctionWithReturnListParametrized",
+          "Signature": {
+            "Label": "() (a Output, b Output, c Output, err error)",
+            "Alt": "() (a Output, b Output, c Output, err error)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "a",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "b",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "c",
+                "Type": {
+                  "Label": "Output",
+                  "Links": [
+                    {
+                      "Name": "Output",
+                      "Underlying": "[]byte",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "err",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Output",
+                "Underlying": "[]byte",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 10,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFloat32",
+      "Type": {
+        "Label": "float32",
+        "Links": [
+          {
+            "Name": "float32",
+            "Underlying": "float32",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFloat32",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 12,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFloat64",
+      "Type": {
+        "Label": "float64",
+        "Links": [
+          {
+            "Name": "float64",
+            "Underlying": "float64",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFloat64",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 14,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomComplex128",
+      "Type": {
+        "Label": "complex128",
+        "Links": [
+          {
+            "Name": "complex128",
+            "Underlying": "complex128",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomComplex128",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 16,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomIntSlice",
+      "Type": {
+        "Label": "[]int",
+        "Links": [
+          {
+            "Name": "int",
+            "Underlying": "int",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomIntSlice",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 18,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomIntArray",
+      "Type": {
+        "Label": "[]int",
+        "Links": [
+          {
+            "Name": "int",
+            "Underlying": "int",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomIntArray",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 20,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomRune",
+      "Type": {
+        "Label": "rune",
+        "Links": [
+          {
+            "Name": "rune",
+            "Underlying": "rune",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomRune",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 22,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomString",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomString",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 24,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Input",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.Input",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 26,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Output",
+      "Type": {
+        "Label": "[]byte",
+        "Links": [
+          {
+            "Name": "byte",
+            "Underlying": "byte",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.Output",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 28,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "PointerString",
+      "Type": {
+        "Label": "*string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.PointerString",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 30,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "PointerStruct",
+      "Type": {
+        "Label": "*config.JWT",
+        "Links": [
+          {
+            "Name": "JWT",
+            "Underlying": "struct{ID string \"env:\\\"HTTP_JWT_ID\\\"       json:\\\"id\\\"\"; KeyPath string \"env:\\\"HTTP_JWT_KEY_PATH\\\" json:\\\"keyPath\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.PointerStruct",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 32,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "PointerSliceOfStruct",
+      "Type": {
+        "Label": "[]*config.JWT",
+        "Links": [
+          {
+            "Name": "JWT",
+            "Underlying": "struct{ID string \"env:\\\"HTTP_JWT_ID\\\"       json:\\\"id\\\"\"; KeyPath string \"env:\\\"HTTP_JWT_KEY_PATH\\\" json:\\\"keyPath\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.PointerSliceOfStruct",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 34,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "MapOfPointerStruct",
+      "Type": {
+        "Label": "map[string]*config.JWT",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "JWT",
+            "Underlying": "struct{ID string \"env:\\\"HTTP_JWT_ID\\\"       json:\\\"id\\\"\"; KeyPath string \"env:\\\"HTTP_JWT_KEY_PATH\\\" json:\\\"keyPath\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.MapOfPointerStruct",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 36,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "MapOfStruct",
+      "Type": {
+        "Label": "map[config.URL]config.JWT",
+        "Links": [
+          {
+            "Name": "URL",
+            "Underlying": "string",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "JWT",
+            "Underlying": "struct{ID string \"env:\\\"HTTP_JWT_ID\\\"       json:\\\"id\\\"\"; KeyPath string \"env:\\\"HTTP_JWT_KEY_PATH\\\" json:\\\"keyPath\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.MapOfStruct",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 38,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomStringWithPointerReceivingMethods",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomStringWithPointerReceivingMethods",
+      "Interfaces": [
+        {
+          "Name": "EmbeddableInterface",
+          "PackageName": "example",
+          "PackagePath": "code/pkg/example"
+        }
+      ],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 44,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomStringWithStructReceivingMethods",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomStringWithStructReceivingMethods",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": false,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 50,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFunctionWithMethod",
+      "Type": {
+        "Label": "func()",
+        "Links": []
+      },
+      "TypeInfo": "code/pkg/example.CustomFunctionWithMethod",
+      "Interfaces": [
+        {
+          "Name": "EmbeddableInterface",
+          "PackageName": "example",
+          "PackagePath": "code/pkg/example"
+        }
+      ],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 56,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CustomFunctionWithMethodWithArgumentsAndReturns",
+      "Type": {
+        "Label": "func(one string, two PointerStruct) (PointerStruct, error)",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "PointerStruct",
+            "Underlying": "*code/pkg/config.JWT",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CustomFunctionWithMethodWithArgumentsAndReturns",
+      "Interfaces": [
+        {
+          "Name": "EmbeddableInterface",
+          "PackageName": "example",
+          "PackagePath": "code/pkg/example"
+        }
+      ],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 62,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "TypeOfCustomType",
+      "Type": {
+        "Label": "CustomStringWithStructReceivingMethods",
+        "Links": [
+          {
+            "Name": "CustomStringWithStructReceivingMethods",
+            "Underlying": "string",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.TypeOfCustomType",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 64,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "TypeOfExternalCustomType",
+      "Type": {
+        "Label": "config.Transport",
+        "Links": [
+          {
+            "Name": "Transport",
+            "Underlying": "struct{MaxConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\\\"      json:\\\"maxConnsPerHost\\\"\"; MaxIdleConns int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS\\\"          json:\\\"maxIdleConns\\\"\"; MaxIdleConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\\\" json:\\\"maxIdleConnsPerHost\\\"\"; TimeoutInSeconds int64 \"env:\\\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\\\"      json:\\\"timeoutInSeconds\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.TypeOfExternalCustomType",
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/type.go",
+      "FileLine": 66,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "CompositionInterfaceWithUsageType",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/example.CompositionInterfaceWithUsageType",
+      "Interfaces": [
+        {
+          "Name": "CompositionInterfaceWithUsage",
+          "PackageName": "example",
+          "PackagePath": "code/pkg/example"
+        },
+        {
+          "Name": "EmbeddableInterface",
+          "PackageName": "example",
+          "PackagePath": "code/pkg/example"
+        }
+      ],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "LoadByte",
+          "Signature": {
+            "Label": "(context.Context, []byte) (error)",
+            "Alt": "() (error)",
+            "Arguments": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "context.Context",
+                  "Links": [
+                    {
+                      "Name": "Context",
+                      "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+                      "PackageName": "context",
+                      "PackagePath": "context",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Context",
+                "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+                "PackageName": "context",
+                "PackagePath": "context",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "Function",
+          "Signature": {
+            "Label": "(_ CustomString, _ CustomString, _ CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Alt": "(CustomString, CustomString, CustomString, []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "Name": "AnotherAdditionalFunction",
+          "Signature": {
+            "Label": "(_ CustomString, _ CustomString, _ CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Alt": "(CustomString, CustomString, CustomString, []byte) (e CustomString, f CustomString, g CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "example",
+                      "PackagePath": "code/pkg/example",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "example",
+                "PackagePath": "code/pkg/example",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    }
+  ],
+  "Func": [
+    {
+      "FilePath": "pkg/example/factory.go",
+      "FileLine": 8,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "NewFour",
+      "Signature": {
+        "Label": "(input Input, output Output, customMethod CustomFunction[I, O], externalCustomMethod integration.ExternalCustomFunction[EI, EO]) (Four[I, O, EI, EO])",
+        "Alt": "(Input, Output, CustomFunction[I, O], integration.ExternalCustomFunction[EI, EO]) (Four[I, O, EI, EO])",
+        "Arguments": [
+          {
+            "Name": "input",
+            "Type": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "customMethod",
+            "Type": {
+              "Label": "CustomFunction[I, O]",
+              "Links": [
+                {
+                  "Name": "I",
+                  "Underlying": "code/pkg/example.Input",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "O",
+                  "Underlying": "code/pkg/example.Output",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "CustomFunction",
+                  "Underlying": "func(context.Context, I) (O, error)",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "externalCustomMethod",
+            "Type": {
+              "Label": "integration.ExternalCustomFunction[EI, EO]",
+              "Links": [
+                {
+                  "Name": "EI",
+                  "Underlying": "code/pkg/integration.ExternalInput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "EO",
+                  "Underlying": "code/pkg/integration.ExternalOutput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "ExternalCustomFunction",
+                  "Underlying": "func(context.Context, I) (O, error)",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "",
+            "Type": {
+              "Label": "Four[I, O, EI, EO]",
+              "Links": [
+                {
+                  "Name": "I",
+                  "Underlying": "code/pkg/example.Input",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "O",
+                  "Underlying": "code/pkg/example.Output",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "EI",
+                  "Underlying": "code/pkg/integration.ExternalInput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "EO",
+                  "Underlying": "code/pkg/integration.ExternalOutput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "Four",
+                  "Underlying": "struct{Input code/pkg/example.Input; output code/pkg/example.Output; CustomMethod code/pkg/example.CustomFunction[I, O]; ExternalCustomMethod code/pkg/integration.ExternalCustomFunction[EI, EO]}",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "Input",
+            "Underlying": "string",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "Output",
+            "Underlying": "[]byte",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "code/pkg/example.Input",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "code/pkg/example.Output",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "CustomFunction",
+            "Underlying": "func(context.Context, I) (O, error)",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "EI",
+            "Underlying": "code/pkg/integration.ExternalInput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "EO",
+            "Underlying": "code/pkg/integration.ExternalOutput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalCustomFunction",
+            "Underlying": "func(context.Context, I) (O, error)",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "Four",
+            "Underlying": "struct{Input code/pkg/example.Input; output code/pkg/example.Output; CustomMethod code/pkg/example.CustomFunction[I, O]; ExternalCustomMethod code/pkg/integration.ExternalCustomFunction[EI, EO]}",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": {
+        "Label": "[I Input, O Output, EI integration.ExternalInput, EO integration.ExternalOutput]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EI",
+            "Constrain": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EO",
+            "Constrain": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/factory.go",
+      "FileLine": 20,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "NewFive",
+      "Signature": {
+        "Label": "(input Input, output Output, customMethod CustomFunction[I, O], externalCustomMethod integration.ExternalCustomFunction[EI, EO]) (Five[I, O, EI, EO])",
+        "Alt": "(Input, Output, CustomFunction[I, O], integration.ExternalCustomFunction[EI, EO]) (Five[I, O, EI, EO])",
+        "Arguments": [
+          {
+            "Name": "input",
+            "Type": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "customMethod",
+            "Type": {
+              "Label": "CustomFunction[I, O]",
+              "Links": [
+                {
+                  "Name": "I",
+                  "Underlying": "code/pkg/example.Input",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "O",
+                  "Underlying": "code/pkg/example.Output",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "CustomFunction",
+                  "Underlying": "func(context.Context, I) (O, error)",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "externalCustomMethod",
+            "Type": {
+              "Label": "integration.ExternalCustomFunction[EI, EO]",
+              "Links": [
+                {
+                  "Name": "EI",
+                  "Underlying": "code/pkg/integration.ExternalInput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "EO",
+                  "Underlying": "code/pkg/integration.ExternalOutput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "ExternalCustomFunction",
+                  "Underlying": "func(context.Context, I) (O, error)",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "",
+            "Type": {
+              "Label": "Five[I, O, EI, EO]",
+              "Links": [
+                {
+                  "Name": "I",
+                  "Underlying": "code/pkg/example.Input",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "O",
+                  "Underlying": "code/pkg/example.Output",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "EI",
+                  "Underlying": "code/pkg/integration.ExternalInput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "EO",
+                  "Underlying": "code/pkg/integration.ExternalOutput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                },
+                {
+                  "Name": "Five",
+                  "Underlying": "struct{Input code/pkg/example.Input; output code/pkg/example.Output; CustomMethod code/pkg/example.CustomFunction[I, O]; ExternalCustomMethod code/pkg/integration.ExternalCustomFunction[EI, EO]}",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "Input",
+            "Underlying": "string",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "Output",
+            "Underlying": "[]byte",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "I",
+            "Underlying": "code/pkg/example.Input",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "code/pkg/example.Output",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "CustomFunction",
+            "Underlying": "func(context.Context, I) (O, error)",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "EI",
+            "Underlying": "code/pkg/integration.ExternalInput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "EO",
+            "Underlying": "code/pkg/integration.ExternalOutput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalCustomFunction",
+            "Underlying": "func(context.Context, I) (O, error)",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": "intg"
+          },
+          {
+            "Name": "Five",
+            "Underlying": "struct{Input code/pkg/example.Input; output code/pkg/example.Output; CustomMethod code/pkg/example.CustomFunction[I, O]; ExternalCustomMethod code/pkg/integration.ExternalCustomFunction[EI, EO]}",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": {
+        "Label": "[I Input, O Output, EI integration.ExternalInput, EO integration.ExternalOutput]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "Input",
+              "Links": [
+                {
+                  "Name": "Input",
+                  "Underlying": "string",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "Output",
+              "Links": [
+                {
+                  "Name": "Output",
+                  "Underlying": "[]byte",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EI",
+            "Constrain": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          },
+          {
+            "Name": "EO",
+            "Constrain": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 10,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "nonExportedFunction",
+      "Signature": {
+        "Label": "(input integration.ExternalInput) (integration.ExternalOutput, error)",
+        "Alt": "(integration.ExternalInput) (integration.ExternalOutput, error)",
+        "Arguments": [
+          {
+            "Name": "input",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "",
+            "Type": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          },
+          {
+            "Name": "",
+            "Type": {
+              "Label": "error",
+              "Links": [
+                {
+                  "Name": "error",
+                  "Underlying": "interface{Error() string}",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "ExternalInput",
+            "Underlying": "string",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalOutput",
+            "Underlying": "[]byte",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": "intg"
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": null,
+      "IsExported": false,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 26,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "nonExportedFunctionWithNamedReturn",
+      "Signature": {
+        "Label": "(input integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Alt": "(integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Arguments": [
+          {
+            "Name": "input",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "err",
+            "Type": {
+              "Label": "error",
+              "Links": [
+                {
+                  "Name": "error",
+                  "Underlying": "interface{Error() string}",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "ExternalInput",
+            "Underlying": "string",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalOutput",
+            "Underlying": "[]byte",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": null,
+      "IsExported": false,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 31,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ExportedFunctionWithMultipleSameTypeArgumentsAndNamedReturn",
+      "Signature": {
+        "Label": "(one integration.ExternalInput, two integration.ExternalInput, three integration.ExternalInput, four integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Alt": "(integration.ExternalInput, integration.ExternalInput, integration.ExternalInput, integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Arguments": [
+          {
+            "Name": "one",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "two",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "three",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "four",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          },
+          {
+            "Name": "err",
+            "Type": {
+              "Label": "error",
+              "Links": [
+                {
+                  "Name": "error",
+                  "Underlying": "interface{Error() string}",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "ExternalInput",
+            "Underlying": "string",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalOutput",
+            "Underlying": "[]byte",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": "intg"
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 35,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ExportedFunctionWithMultipleSameTypeArguments",
+      "Signature": {
+        "Label": "(one integration.ExternalInput, two integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Alt": "(integration.ExternalInput, integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Arguments": [
+          {
+            "Name": "one",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "two",
+            "Type": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "err",
+            "Type": {
+              "Label": "error",
+              "Links": [
+                {
+                  "Name": "error",
+                  "Underlying": "interface{Error() string}",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "ExternalInput",
+            "Underlying": "string",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalOutput",
+            "Underlying": "[]byte",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 39,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ExportedVariadicFunctionWithMultipleSameTypeArgumentsAndNamedReturn",
+      "Signature": {
+        "Label": "(input ...integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Alt": "(...integration.ExternalInput) (output integration.ExternalOutput, err error)",
+        "Arguments": [
+          {
+            "Name": "input",
+            "Type": {
+              "Label": "...integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "err",
+            "Type": {
+              "Label": "error",
+              "Links": [
+                {
+                  "Name": "error",
+                  "Underlying": "interface{Error() string}",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "ExternalInput",
+            "Underlying": "string",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "ExternalOutput",
+            "Underlying": "[]byte",
+            "PackageName": "integration",
+            "PackagePath": "code/pkg/integration",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": null,
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 43,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ExportedVariadicFunctionWithMultipleSameTypeArgumentsAndNamedReturnWithGenerics",
+      "Signature": {
+        "Label": "(input ...I) (output O, err error)",
+        "Alt": "(...I) (output O, err error)",
+        "Arguments": [
+          {
+            "Name": "input",
+            "Type": {
+              "Label": "...I",
+              "Links": [
+                {
+                  "Name": "I",
+                  "Underlying": "code/pkg/integration.ExternalInput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "output",
+            "Type": {
+              "Label": "O",
+              "Links": [
+                {
+                  "Name": "O",
+                  "Underlying": "code/pkg/integration.ExternalOutput",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "err",
+            "Type": {
+              "Label": "error",
+              "Links": [
+                {
+                  "Name": "error",
+                  "Underlying": "interface{Error() string}",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "I",
+            "Underlying": "code/pkg/integration.ExternalInput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "O",
+            "Underlying": "code/pkg/integration.ExternalOutput",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "error",
+            "Underlying": "interface{Error() string}",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": {
+        "Label": "[I integration.ExternalInput, O integration.ExternalOutput]",
+        "List": [
+          {
+            "Name": "I",
+            "Constrain": {
+              "Label": "integration.ExternalInput",
+              "Links": [
+                {
+                  "Name": "ExternalInput",
+                  "Underlying": "string",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": "intg"
+                }
+              ]
+            }
+          },
+          {
+            "Name": "O",
+            "Constrain": {
+              "Label": "integration.ExternalOutput",
+              "Links": [
+                {
+                  "Name": "ExternalOutput",
+                  "Underlying": "[]byte",
+                  "PackageName": "integration",
+                  "PackagePath": "code/pkg/integration",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/func.go",
+      "FileLine": 47,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "doNothingFunction",
+      "Signature": {
+        "Label": "()",
+        "Alt": "()",
+        "Arguments": [],
+        "Returns": [],
+        "Links": []
+      },
+      "Params": null,
+      "IsExported": false,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/generics.go",
+      "FileLine": 20,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "Swap",
+      "Signature": {
+        "Label": "(first T, second U) (U, T)",
+        "Alt": "(T, U) (U, T)",
+        "Arguments": [
+          {
+            "Name": "first",
+            "Type": {
+              "Label": "T",
+              "Links": [
+                {
+                  "Name": "T",
+                  "Underlying": "any",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "second",
+            "Type": {
+              "Label": "U",
+              "Links": [
+                {
+                  "Name": "U",
+                  "Underlying": "any",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Returns": [
+          {
+            "Name": "",
+            "Type": {
+              "Label": "U",
+              "Links": [
+                {
+                  "Name": "U",
+                  "Underlying": "any",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "",
+            "Type": {
+              "Label": "T",
+              "Links": [
+                {
+                  "Name": "T",
+                  "Underlying": "any",
+                  "PackageName": "example",
+                  "PackagePath": "code/pkg/example",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ],
+        "Links": [
+          {
+            "Name": "T",
+            "Underlying": "any",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "U",
+            "Underlying": "any",
+            "PackageName": "example",
+            "PackagePath": "code/pkg/example",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "Params": {
+        "Label": "[T any, U any]",
+        "List": [
+          {
+            "Name": "T",
+            "Constrain": {
+              "Label": "any",
+              "Links": [
+                {
+                  "Name": "any",
+                  "Underlying": "any",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          },
+          {
+            "Name": "U",
+            "Constrain": {
+              "Label": "any",
+              "Links": [
+                {
+                  "Name": "any",
+                  "Underlying": "any",
+                  "PackageName": "",
+                  "PackagePath": "",
+                  "PackageAlias": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "IsExported": true,
+      "Doc": ""
+    }
+  ],
+  "Const": [
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ValueStringOne",
+      "Type": null,
+      "TypeInfo": "untyped string",
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ValueStringTwo",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "string",
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ValueType",
+      "Type": {
+        "Label": "config.URL",
+        "Links": [
+          {
+            "Name": "URL",
+            "Underlying": "string",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/config.URL",
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "AdditionalType",
+      "Type": {
+        "Label": "config.Additional",
+        "Links": [
+          {
+            "Name": "Additional",
+            "Underlying": "string",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/config.Additional",
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ValueBoolTrue",
+      "Type": null,
+      "TypeInfo": "untyped bool",
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ValueBoolFalse",
+      "Type": {
+        "Label": "bool",
+        "Links": [
+          {
+            "Name": "bool",
+            "Underlying": "bool",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "bool",
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "valueNotExported",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "string",
+      "IsExported": false,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/example/const.go",
+      "FileLine": 5,
+      "PackageName": "example",
+      "PackagePath": "code/pkg/example",
+      "Name": "ValueWithDoc",
+      "Type": null,
+      "TypeInfo": "untyped string",
+      "IsExported": true,
+      "Doc": "ValueWithDoc is a value with extensive document.\ne.g. use it as you wish...\n     ...perhaps with a little bit of indentation.\n\n/*\n * example block comment\n */\n\nWell-defined doc block should help with understanding the code.\n"
+    }
+  ]
+}

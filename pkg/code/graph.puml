@@ -1,0 +1,791 @@
+@startuml
+top to bottom direction
+skinparam package {
+    BackgroundColor #fafafa
+}
+skinparam defaulttextalignment center
+skinparam noteTextAlignment left
+package "github.com/codemityio/goforma/pkg/code/doc" as github_com_codemityio_goforma_pkg_code_doc {
+    class "<b><font color=#1c1c1c>Parser</font></b>" as github_com_codemityio_goforma_pkg_code_doc_Parser << (I, #e4f58e) >> {
+        + Parse <font color=#1f38b5>(lines []string) (string)</font>
+    }
+    class "<b><font color=#1c1c1c>DefaultParser</font></b>" as github_com_codemityio_goforma_pkg_code_doc_DefaultParser << (S, #b5558d) >> {
+        + Parse <font color=#1f38b5>(lines []string) (string)</font>
+    }
+    class "<b><font color=#1c1c1c>New</font></b><font color=#1f38b5>() (*DefaultParser)</font>" as github_com_codemityio_goforma_pkg_code_doc_New << (F, #dbcb8f) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/gen" as github_com_codemityio_goforma_pkg_code_gen {
+    class "<b><font color=#1c1c1c>DefaultDepGraphGenerator</font></b>" as github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator << (S, #b5558d) >> {
+        + Generate <font color=#1f38b5>(packages *imports.Packages) (string, error)</font>
+        - fillColour <font color=#1f38b5>(pkg *imports.Package) (string)</font>
+        - strokeColour <font color=#1f38b5>(pkg *imports.Package) (string)</font>
+    }
+    class "<b><font color=#1c1c1c>DepGraphGenerator</font></b>" as github_com_codemityio_goforma_pkg_code_gen_DepGraphGenerator << (I, #e4f58e) >> {
+        + Generate <font color=#1f38b5>(packages *imports.Packages) (string, error)</font>
+    }
+    class "<b><font color=#1c1c1c>UMLGraphGenerator</font></b>" as github_com_codemityio_goforma_pkg_code_gen_UMLGraphGenerator << (I, #e4f58e) >> {
+        + Generate <font color=#1f38b5>() (string, error)</font>
+    }
+    class "<b><font color=#1c1c1c>UMLGraphGeneratorOption</font></b>" as github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorOption << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>UMLGraphGeneratorConfig</font></b>" as github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorConfig << (S, #b5558d) >> {
+        + Legend <font color=#1f38b5>bool</font>
+        + Primitive <font color=#1f38b5>bool</font>
+        + Var <font color=#1f38b5>bool</font>
+        + Const <font color=#1f38b5>bool</font>
+        + Func <font color=#1f38b5>bool</font>
+        + NotExported <font color=#1f38b5>bool</font>
+        + Doc <font color=#1f38b5>bool</font>
+    }
+    class "<b><font color=#1c1c1c>TypeInfoParts</font></b>" as github_com_codemityio_goforma_pkg_code_gen_TypeInfoParts << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>DefaultUMLGraphGenerator</font></b>" as github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator << (S, #b5558d) >> {
+        - codeMaps <font color=#1f38b5>map[string]*parser.CodeMap[*parser.Var, *parser.Type, *parser.Func, *parser.Const]</font>
+        - types <font color=#1f38b5>map[string]struct</font>
+        - typesCache <font color=#1f38b5>map[string]struct</font>
+        - linksCache <font color=#1f38b5>map[string]struct</font>
+        - primitiveTypes <font color=#1f38b5>map[string]bool</font>
+        - config <font color=#1f38b5>*UMLGraphGeneratorConfig</font>
+        + Generate <font color=#1f38b5>() (string, error)</font>
+        - initiateCodeMap <font color=#1f38b5>() (*parser.CodeMap[*parser.Var, *parser.Type, *parser.Func, *parser.Const])</font>
+        - generateElementID <font color=#1f38b5>(input string) (string)</font>
+        - concat <font color=#1f38b5>(input ...string) (string)</font>
+        - typeExists <font color=#1f38b5>(input string) (bool)</font>
+        - typeInCache <font color=#1f38b5>(input string) (bool)</font>
+        - linkInCache <font color=#1f38b5>(input string) (bool)</font>
+        - getTypeInitial <font color=#1f38b5>(input string) (string)</font>
+        - mapTypeColour <font color=#1f38b5>(input string) (string)</font>
+        - mapColour <font color=#1f38b5>(input string) (string)</font>
+        - isPrimitive <font color=#1f38b5>(input string) (bool)</font>
+        - isComposite <font color=#1f38b5>(input string) (bool)</font>
+        - isPointer <font color=#1f38b5>(input string) (bool)</font>
+        - isAny <font color=#1f38b5>(input string) (bool)</font>
+        - isInterface <font color=#1f38b5>(input string) (bool)</font>
+        - isError <font color=#1f38b5>(input string) (bool)</font>
+        - isStruct <font color=#1f38b5>(input string) (bool)</font>
+        - isVar <font color=#1f38b5>(input string) (bool)</font>
+        - isConst <font color=#1f38b5>(input string) (bool)</font>
+        - isFunc <font color=#1f38b5>(input string) (bool)</font>
+        - isExternal <font color=#1f38b5>(input string) (bool)</font>
+        - isSelector <font color=#1f38b5>(input string) (bool)</font>
+        - isValidIdentifier <font color=#1f38b5>(input string) (bool)</font>
+        - isFullPath <font color=#1f38b5>(input string) (bool)</font>
+        - isExported <font color=#1f38b5>(input string) (bool)</font>
+        - getFullPathParts <font color=#1f38b5>(input string) (*TypeInfoParts)</font>
+        - skipLegend <font color=#1f38b5>() (bool)</font>
+        - skipPrimitive <font color=#1f38b5>() (bool)</font>
+        - skipVar <font color=#1f38b5>() (bool)</font>
+        - skipConst <font color=#1f38b5>() (bool)</font>
+        - skipFunc <font color=#1f38b5>() (bool)</font>
+        - skipNotExported <font color=#1f38b5>() (bool)</font>
+        - skipDoc <font color=#1f38b5>() (bool)</font>
+        - ternary <font color=#1f38b5>(cond bool, trueVal string, falseVal string) (string)</font>
+    }
+    class "<font color=#1c1c1c>depDotTpl</font>" as github_com_codemityio_goforma_pkg_code_gen_depDotTpl << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrPkg</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ErrPkg << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrTemplateParse</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ErrTemplateParse << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrTemplateExecute</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ErrTemplateExecute << (V, #edb4ab) >> {}
+    class "<font color=#1c1c1c>umlPlantumlTpl</font>" as github_com_codemityio_goforma_pkg_code_gen_umlPlantumlTpl << (V, #edb4ab) >> {}
+    class "<font color=#1c1c1c>selectorPartsLimit</font>" as github_com_codemityio_goforma_pkg_code_gen_selectorPartsLimit << (C, #c5bfdb) >> {}
+    class "<font color=#1c1c1c>regexFullPath</font>" as github_com_codemityio_goforma_pkg_code_gen_regexFullPath << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourWhite</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourWhite << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourName</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourName << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourEmbedded</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourEmbedded << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourFieldType</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourFieldType << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourMethodSignature</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourMethodSignature << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourFuncSignature</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourFuncSignature << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourType</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourType << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourPrimitive</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourPrimitive << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourComposite</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourComposite << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourPointer</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourPointer << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourStruct</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourStruct << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourInterface</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourInterface << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourVar</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourVar << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourConst</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourConst << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourFunc</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourFunc << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>ColourExternal</font></b>" as github_com_codemityio_goforma_pkg_code_gen_ColourExternal << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>NewDepGraphGenerator</font></b><font color=#1f38b5>() (*DefaultDepGraphGenerator)</font>" as github_com_codemityio_goforma_pkg_code_gen_NewDepGraphGenerator << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>NewDefaultUMLGraphGenerator</font></b><font color=#1f38b5>(options ...UMLGraphGeneratorOption) (*DefaultUMLGraphGenerator)</font>" as github_com_codemityio_goforma_pkg_code_gen_NewDefaultUMLGraphGenerator << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithUMLGraphGeneratorConfig</font></b><font color=#1f38b5>(config *UMLGraphGeneratorConfig) (UMLGraphGeneratorOption)</font>" as github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorConfig << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithUMLGraphGeneratorCodeMap</font></b><font color=#1f38b5>(codeMap *parser.CodeMap[*parser.Var, *parser.Type, *parser.Func, *parser.Const]) (UMLGraphGeneratorOption)</font>" as github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap << (F, #dbcb8f) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/imports" as github_com_codemityio_goforma_pkg_code_imports {
+    class "<b><font color=#1c1c1c>DefaultParser</font></b>" as github_com_codemityio_goforma_pkg_code_imports_DefaultParser << (S, #b5558d) >> {
+        - rootPath <font color=#1f38b5>string</font>
+        - depth <font color=#1f38b5>int</font>
+        - packagesMap <font color=#1f38b5>map[string]*packages.Package</font>
+        - owned <font color=#1f38b5>[]string</font>
+        - excludePaths <font color=#1f38b5>[]string</font>
+        - excludeStandard <font color=#1f38b5>bool</font>
+        - excludeVendor <font color=#1f38b5>bool</font>
+        - excludeInternal <font color=#1f38b5>bool</font>
+        + Parse <font color=#1f38b5>(path string) (*Packages, error)</font>
+        - collectPackages <font color=#1f38b5>(pkgs []*packages.Package, currentDepth int, maxDepth int)</font>
+        - build <font color=#1f38b5>() (*Packages)</font>
+        - isLocal <font color=#1f38b5>(path string) (bool)</font>
+        - isOwned <font color=#1f38b5>(path string) (bool)</font>
+        - isExclude <font color=#1f38b5>(path string) (bool)</font>
+        - isExternal <font color=#1f38b5>(path string) (bool)</font>
+        - isStandard <font color=#1f38b5>(path string) (bool)</font>
+        - isInternal <font color=#1f38b5>(path string) (bool)</font>
+        - isVendor <font color=#1f38b5>(path string) (bool)</font>
+        - sanitiseVendorPath <font color=#1f38b5>(path string) (string)</font>
+        - sanitisePath <font color=#1f38b5>(path string) (string)</font>
+        - dedupeSliceOfString <font color=#1f38b5>(input []string) ([]string)</font>
+    }
+    class "<b><font color=#1c1c1c>Option</font></b>" as github_com_codemityio_goforma_pkg_code_imports_Option << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>Package</font></b>" as github_com_codemityio_goforma_pkg_code_imports_Package << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Path <font color=#1f38b5>string</font>
+        + Label <font color=#1f38b5>string</font>
+        + IsLocal <font color=#1f38b5>bool</font>
+        + IsOwned <font color=#1f38b5>bool</font>
+        + IsExternal <font color=#1f38b5>bool</font>
+        + IsStandard <font color=#1f38b5>bool</font>
+        + IsInternal <font color=#1f38b5>bool</font>
+        + IsVendor <font color=#1f38b5>bool</font>
+        + DepPaths <font color=#1f38b5>[]string</font>
+    }
+    class "<b><font color=#1c1c1c>Packages</font></b>" as github_com_codemityio_goforma_pkg_code_imports_Packages << (S, #b5558d) >> {
+        + Paths <font color=#1f38b5>[]string</font>
+        + List <font color=#1f38b5>[]*Package</font>
+    }
+    class "<b><font color=#1c1c1c>ErrPkg</font></b>" as github_com_codemityio_goforma_pkg_code_imports_ErrPkg << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrPkgLoad</font></b>" as github_com_codemityio_goforma_pkg_code_imports_ErrPkgLoad << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>DefaultDepth</font></b>" as github_com_codemityio_goforma_pkg_code_imports_DefaultDepth << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>New</font></b><font color=#1f38b5>(options ...Option) (*DefaultParser)</font>" as github_com_codemityio_goforma_pkg_code_imports_New << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithRootPath</font></b><font color=#1f38b5>(rootPath string) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithRootPath << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithDepth</font></b><font color=#1f38b5>(depth int) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithDepth << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithOwned</font></b><font color=#1f38b5>(owned []string) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithOwned << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithExcludePaths</font></b><font color=#1f38b5>(paths []string) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithExcludePaths << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithExcludeStandard</font></b><font color=#1f38b5>(exclude bool) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithExcludeStandard << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithExcludeVendor</font></b><font color=#1f38b5>(exclude bool) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithExcludeVendor << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithExcludeInternal</font></b><font color=#1f38b5>(exclude bool) (Option)</font>" as github_com_codemityio_goforma_pkg_code_imports_WithExcludeInternal << (F, #dbcb8f) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio_goforma_pkg_code_parser {
+    class "<b><font color=#1c1c1c>Parser</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Parser << (I, #e4f58e) >> {
+        + Parse <font color=#1f38b5>(pkgPath string) (map[string][]any, error)</font>
+    }
+    class "<b><font color=#1c1c1c>DefaultParser</font></b>" as github_com_codemityio_goforma_pkg_code_parser_DefaultParser << (S, #b5558d) >> {
+        - rootPath <font color=#1f38b5>string</font>
+        - docParser <font color=#1f38b5>doc.Parser</font>
+        - interfaces <font color=#1f38b5>map[string]*Interface</font>
+        - types <font color=#1f38b5>map[string]*Type</font>
+        + Parse <font color=#1f38b5>(path string) (*CodeMap[*Var, *Type, *Func, *Const], error)</font>
+        - collectAllInterfaces <font color=#1f38b5>(pkgs []*packages.Package) (map[string]*Interface)</font>
+        - parse <font color=#1f38b5>(output *CodeMap[*Var, *Type, *Func, *Const], pkg *packages.Package, errs *ast.ChanType)</font>
+        - inspect <font color=#1f38b5>(output *CodeMap[*Var, *Type, *Func, *Const], pkg *packages.Package, decl ast.Decl, packageMethods map[string][]*Method, errs *ast.ChanType)</font>
+        - inspectSwitch <font color=#1f38b5>(output *CodeMap[*Var, *Type, *Func, *Const], path string, pkg *packages.Package, start token.Position, end token.Position, node ast.Node, packageMethods map[string][]*Method, errs *ast.ChanType)</font>
+        - isPackageScope <font color=#1f38b5>(pos token.Position, pkg *packages.Package) (bool)</font>
+        - describeFuncDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, funcDecl *ast.FuncDecl) (*Func)</font>
+        - describeVarDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, varSpec *ast.ValueSpec) ([]*Var)</font>
+        - describeConstDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, constSpec *ast.ValueSpec) ([]*Const)</font>
+        - resolveTypeInfo <font color=#1f38b5>(specType ast.Expr, doc *ast.CommentGroup, name *ast.Ident, typesInfo *types.Info) (typ *TypeDesc, typeInfo string, docStr string)</font>
+        - describeTypeDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, typeSpec *ast.TypeSpec, packageMethods map[string][]*Method, errs *ast.ChanType) (*Type)</font>
+        - getInterfaces <font color=#1f38b5>(namedType *types.Named) ([]*Interface)</font>
+        - collectMethodSet <font color=#1f38b5>(t types.Type) ([]*types.Func)</font>
+        - describeType <font color=#1f38b5>(expr ast.Expr, typesInfo *types.Info) (*TypeDesc)</font>
+        - enrichType <font color=#1f38b5>(item *Type)</font>
+        - findSelector <font color=#1f38b5>(label string, links []*Link) (string)</font>
+        - getUnderlying <font color=#1f38b5>(expr ast.Expr, typesInfo *types.Info) (string)</font>
+        - prepareLink <font color=#1f38b5>(name string, underlying string, pkgName string, pkgPath string, pkgAlias string) (*Link)</font>
+        - describePkg <font color=#1f38b5>(ident *ast.Ident, typesInfo *types.Info) (string, string, string, bool)</font>
+        - collectAllPackageMethods <font color=#1f38b5>(pkg *packages.Package, errs *ast.ChanType) (map[string][]*Method)</font>
+        - describeMethodDecl <font color=#1f38b5>(pkg *packages.Package, decl *ast.FuncDecl, typesInfo *types.Info, errs *ast.ChanType) (string, *Method)</font>
+        - getFuncSignature <font color=#1f38b5>(funcType *ast.FuncType, typesInfo *types.Info) (*Signature)</font>
+        - getFuncSignatureArguments <font color=#1f38b5>(field *ast.Field, typesInfo *types.Info) ([]*Argument, []string, []string, []*Link)</font>
+        - getFuncSignatureReturns <font color=#1f38b5>(field *ast.Field, typesInfo *types.Info) ([]*Return, []string, []*Link)</font>
+        - getVarParamsWithConstraints <font color=#1f38b5>(valueSpec *ast.ValueSpec, typesInfo *types.Info) (*Params)</font>
+        - getTypeParamsWithConstraints <font color=#1f38b5>(typeSpec *ast.TypeSpec, typesInfo *types.Info) (*Params)</font>
+        - getFuncTypeParams <font color=#1f38b5>(funcDecl *ast.FuncDecl, typesInfo *types.Info) (*Params)</font>
+        - getStructFields <font color=#1f38b5>(fields *ast.FieldList, typesInfo *types.Info) ([]*Field)</font>
+        - parseTags <font color=#1f38b5>(basicList *ast.BasicLit) (*Tags)</font>
+        - getEmbeddedTypes <font color=#1f38b5>(typeSpec *ast.TypeSpec, typesInfo *types.Info) ([]*TypeDesc)</font>
+        - getInterfaceMethods <font color=#1f38b5>(typeSpec *ast.TypeSpec, pkg *packages.Package, errs *ast.ChanType) ([]*Method)</font>
+        - isSelector <font color=#1f38b5>(input string) (bool)</font>
+        - isValidIdentifier <font color=#1f38b5>(input string) (bool)</font>
+        - dedupeSliceOfLinks <font color=#1f38b5>(input []*Link) ([]*Link)</font>
+        - dedupeSliceOfFields <font color=#1f38b5>(input []*Field) ([]*Field)</font>
+        - dedupeSliceOfInterfaces <font color=#1f38b5>(input []*Interface) ([]*Interface)</font>
+        - dedupeSliceOfMethods <font color=#1f38b5>(input []*Method) ([]*Method)</font>
+        - dedupeSliceOfTypeDesc <font color=#1f38b5>(input []*TypeDesc) ([]*TypeDesc)</font>
+        - getDoc <font color=#1f38b5>(doc *ast.CommentGroup) (string)</font>
+    }
+    class "<b><font color=#1c1c1c>Option</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Option << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>Position</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Position << (S, #b5558d) >> {
+        + Offset <font color=#1f38b5>int</font>
+        + Line <font color=#1f38b5>int</font>
+        + Column <font color=#1f38b5>int</font>
+    }
+    class "<b><font color=#1c1c1c>Var</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Var << (S, #b5558d) >> {
+        + FilePath <font color=#1f38b5>string</font>
+        + Start <font color=#1f38b5>*Position</font>
+        + End <font color=#1f38b5>*Position</font>
+        + PackageName <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+        + Name <font color=#1f38b5>string</font>
+        + Type <font color=#1f38b5>*TypeDesc</font>
+        + TypeInfo <font color=#1f38b5>string</font>
+        + Params <font color=#1f38b5>*Params</font>
+        + IsExported <font color=#1f38b5>bool</font>
+        + Doc <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Const</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Const << (S, #b5558d) >> {
+        + FilePath <font color=#1f38b5>string</font>
+        + Start <font color=#1f38b5>*Position</font>
+        + End <font color=#1f38b5>*Position</font>
+        + PackageName <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+        + Name <font color=#1f38b5>string</font>
+        + Type <font color=#1f38b5>*TypeDesc</font>
+        + TypeInfo <font color=#1f38b5>string</font>
+        + IsExported <font color=#1f38b5>bool</font>
+        + Doc <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Func</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Func << (S, #b5558d) >> {
+        + FilePath <font color=#1f38b5>string</font>
+        + Start <font color=#1f38b5>*Position</font>
+        + End <font color=#1f38b5>*Position</font>
+        + PackageName <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+        + Name <font color=#1f38b5>string</font>
+        + Signature <font color=#1f38b5>*Signature</font>
+        + Params <font color=#1f38b5>*Params</font>
+        + IsExported <font color=#1f38b5>bool</font>
+        + Doc <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Argument</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Argument << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Type <font color=#1f38b5>*TypeDesc</font>
+    }
+    class "<b><font color=#1c1c1c>Return</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Return << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Type <font color=#1f38b5>*TypeDesc</font>
+    }
+    class "<b><font color=#1c1c1c>Signature</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Signature << (S, #b5558d) >> {
+        + Label <font color=#1f38b5>string</font>
+        + Alt <font color=#1f38b5>string</font>
+        + Arguments <font color=#1f38b5>[]*Argument</font>
+        + Returns <font color=#1f38b5>[]*Return</font>
+        + Links <font color=#1f38b5>[]*Link</font>
+    }
+    class "<b><font color=#1c1c1c>Type</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Type << (S, #b5558d) >> {
+        + FilePath <font color=#1f38b5>string</font>
+        + Start <font color=#1f38b5>*Position</font>
+        + End <font color=#1f38b5>*Position</font>
+        + PackageName <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+        + Name <font color=#1f38b5>string</font>
+        + Type <font color=#1f38b5>*TypeDesc</font>
+        + TypeInfo <font color=#1f38b5>string</font>
+        + IsTypeAlias <font color=#1f38b5>bool</font>
+        + Interfaces <font color=#1f38b5>[]*Interface</font>
+        + Embedded <font color=#1f38b5>[]*TypeDesc</font>
+        + Params <font color=#1f38b5>*Params</font>
+        + Fields <font color=#1f38b5>[]*Field</font>
+        + Methods <font color=#1f38b5>[]*Method</font>
+        + IsExported <font color=#1f38b5>bool</font>
+        + Doc <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Params</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Params << (S, #b5558d) >> {
+        + Label <font color=#1f38b5>string</font>
+        + List <font color=#1f38b5>[]*Param</font>
+    }
+    class "<b><font color=#1c1c1c>Param</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Param << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Constrain <font color=#1f38b5>*TypeDesc</font>
+    }
+    class "<b><font color=#1c1c1c>Field</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Field << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Type <font color=#1f38b5>*TypeDesc</font>
+        + IsExported <font color=#1f38b5>bool</font>
+        + Tags <font color=#1f38b5>*Tags</font>
+        + Doc <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Tags</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Tags << (S, #b5558d) >> {
+        + Label <font color=#1f38b5>string</font>
+        + Tags <font color=#1f38b5>[]*Tag</font>
+    }
+    class "<b><font color=#1c1c1c>Tag</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Tag << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Value <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Method</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Method << (S, #b5558d) >> {
+        + FilePath <font color=#1f38b5>string</font>
+        + Start <font color=#1f38b5>*Position</font>
+        + End <font color=#1f38b5>*Position</font>
+        + Name <font color=#1f38b5>string</font>
+        + Signature <font color=#1f38b5>*Signature</font>
+        + IsPointerReceiver <font color=#1f38b5>bool</font>
+        + IsExported <font color=#1f38b5>bool</font>
+        + Doc <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>Interface</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Interface << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + PackageName <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+        - iface <font color=#1f38b5>*types.Interface</font>
+    }
+    class "<b><font color=#1c1c1c>TypeDesc</font></b>" as github_com_codemityio_goforma_pkg_code_parser_TypeDesc << (S, #b5558d) >> {
+        + Label <font color=#1f38b5>string</font>
+        + Links <font color=#1f38b5>[]*Link</font>
+    }
+    class "<b><font color=#1c1c1c>Link</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Link << (S, #b5558d) >> {
+        + Name <font color=#1f38b5>string</font>
+        + Underlying <font color=#1f38b5>string</font>
+        + PackageName <font color=#1f38b5>string</font>
+        + PackagePath <font color=#1f38b5>string</font>
+        + PackageAlias <font color=#1f38b5>string</font>
+    }
+    class "<b><font color=#1c1c1c>CodeMap</font></b><[V *Var, T *Type, F *Func, C *Const]>" as github_com_codemityio_goforma_pkg_code_parser_CodeMap << (S, #b5558d) >> {
+        + Var <font color=#1f38b5>[]V</font>
+        + Type <font color=#1f38b5>[]T</font>
+        + Func <font color=#1f38b5>[]F</font>
+        + Const <font color=#1f38b5>[]C</font>
+    }
+    class "<b><font color=#1c1c1c>ErrPkg</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrPkg << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrPkgLoad</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrPkgLoad << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrGetRelPath</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrGetRelPath << (V, #edb4ab) >> {}
+    class "<font color=#1c1c1c>selectorPartsLimit</font>" as github_com_codemityio_goforma_pkg_code_parser_selectorPartsLimit << (C, #c5bfdb) >> {}
+    class "<b><font color=#1c1c1c>New</font></b><font color=#1f38b5>(options ...Option) (*DefaultParser)</font>" as github_com_codemityio_goforma_pkg_code_parser_New << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithRootPath</font></b><font color=#1f38b5>(rootPath string) (Option)</font>" as github_com_codemityio_goforma_pkg_code_parser_WithRootPath << (F, #dbcb8f) >> {}
+    class "<b><font color=#1c1c1c>WithDocParser</font></b><font color=#1f38b5>(docParser doc.Parser) (Option)</font>" as github_com_codemityio_goforma_pkg_code_parser_WithDocParser << (F, #dbcb8f) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/doc" as github_com_codemityio_goforma_pkg_code_doc {
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/gen" as github_com_codemityio_goforma_pkg_code_gen {
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(p *DefaultUMLGraphGenerator)" as github_com_codemityio_goforma_pkg_code_gen_func_p__DefaultUMLGraphGenerator_ << (F, #739e78) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/imports" as github_com_codemityio_goforma_pkg_code_imports {
+    class "struct" as _struct << (S, #b5558d) >> {}
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    class "error" as _error << (I, #e4f58e) >> {}
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    class "func(p *DefaultParser)" as github_com_codemityio_goforma_pkg_code_imports_func_p__DefaultParser_ << (F, #739e78) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+    class "untyped int" as untyped_int << (T, #6d8cbf) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio_goforma_pkg_code_parser {
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    class "any" as _any << (T, #6d8cbf) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Decl" as go_ast_Decl << (I, #e4f58e) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/token" as .go_token {
+        class "Position" as go_token_Position << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Node" as go_ast_Node << (I, #e4f58e) >> {}
+    }
+    package "go/token" as .go_token {
+        class "Position" as go_token_Position << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/token" as .go_token {
+        class "Position" as go_token_Position << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "FuncDecl" as go_ast_FuncDecl << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/token" as .go_token {
+        class "Position" as go_token_Position << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "ValueSpec" as go_ast_ValueSpec << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/token" as .go_token {
+        class "Position" as go_token_Position << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "ValueSpec" as go_ast_ValueSpec << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Expr" as go_ast_Expr << (I, #e4f58e) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "CommentGroup" as go_ast_CommentGroup << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Ident" as go_ast_Ident << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/token" as .go_token {
+        class "Position" as go_token_Position << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "TypeSpec" as go_ast_TypeSpec << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Named" as go_types_Named << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Type" as go_types_Type << (I, #e4f58e) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Func" as go_types_Func << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Expr" as go_ast_Expr << (I, #e4f58e) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Expr" as go_ast_Expr << (I, #e4f58e) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Ident" as go_ast_Ident << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "FuncDecl" as go_ast_FuncDecl << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "FuncType" as go_ast_FuncType << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Field" as go_ast_Field << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "Field" as go_ast_Field << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "ValueSpec" as go_ast_ValueSpec << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "TypeSpec" as go_ast_TypeSpec << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "FuncDecl" as go_ast_FuncDecl << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "FieldList" as go_ast_FieldList << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "BasicLit" as go_ast_BasicLit << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "TypeSpec" as go_ast_TypeSpec << (S, #b5558d) >> {}
+    }
+    package "go/types" as .go_types {
+        class "Info" as go_types_Info << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "TypeSpec" as go_ast_TypeSpec << (S, #b5558d) >> {}
+    }
+    package "golang.org/x/tools/go/packages" as .golang_org_x_tools_go_packages {
+        class "Package" as golang_org_x_tools_go_packages_Package << (S, #b5558d) >> {}
+    }
+    package "go/ast" as .go_ast {
+        class "CommentGroup" as go_ast_CommentGroup << (S, #b5558d) >> {}
+    }
+    class "func(p *DefaultParser)" as github_com_codemityio_goforma_pkg_code_parser_func_p__DefaultParser_ << (F, #739e78) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    package "go/types" as .go_types {
+        class "Interface" as go_types_Interface << (S, #b5558d) >> {}
+    }
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "V" as github_com_codemityio_goforma_pkg_code_parser_V << (T, #fa6d57) >> {}
+    class "T" as github_com_codemityio_goforma_pkg_code_parser_T << (T, #fa6d57) >> {}
+    class "F" as github_com_codemityio_goforma_pkg_code_parser_F << (T, #fa6d57) >> {}
+    class "C" as github_com_codemityio_goforma_pkg_code_parser_C << (T, #fa6d57) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
+}
+package "github.com/codemityio/goforma/pkg/code/doc" as github_com_codemityio_goforma_pkg_code_doc {
+    github_com_codemityio_goforma_pkg_code_doc_Parser #...up...> _interface
+    github_com_codemityio_goforma_pkg_code_doc_DefaultParser #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_doc_DefaultParser ...up...|> github_com_codemityio_goforma_pkg_code_doc_Parser
+    github_com_codemityio_goforma_pkg_code_doc_New ....up....> github_com_codemityio_goforma_pkg_code_doc_DefaultParser
+}
+package "github.com/codemityio/goforma/pkg/code/gen" as github_com_codemityio_goforma_pkg_code_gen {
+    github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator ...up...|> github_com_codemityio_goforma_pkg_code_gen_DepGraphGenerator
+    github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_imports_Packages
+    github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator ...up...> _error
+    github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_imports_Package
+    github_com_codemityio_goforma_pkg_code_gen_DepGraphGenerator #...up...> _interface
+    github_com_codemityio_goforma_pkg_code_gen_DepGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_imports_Packages
+    github_com_codemityio_goforma_pkg_code_gen_DepGraphGenerator ...up...> _error
+    github_com_codemityio_goforma_pkg_code_gen_UMLGraphGenerator #...up...> _interface
+    github_com_codemityio_goforma_pkg_code_gen_UMLGraphGenerator ...up...> _error
+    github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorOption #...up...> github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator
+    github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorOption #...up...> github_com_codemityio_goforma_pkg_code_gen_func_p__DefaultUMLGraphGenerator_
+    github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorConfig #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_gen_TypeInfoParts #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...|> github_com_codemityio_goforma_pkg_code_gen_UMLGraphGenerator
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> github_com_codemityio_goforma_pkg_code_parser_Var
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> github_com_codemityio_goforma_pkg_code_parser_Type
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> github_com_codemityio_goforma_pkg_code_parser_Func
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> github_com_codemityio_goforma_pkg_code_parser_Const
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> github_com_codemityio_goforma_pkg_code_parser_CodeMap
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> _struct
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator o---up---> github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorConfig
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> _error
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_parser_Var
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_parser_Type
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_parser_Func
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_parser_Const
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_parser_CodeMap
+    github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator ...up...> github_com_codemityio_goforma_pkg_code_gen_TypeInfoParts
+    github_com_codemityio_goforma_pkg_code_gen_ErrPkg ...up...|> error
+    github_com_codemityio_goforma_pkg_code_gen_ErrTemplateParse ...up...|> error
+    github_com_codemityio_goforma_pkg_code_gen_ErrTemplateExecute ...up...|> error
+    github_com_codemityio_goforma_pkg_code_gen_NewDepGraphGenerator ....up....> github_com_codemityio_goforma_pkg_code_gen_DefaultDepGraphGenerator
+    github_com_codemityio_goforma_pkg_code_gen_NewDefaultUMLGraphGenerator ....up....> github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorOption
+    github_com_codemityio_goforma_pkg_code_gen_NewDefaultUMLGraphGenerator ....up....> github_com_codemityio_goforma_pkg_code_gen_DefaultUMLGraphGenerator
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorConfig ....up....> github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorConfig
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorConfig ....up....> github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorOption
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap ....up....> github_com_codemityio_goforma_pkg_code_parser_Var
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap ....up....> github_com_codemityio_goforma_pkg_code_parser_Type
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap ....up....> github_com_codemityio_goforma_pkg_code_parser_Func
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap ....up....> github_com_codemityio_goforma_pkg_code_parser_Const
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap ....up....> github_com_codemityio_goforma_pkg_code_parser_CodeMap
+    github_com_codemityio_goforma_pkg_code_gen_WithUMLGraphGeneratorCodeMap ....up....> github_com_codemityio_goforma_pkg_code_gen_UMLGraphGeneratorOption
+}
+package "github.com/codemityio/goforma/pkg/code/imports" as github_com_codemityio_goforma_pkg_code_imports {
+    github_com_codemityio_goforma_pkg_code_imports_DefaultParser #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_imports_DefaultParser o---up---> golang_org_x_tools_go_packages_Package
+    github_com_codemityio_goforma_pkg_code_imports_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_imports_Packages
+    github_com_codemityio_goforma_pkg_code_imports_DefaultParser ...up...> _error
+    github_com_codemityio_goforma_pkg_code_imports_DefaultParser ...up...> golang_org_x_tools_go_packages_Package
+    github_com_codemityio_goforma_pkg_code_imports_Option #...up...> github_com_codemityio_goforma_pkg_code_imports_DefaultParser
+    github_com_codemityio_goforma_pkg_code_imports_Option #...up...> github_com_codemityio_goforma_pkg_code_imports_func_p__DefaultParser_
+    github_com_codemityio_goforma_pkg_code_imports_Package #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_imports_Packages #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_imports_Packages o---up---> github_com_codemityio_goforma_pkg_code_imports_Package
+    github_com_codemityio_goforma_pkg_code_imports_ErrPkg ...up...|> error
+    github_com_codemityio_goforma_pkg_code_imports_ErrPkgLoad ...up...|> error
+    github_com_codemityio_goforma_pkg_code_imports_DefaultDepth #...up...> untyped_int
+    github_com_codemityio_goforma_pkg_code_imports_New ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_New ....up....> github_com_codemityio_goforma_pkg_code_imports_DefaultParser
+    github_com_codemityio_goforma_pkg_code_imports_WithRootPath ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_WithDepth ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_WithOwned ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_WithExcludePaths ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_WithExcludeStandard ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_WithExcludeVendor ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+    github_com_codemityio_goforma_pkg_code_imports_WithExcludeInternal ....up....> github_com_codemityio_goforma_pkg_code_imports_Option
+}
+package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio_goforma_pkg_code_parser {
+    github_com_codemityio_goforma_pkg_code_parser_Parser #...up...> _interface
+    github_com_codemityio_goforma_pkg_code_parser_Parser ...up...> _any
+    github_com_codemityio_goforma_pkg_code_parser_Parser ...up...> _error
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser o---up---> github_com_codemityio_goforma_pkg_code_doc_Parser
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser o---up---> github_com_codemityio_goforma_pkg_code_parser_Interface
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser o---up---> github_com_codemityio_goforma_pkg_code_parser_Type
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Var
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Type
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Func
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Const
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_CodeMap
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> _error
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> golang_org_x_tools_go_packages_Package
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Interface
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_Decl
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Method
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_token_Position
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_Node
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_FuncDecl
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_ValueSpec
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_Expr
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_CommentGroup
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_Ident
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_types_Info
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_TypeSpec
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_types_Named
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_types_Type
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_types_Func
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Link
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_FuncType
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Signature
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_Field
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Argument
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Return
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Params
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_FieldList
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Field
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> go_ast_BasicLit
+    github_com_codemityio_goforma_pkg_code_parser_DefaultParser ...up...> github_com_codemityio_goforma_pkg_code_parser_Tags
+    github_com_codemityio_goforma_pkg_code_parser_Option #...up...> github_com_codemityio_goforma_pkg_code_parser_DefaultParser
+    github_com_codemityio_goforma_pkg_code_parser_Option #...up...> github_com_codemityio_goforma_pkg_code_parser_func_p__DefaultParser_
+    github_com_codemityio_goforma_pkg_code_parser_Position #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Var #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Var o---up---> github_com_codemityio_goforma_pkg_code_parser_Position
+    github_com_codemityio_goforma_pkg_code_parser_Var o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Var o---up---> github_com_codemityio_goforma_pkg_code_parser_Params
+    github_com_codemityio_goforma_pkg_code_parser_Const #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Const o---up---> github_com_codemityio_goforma_pkg_code_parser_Position
+    github_com_codemityio_goforma_pkg_code_parser_Const o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Func #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Func o---up---> github_com_codemityio_goforma_pkg_code_parser_Position
+    github_com_codemityio_goforma_pkg_code_parser_Func o---up---> github_com_codemityio_goforma_pkg_code_parser_Signature
+    github_com_codemityio_goforma_pkg_code_parser_Func o---up---> github_com_codemityio_goforma_pkg_code_parser_Params
+    github_com_codemityio_goforma_pkg_code_parser_Argument #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Argument o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Return #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Return o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Signature #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Signature o---up---> github_com_codemityio_goforma_pkg_code_parser_Argument
+    github_com_codemityio_goforma_pkg_code_parser_Signature o---up---> github_com_codemityio_goforma_pkg_code_parser_Return
+    github_com_codemityio_goforma_pkg_code_parser_Signature o---up---> github_com_codemityio_goforma_pkg_code_parser_Link
+    github_com_codemityio_goforma_pkg_code_parser_Type #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Type o---up---> github_com_codemityio_goforma_pkg_code_parser_Position
+    github_com_codemityio_goforma_pkg_code_parser_Type o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Type o---up---> github_com_codemityio_goforma_pkg_code_parser_Interface
+    github_com_codemityio_goforma_pkg_code_parser_Type o---up---> github_com_codemityio_goforma_pkg_code_parser_Params
+    github_com_codemityio_goforma_pkg_code_parser_Type o---up---> github_com_codemityio_goforma_pkg_code_parser_Field
+    github_com_codemityio_goforma_pkg_code_parser_Type o---up---> github_com_codemityio_goforma_pkg_code_parser_Method
+    github_com_codemityio_goforma_pkg_code_parser_Params #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Params o---up---> github_com_codemityio_goforma_pkg_code_parser_Param
+    github_com_codemityio_goforma_pkg_code_parser_Param #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Param o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Field #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Field o---up---> github_com_codemityio_goforma_pkg_code_parser_TypeDesc
+    github_com_codemityio_goforma_pkg_code_parser_Field o---up---> github_com_codemityio_goforma_pkg_code_parser_Tags
+    github_com_codemityio_goforma_pkg_code_parser_Tags #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Tags o---up---> github_com_codemityio_goforma_pkg_code_parser_Tag
+    github_com_codemityio_goforma_pkg_code_parser_Tag #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Method #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Method o---up---> github_com_codemityio_goforma_pkg_code_parser_Position
+    github_com_codemityio_goforma_pkg_code_parser_Method o---up---> github_com_codemityio_goforma_pkg_code_parser_Signature
+    github_com_codemityio_goforma_pkg_code_parser_Interface #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_Interface o---up---> go_types_Interface
+    github_com_codemityio_goforma_pkg_code_parser_TypeDesc #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_TypeDesc o---up---> github_com_codemityio_goforma_pkg_code_parser_Link
+    github_com_codemityio_goforma_pkg_code_parser_Link #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap #...up...> _struct
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap #...up...> github_com_codemityio_goforma_pkg_code_parser_Var
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap #...up...> github_com_codemityio_goforma_pkg_code_parser_Type
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap #...up...> github_com_codemityio_goforma_pkg_code_parser_Func
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap #...up...> github_com_codemityio_goforma_pkg_code_parser_Const
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap o---up---> github_com_codemityio_goforma_pkg_code_parser_V
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap o---up---> github_com_codemityio_goforma_pkg_code_parser_T
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap o---up---> github_com_codemityio_goforma_pkg_code_parser_F
+    github_com_codemityio_goforma_pkg_code_parser_CodeMap o---up---> github_com_codemityio_goforma_pkg_code_parser_C
+    github_com_codemityio_goforma_pkg_code_parser_ErrPkg ...up...|> error
+    github_com_codemityio_goforma_pkg_code_parser_ErrPkgLoad ...up...|> error
+    github_com_codemityio_goforma_pkg_code_parser_ErrGetRelPath ...up...|> error
+    github_com_codemityio_goforma_pkg_code_parser_New ....up....> github_com_codemityio_goforma_pkg_code_parser_Option
+    github_com_codemityio_goforma_pkg_code_parser_New ....up....> github_com_codemityio_goforma_pkg_code_parser_DefaultParser
+    github_com_codemityio_goforma_pkg_code_parser_WithRootPath ....up....> github_com_codemityio_goforma_pkg_code_parser_Option
+    github_com_codemityio_goforma_pkg_code_parser_WithDocParser ....up....> github_com_codemityio_goforma_pkg_code_doc_Parser
+    github_com_codemityio_goforma_pkg_code_parser_WithDocParser ....up....> github_com_codemityio_goforma_pkg_code_parser_Option
+}
+@enduml
+
