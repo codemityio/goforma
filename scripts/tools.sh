@@ -101,6 +101,7 @@ EOF
 
 "cov")
   go tool cover -func="tmp/coverage.out" -o tmp/coverage.in
+  scripts/tools.sh install
   goforma badge \
     --document=README.md \
     --id=coverage-badge-do-not-edit \
