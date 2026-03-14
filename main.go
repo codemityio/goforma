@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/codemity/goforma/cmd/badge"
 	"github.com/codemity/goforma/internal/app"
 	"github.com/urfave/cli/v2"
 )
@@ -21,7 +22,9 @@ func main() {
 		),
 	)
 
-	application.Commands = []*cli.Command{}
+	application.Commands = []*cli.Command{
+		&badge.App,
+	}
 
 	if e := application.Run(os.Args); e != nil {
 		log.Fatalf("error occurred during execution")
