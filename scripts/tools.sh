@@ -11,6 +11,11 @@ mkdir -p tmp var
 
 case "$1" in
 
+"prep")
+  go install github.com/codemity/auxilium@latest
+  go install github.com/codemity/goforma@latest
+  ;;
+
 "cmd")
   docker run --rm \
     --user $(id -u):$(id -g) \
