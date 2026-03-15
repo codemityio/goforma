@@ -17,11 +17,13 @@ Navigate the available options using the arrow keys: `↓ ↑ → ←`. Use `/` 
 ## Installation
 
 To install the tool use `make install` (directly from the repository clone) or use
-`go install github.com/codemity/goforma@latest`.
+`go install github.com/codemityio/goforma@latest`.
 
 ## Usage
 
 Once you have the tool installed, just use `goforma` command to start.
+
+## Packages
 
 ## License
 
