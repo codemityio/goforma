@@ -1,4 +1,4 @@
-module github.com/codemity/goforma
+module github.com/codemityio/goforma
 
 go 1.25.8
 

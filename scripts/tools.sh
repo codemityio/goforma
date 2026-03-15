@@ -12,8 +12,8 @@ mkdir -p tmp var
 case "$1" in
 
 "prep")
-  go install github.com/codemity/auxilium@latest
-  go install github.com/codemity/goforma@latest
+  scripts/tools.sh install
+  go install github.com/"${VENDOR}"/auxilium@latest
   ;;
 
 "cmd")
@@ -106,7 +106,6 @@ EOF
 
 "cov")
   go tool cover -func="tmp/coverage.out" -o tmp/coverage.in
-  scripts/tools.sh install
   goforma badge \
     --document=README.md \
     --id=coverage-badge-do-not-edit \
@@ -137,7 +136,7 @@ EOF
   ;;
 
 "next")
-# get latest v-tag (supports vX.Y.Z and vX.Y.Z-preN) and bump prerelease or patch
+  # get latest v-tag (supports vX.Y.Z and vX.Y.Z-preN) and bump prerelease or patch
   latest=$(git tag -l "v*" | sort -V | tail -n1)
 
   if [[ $latest =~ ^v([0-9]+\.[0-9]+\.[0-9]+)-([a-zA-Z]+)([0-9]+)$ ]]; then

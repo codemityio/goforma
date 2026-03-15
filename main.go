@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/codemity/goforma/cmd/badge"
-	"github.com/codemity/goforma/internal/app"
+	"github.com/codemityio/goforma/cmd/badge"
+	"github.com/codemityio/goforma/internal/app"
 	"github.com/urfave/cli/v2"
 )
 
