@@ -1,8 +1,18 @@
 # ![GoForma](logo.jpg)
 
-![coverage-badge-do-not-edit](https://img.shields.io/badge/Coverage-83%25-green.svg?longCache=true&style=flat)
+![coverage-badge-do-not-edit](https://img.shields.io/badge/Coverage-88%25-green.svg?longCache=true&style=flat)
 
 ## Table of contents
+
+- [Summary](#summary)
+- [Development](#development)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Manual](#manual)
+  - [Subcommands](#subcommands)
+  - [Docker](#docker)
+- [Packages](#packages)
+- [License](#license)
 
 ## Summary
 
@@ -21,9 +31,54 @@ To install the tool use `make install` (directly from the repository clone) or u
 
 ## Usage
 
-Once you have the tool installed, just use `goforma` command to start.
+Once you have the tool installed, just use the `goforma` command to get started.
+
+### Manual
+
+``` bash
+$ goforma --help
+NAME:
+   goforma - A new cli application
+
+USAGE:
+   goforma [global options] command [command options]
+
+VERSION:
+   latest
+
+DESCRIPTION:
+   A tool to support work with Markdown.
+
+AUTHOR:
+   codemityio
+
+COMMANDS:
+   badge    
+   code     
+   help, h  Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --help, -h     show help
+   --version, -v  print the version
+
+COPYRIGHT:
+   codemityio
+```
+
+### Subcommands
+
+- [`badge`](cmd/badge/README.md) - A simple tool to generate badges within a file.
+- [`code`](cmd/code/README.md) - A simple tool to perform tasks on **Go** code.
+
+### Docker
+
+``` bash
+$ docker run codemityio/goforma
+```
 
 ## Packages
+
+- [`code`](pkg/code/README.md) - A package containing tools to perform code analysis, generate documentation and so on.
 
 ## License
 

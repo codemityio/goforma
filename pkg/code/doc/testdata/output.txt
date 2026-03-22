@@ -1,0 +1,4 @@
+Save stores the given message in the underlying storage.
+
+It returns an error if the message cannot be persisted.
+This method is safe for concurrent use.

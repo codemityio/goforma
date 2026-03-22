@@ -1,0 +1,211 @@
+{
+  "Paths": [
+    "github.com/danielgtaylor/huma/v2",
+    "github.com/danielgtaylor/huma/v2/adapters/humachi",
+    "github.com/danielgtaylor/huma/v2/casing",
+    "github.com/danielgtaylor/huma/v2/negotiation",
+    "github.com/danielgtaylor/huma/v2/queryparam",
+    "github.com/danielgtaylor/huma/v2/validation",
+    "github.com/danielgtaylor/huma/v2/yaml",
+    "github.com/go-chi/chi/v5",
+    "github.com/sethvargo/go-envconfig",
+    "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config",
+    "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example",
+    "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma",
+    "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration",
+    "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local"
+  ],
+  "List": [
+    {
+      "Name": "huma",
+      "Path": "github.com/danielgtaylor/huma/v2",
+      "Label": "github.com/danielgtaylor/huma/v2",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "github.com/danielgtaylor/huma/v2/casing",
+        "github.com/danielgtaylor/huma/v2/negotiation",
+        "github.com/danielgtaylor/huma/v2/validation",
+        "github.com/danielgtaylor/huma/v2/yaml"
+      ]
+    },
+    {
+      "Name": "humachi",
+      "Path": "github.com/danielgtaylor/huma/v2/adapters/humachi",
+      "Label": "github.com/danielgtaylor/huma/v2/adapters/humachi",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "github.com/danielgtaylor/huma/v2",
+        "github.com/danielgtaylor/huma/v2/queryparam",
+        "github.com/go-chi/chi/v5"
+      ]
+    },
+    {
+      "Name": "casing",
+      "Path": "github.com/danielgtaylor/huma/v2/casing",
+      "Label": "github.com/danielgtaylor/huma/v2/casing",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "negotiation",
+      "Path": "github.com/danielgtaylor/huma/v2/negotiation",
+      "Label": "github.com/danielgtaylor/huma/v2/negotiation",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "queryparam",
+      "Path": "github.com/danielgtaylor/huma/v2/queryparam",
+      "Label": "github.com/danielgtaylor/huma/v2/queryparam",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "validation",
+      "Path": "github.com/danielgtaylor/huma/v2/validation",
+      "Label": "github.com/danielgtaylor/huma/v2/validation",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "yaml",
+      "Path": "github.com/danielgtaylor/huma/v2/yaml",
+      "Label": "github.com/danielgtaylor/huma/v2/yaml",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "chi",
+      "Path": "github.com/go-chi/chi/v5",
+      "Label": "github.com/go-chi/chi/v5",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "envconfig",
+      "Path": "github.com/sethvargo/go-envconfig",
+      "Label": "github.com/sethvargo/go-envconfig",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "config",
+      "Path": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config",
+      "Label": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config",
+      "IsLocal": true,
+      "IsOwned": true,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": []
+    },
+    {
+      "Name": "example",
+      "Path": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example",
+      "Label": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example",
+      "IsLocal": true,
+      "IsOwned": true,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config",
+        "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration"
+      ]
+    },
+    {
+      "Name": "huma",
+      "Path": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma",
+      "Label": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma",
+      "IsLocal": true,
+      "IsOwned": true,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "github.com/danielgtaylor/huma/v2",
+        "github.com/danielgtaylor/huma/v2/adapters/humachi",
+        "github.com/go-chi/chi/v5",
+        "github.com/sethvargo/go-envconfig",
+        "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration"
+      ]
+    },
+    {
+      "Name": "integration",
+      "Path": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration",
+      "Label": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration",
+      "IsLocal": true,
+      "IsOwned": true,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "github.com/danielgtaylor/huma/v2",
+        "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config"
+      ]
+    },
+    {
+      "Name": "local",
+      "Path": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local",
+      "Label": "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local",
+      "IsLocal": true,
+      "IsOwned": true,
+      "IsExternal": true,
+      "IsStandard": false,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config"
+      ]
+    }
+  ]
+}

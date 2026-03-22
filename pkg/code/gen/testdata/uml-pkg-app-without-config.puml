@@ -1,0 +1,358 @@
+@startuml
+top to bottom direction
+skinparam package {
+    BackgroundColor #fafafa
+}
+skinparam defaulttextalignment center
+skinparam noteTextAlignment left
+package "code/pkg/example" as code_pkg_example {
+    class "<b><font color=#1c1c1c>Five</font></b><[I Input, O Output, EI integration.ExternalInput, EO integration.ExternalOutput]>" as code_pkg_example_Five << (S, #b5558d) >> {
+        + Input <font color=#1f38b5>Input</font>
+        + CustomMethod <font color=#1f38b5>CustomFunction[I, O]</font>
+        + ExternalCustomMethod <font color=#1f38b5>integration.ExternalCustomFunction[EI, EO]</font>
+    }
+    class "<b><font color=#1c1c1c>Four</font></b><[I Input, O Output, EI integration.ExternalInput, EO integration.ExternalOutput]>" as code_pkg_example_Four << (S, #b5558d) >> {
+        + Input <font color=#1f38b5>Input</font>
+        + CustomMethod <font color=#1f38b5>CustomFunction[I, O]</font>
+        + ExternalCustomMethod <font color=#1f38b5>integration.ExternalCustomFunction[EI, EO]</font>
+    }
+    class "<b><font color=#1c1c1c>AnyFunction</font></b><[I any, O any]>" as code_pkg_example_AnyFunction << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFunction</font></b><[I Input, O Output]>" as code_pkg_example_CustomFunction << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionGenericsSlices</font></b><[I []*Input, O []Output]>" as code_pkg_example_CustomFunctionGenericsSlices << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionGenericsSlicesExternalTypes</font></b><[I []*integration.ExternalInput, O []integration.ExternalOutput]>" as code_pkg_example_CustomFunctionGenericsSlicesExternalTypes << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionGenericsMaps</font></b><[I []*Input, O map[string]Output]>" as code_pkg_example_CustomFunctionGenericsMaps << (F, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>EmbeddableInterface</font></b>" as code_pkg_example_EmbeddableInterface << (I, #e4f58e) >> {
+        + String <font color=#1f38b5>() (string)</font>
+    }
+    class "<b><font color=#1c1c1c>CompositionInterfaceWithoutUsage</font></b>" as code_pkg_example_CompositionInterfaceWithoutUsage << (I, #e4f58e) >> {
+        <font color=#1f38b5>EmbeddableInterface</font>
+        <font color=#1f38b5>integration.BytesLoader</font>
+        <font color=#1f38b5>[]integration.EnvLoader</font>
+        + AdditionalFunction <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)</font>
+        + AnotherAdditionalFunction <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)</font>
+    }
+    class "<b><font color=#1c1c1c>CompositionInterfaceWithUsage</font></b>" as code_pkg_example_CompositionInterfaceWithUsage << (I, #e4f58e) >> {
+        <font color=#1f38b5>EmbeddableInterface</font>
+        <font color=#1f38b5>integration.BytesLoader</font>
+        + Function <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)</font>
+        + AnotherAdditionalFunction <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)</font>
+    }
+    class "<b><font color=#1c1c1c>One</font></b>" as code_pkg_example_One << (S, #b5558d) >> {
+        + FunctionOne <font color=#1f38b5>(b bool, i int) (bool)</font>
+        + FunctionTwo <font color=#1f38b5>(a bool, b bool, c bool, i int) (bool)</font>
+        + FunctionThree <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, i int) (bool)</font>
+        + FunctionWithReturnListParametrized <font color=#1f38b5>() (a []byte, b []byte, c []byte, err error)</font>
+    }
+    class "<b><font color=#1c1c1c>Three</font></b>" as code_pkg_example_Three << (S, #b5558d) >> {
+        + Input <font color=#1f38b5>Input</font>
+        + FunctionOne <font color=#1f38b5>(b bool, i int) (bool)</font>
+        + FunctionThree <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, i int) (bool)</font>
+        + FunctionWithReturnList <font color=#1f38b5>() (Output, *Output, error)</font>
+    }
+    class "<b><font color=#1c1c1c>Two</font></b>" as code_pkg_example_Two << (S, #b5558d) >> {
+        + FunctionOne <font color=#1f38b5>(b bool, i int) (bool)</font>
+        + FunctionTwo <font color=#1f38b5>(a Input, b Input, c Input, i int) (bool)</font>
+        + FunctionThree <font color=#1f38b5>(a CustomString, b CustomString, c CustomString, i int) (bool)</font>
+        + FunctionWithReturnList <font color=#1f38b5>() (Output, *Output, error)</font>
+        + FunctionWithReturnListParametrized <font color=#1f38b5>() (a Output, b Output, c Output, err error)</font>
+    }
+    class "<b><font color=#1c1c1c>CustomFloat32</font></b>" as code_pkg_example_CustomFloat32 << (P, #74b1b5) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFloat64</font></b>" as code_pkg_example_CustomFloat64 << (P, #74b1b5) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomComplex128</font></b>" as code_pkg_example_CustomComplex128 << (P, #74b1b5) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomIntSlice</font></b>" as code_pkg_example_CustomIntSlice << (T, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomIntArray</font></b>" as code_pkg_example_CustomIntArray << (T, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomRune</font></b>" as code_pkg_example_CustomRune << (P, #74b1b5) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomString</font></b>" as code_pkg_example_CustomString << (P, #74b1b5) >> {
+    }
+    class "<b><font color=#1c1c1c>Input</font></b>" as code_pkg_example_Input << (P, #74b1b5) >> {
+    }
+    class "<b><font color=#1c1c1c>Output</font></b>" as code_pkg_example_Output << (T, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>PointerString</font></b>" as code_pkg_example_PointerString << (T, #fa6d57) >> {
+    }
+    class "<b><font color=#1c1c1c>PointerStruct</font></b>" as code_pkg_example_PointerStruct << (T, #fa6d57) >> {
+    }
+    class "<b><font color=#1c1c1c>PointerSliceOfStruct</font></b>" as code_pkg_example_PointerSliceOfStruct << (T, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>MapOfPointerStruct</font></b>" as code_pkg_example_MapOfPointerStruct << (T, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>MapOfStruct</font></b>" as code_pkg_example_MapOfStruct << (T, #739e78) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomStringWithPointerReceivingMethods</font></b>" as code_pkg_example_CustomStringWithPointerReceivingMethods << (P, #74b1b5) >> {
+        + String <font color=#1f38b5>() (string)</font>
+    }
+    class "<b><font color=#1c1c1c>CustomStringWithStructReceivingMethods</font></b>" as code_pkg_example_CustomStringWithStructReceivingMethods << (P, #74b1b5) >> {
+        + String <font color=#1f38b5>() (string)</font>
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionWithMethod</font></b>" as code_pkg_example_CustomFunctionWithMethod << (F, #739e78) >> {
+        + String <font color=#1f38b5>() (string)</font>
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionWithMethodWithArgumentsAndReturns</font></b>" as code_pkg_example_CustomFunctionWithMethodWithArgumentsAndReturns << (F, #739e78) >> {
+        + String <font color=#1f38b5>() (string)</font>
+    }
+    class "<b><font color=#1c1c1c>TypeOfCustomType</font></b>" as code_pkg_example_TypeOfCustomType << (T, #6d8cbf) >> {
+    }
+    class "<b><font color=#1c1c1c>TypeOfExternalCustomType</font></b>" as code_pkg_example_TypeOfExternalCustomType << (T, #6d8cbf) >> {
+    }
+    class "<b><font color=#1c1c1c>CompositionInterfaceWithUsageType</font></b>" as code_pkg_example_CompositionInterfaceWithUsageType << (S, #b5558d) >> {
+        + String <font color=#1f38b5>() (string)</font>
+        + LoadByte <font color=#1f38b5>(context.Context, []byte) (error)</font>
+        + Function <font color=#1f38b5>(_ CustomString, _ CustomString, _ CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)</font>
+        + AnotherAdditionalFunction <font color=#1f38b5>(_ CustomString, _ CustomString, _ CustomString, d []byte) (e CustomString, f CustomString, g CustomString, h []byte)</font>
+    }
+}
+package "code/pkg/example" as code_pkg_example {
+    class "struct" as _struct << (S, #b5558d) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalInput" as code_pkg_integration_ExternalInput << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalOutput" as code_pkg_integration_ExternalOutput << (T, #739e78) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #6d8cbf) >> {}
+    class "O" as code_pkg_example_O << (T, #6d8cbf) >> {}
+    class "EI" as code_pkg_example_EI << (T, #6d8cbf) >> {}
+    class "EO" as code_pkg_example_EO << (T, #6d8cbf) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalCustomFunction" as code_pkg_integration_ExternalCustomFunction << (F, #739e78) >> {}
+    }
+    class "struct" as _struct << (S, #b5558d) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalInput" as code_pkg_integration_ExternalInput << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalOutput" as code_pkg_integration_ExternalOutput << (T, #739e78) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #6d8cbf) >> {}
+    class "O" as code_pkg_example_O << (T, #6d8cbf) >> {}
+    class "EI" as code_pkg_example_EI << (T, #6d8cbf) >> {}
+    class "EO" as code_pkg_example_EO << (T, #6d8cbf) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalCustomFunction" as code_pkg_integration_ExternalCustomFunction << (F, #739e78) >> {}
+    }
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #6d8cbf) >> {}
+    class "O" as code_pkg_example_O << (T, #6d8cbf) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(context.Context, *I) (*O, error)" as code_pkg_example_func_context_Context___I____O__error_ << (F, #739e78) >> {}
+    class "any" as _any << (T, #6d8cbf) >> {}
+    class "any" as _any << (T, #6d8cbf) >> {}
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #6d8cbf) >> {}
+    class "O" as code_pkg_example_O << (T, #6d8cbf) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(context.Context, I) (O, error)" as code_pkg_example_func_context_Context__I___O__error_ << (F, #739e78) >> {}
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #739e78) >> {}
+    class "O" as code_pkg_example_O << (T, #739e78) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(context.Context, I) (O, error)" as code_pkg_example_func_context_Context__I___O__error_ << (F, #739e78) >> {}
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #739e78) >> {}
+    class "O" as code_pkg_example_O << (T, #739e78) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(context.Context, I) (O, error)" as code_pkg_example_func_context_Context__I___O__error_ << (F, #739e78) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalInput" as code_pkg_integration_ExternalInput << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "ExternalOutput" as code_pkg_integration_ExternalOutput << (T, #739e78) >> {}
+    }
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "I" as code_pkg_example_I << (T, #739e78) >> {}
+    class "O" as code_pkg_example_O << (T, #739e78) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(context.Context, I) (O, error)" as code_pkg_example_func_context_Context__I___O__error_ << (F, #739e78) >> {}
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "BytesLoader" as code_pkg_integration_BytesLoader << (I, #e4f58e) >> {}
+    }
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "EnvLoader" as code_pkg_integration_EnvLoader << (I, #e4f58e) >> {}
+    }
+    class "interface" as _interface << (I, #e4f58e) >> {}
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "BytesLoader" as code_pkg_integration_BytesLoader << (I, #e4f58e) >> {}
+    }
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "[]int" as code_pkg_example___int << (T, #739e78) >> {}
+    class "[]int" as code_pkg_example___int << (T, #739e78) >> {}
+    class "[]byte" as code_pkg_example___byte << (T, #739e78) >> {}
+    class "*string" as code_pkg_example__string << (T, #fa6d57) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "JWT" as code_pkg_config_JWT << (S, #b5558d) >> {}
+    }
+    class "*config.JWT" as code_pkg_example__config_JWT << (T, #fa6d57) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "JWT" as code_pkg_config_JWT << (S, #b5558d) >> {}
+    }
+    class "[]*config.JWT" as code_pkg_example____config_JWT << (T, #739e78) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "JWT" as code_pkg_config_JWT << (S, #b5558d) >> {}
+    }
+    class "map[string]*config.JWT" as code_pkg_example_map_string__config_JWT << (T, #739e78) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "URL" as code_pkg_config_URL << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/config" as .code_pkg_config {
+        class "JWT" as code_pkg_config_JWT << (S, #b5558d) >> {}
+    }
+    class "map[config.URL]config.JWT" as code_pkg_example_map_config_URL_config_JWT << (T, #739e78) >> {}
+    class "func()" as code_pkg_example_func__ << (F, #739e78) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    class "func(one string, two PointerStruct) (PointerStruct, error)" as code_pkg_example_func_one_string__two_PointerStruct___PointerStruct__error_ << (F, #739e78) >> {}
+    class "CustomStringWithStructReceivingMethods" as code_pkg_example_CustomStringWithStructReceivingMethods << (T, #6d8cbf) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "Transport" as code_pkg_config_Transport << (S, #b5558d) >> {}
+    }
+    class "struct" as _struct << (S, #b5558d) >> {}
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "error" as _error << (I, #e4f58e) >> {}
+}
+package "code/pkg/example" as code_pkg_example {
+    code_pkg_example_Five #...up...> _struct
+    code_pkg_example_Five #...up...> code_pkg_example_Input
+    code_pkg_example_Five #...up...> code_pkg_example_Output
+    code_pkg_example_Five #...up...> code_pkg_integration_ExternalInput
+    code_pkg_example_Five #...up...> code_pkg_integration_ExternalOutput
+    code_pkg_example_Five o---up---> code_pkg_example_Input
+    code_pkg_example_Five o---up---> code_pkg_example_Output
+    code_pkg_example_Five o---up---> code_pkg_example_I
+    code_pkg_example_Five o---up---> code_pkg_example_O
+    code_pkg_example_Five o---up---> code_pkg_example_CustomFunction
+    code_pkg_example_Five o---up---> code_pkg_example_EI
+    code_pkg_example_Five o---up---> code_pkg_example_EO
+    code_pkg_example_Five o---up---> code_pkg_integration_ExternalCustomFunction
+    code_pkg_example_Four #...up...> _struct
+    code_pkg_example_Four #...up...> code_pkg_example_Input
+    code_pkg_example_Four #...up...> code_pkg_example_Output
+    code_pkg_example_Four #...up...> code_pkg_integration_ExternalInput
+    code_pkg_example_Four #...up...> code_pkg_integration_ExternalOutput
+    code_pkg_example_Four o---up---> code_pkg_example_Input
+    code_pkg_example_Four o---up---> code_pkg_example_Output
+    code_pkg_example_Four o---up---> code_pkg_example_I
+    code_pkg_example_Four o---up---> code_pkg_example_O
+    code_pkg_example_Four o---up---> code_pkg_example_CustomFunction
+    code_pkg_example_Four o---up---> code_pkg_example_EI
+    code_pkg_example_Four o---up---> code_pkg_example_EO
+    code_pkg_example_Four o---up---> code_pkg_integration_ExternalCustomFunction
+    code_pkg_example_AnyFunction #...up...> context_Context
+    code_pkg_example_AnyFunction #...up...> code_pkg_example_I
+    code_pkg_example_AnyFunction #...up...> code_pkg_example_O
+    code_pkg_example_AnyFunction #...up...> _error
+    code_pkg_example_AnyFunction #...up...> code_pkg_example_func_context_Context___I____O__error_
+    code_pkg_example_AnyFunction #...up...> _any
+    code_pkg_example_CustomFunction #...up...> context_Context
+    code_pkg_example_CustomFunction #...up...> code_pkg_example_I
+    code_pkg_example_CustomFunction #...up...> code_pkg_example_O
+    code_pkg_example_CustomFunction #...up...> _error
+    code_pkg_example_CustomFunction #...up...> code_pkg_example_func_context_Context__I___O__error_
+    code_pkg_example_CustomFunction #...up...> code_pkg_example_Input
+    code_pkg_example_CustomFunction #...up...> code_pkg_example_Output
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> context_Context
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> code_pkg_example_I
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> code_pkg_example_O
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> _error
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> code_pkg_example_func_context_Context__I___O__error_
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> code_pkg_example_Input
+    code_pkg_example_CustomFunctionGenericsSlices #...up...> code_pkg_example_Output
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> context_Context
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> code_pkg_example_I
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> code_pkg_example_O
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> _error
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> code_pkg_example_func_context_Context__I___O__error_
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> code_pkg_integration_ExternalInput
+    code_pkg_example_CustomFunctionGenericsSlicesExternalTypes #...up...> code_pkg_integration_ExternalOutput
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> context_Context
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> code_pkg_example_I
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> code_pkg_example_O
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> _error
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> code_pkg_example_func_context_Context__I___O__error_
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> code_pkg_example_Input
+    code_pkg_example_CustomFunctionGenericsMaps #...up...> code_pkg_example_Output
+    code_pkg_example_EmbeddableInterface #...up...> _interface
+    code_pkg_example_CompositionInterfaceWithoutUsage #...up...> _interface
+    code_pkg_example_CompositionInterfaceWithoutUsage *---up---> code_pkg_example_EmbeddableInterface
+    code_pkg_example_CompositionInterfaceWithoutUsage *---up---> code_pkg_integration_BytesLoader
+    code_pkg_example_CompositionInterfaceWithoutUsage *---up---> code_pkg_integration_EnvLoader
+    code_pkg_example_CompositionInterfaceWithoutUsage ...up...> code_pkg_example_CustomString
+    code_pkg_example_CompositionInterfaceWithUsage #...up...> _interface
+    code_pkg_example_CompositionInterfaceWithUsage *---up---> code_pkg_example_EmbeddableInterface
+    code_pkg_example_CompositionInterfaceWithUsage *---up---> code_pkg_integration_BytesLoader
+    code_pkg_example_CompositionInterfaceWithUsage ...up...> code_pkg_example_CustomString
+    code_pkg_example_One #...up...> _struct
+    code_pkg_example_One ...up...> code_pkg_example_CustomString
+    code_pkg_example_One ...up...> _error
+    code_pkg_example_Three #...up...> _struct
+    code_pkg_example_Three o---up---> code_pkg_example_Input
+    code_pkg_example_Three o---up---> code_pkg_example_Output
+    code_pkg_example_Three ...up...> code_pkg_example_Input
+    code_pkg_example_Three ...up...> code_pkg_example_CustomString
+    code_pkg_example_Three ...up...> code_pkg_example_Output
+    code_pkg_example_Three ...up...> _error
+    code_pkg_example_Two #...up...> _struct
+    code_pkg_example_Two ...up...> code_pkg_example_Input
+    code_pkg_example_Two ...up...> code_pkg_example_CustomString
+    code_pkg_example_Two ...up...> code_pkg_example_Output
+    code_pkg_example_Two ...up...> _error
+    code_pkg_example_CustomIntSlice #...up...> code_pkg_example___int
+    code_pkg_example_CustomIntArray #...up...> code_pkg_example___int
+    code_pkg_example_Output #...up...> code_pkg_example___byte
+    code_pkg_example_PointerString #...up...> code_pkg_example__string
+    code_pkg_example_PointerStruct #...up...> code_pkg_config_JWT
+    code_pkg_example_PointerStruct #...up...> code_pkg_example__config_JWT
+    code_pkg_example_PointerSliceOfStruct #...up...> code_pkg_config_JWT
+    code_pkg_example_PointerSliceOfStruct #...up...> code_pkg_example____config_JWT
+    code_pkg_example_MapOfPointerStruct #...up...> code_pkg_config_JWT
+    code_pkg_example_MapOfPointerStruct #...up...> code_pkg_example_map_string__config_JWT
+    code_pkg_example_MapOfStruct #...up...> code_pkg_config_URL
+    code_pkg_example_MapOfStruct #...up...> code_pkg_config_JWT
+    code_pkg_example_MapOfStruct #...up...> code_pkg_example_map_config_URL_config_JWT
+    code_pkg_example_CustomStringWithPointerReceivingMethods ...up...|> code_pkg_example_EmbeddableInterface
+    code_pkg_example_CustomFunctionWithMethod #...up...> code_pkg_example_func__
+    code_pkg_example_CustomFunctionWithMethod ...up...|> code_pkg_example_EmbeddableInterface
+    code_pkg_example_CustomFunctionWithMethodWithArgumentsAndReturns #...up...> code_pkg_example_PointerStruct
+    code_pkg_example_CustomFunctionWithMethodWithArgumentsAndReturns #...up...> _error
+    code_pkg_example_CustomFunctionWithMethodWithArgumentsAndReturns #...up...> code_pkg_example_func_one_string__two_PointerStruct___PointerStruct__error_
+    code_pkg_example_CustomFunctionWithMethodWithArgumentsAndReturns ...up...|> code_pkg_example_EmbeddableInterface
+    code_pkg_example_TypeOfCustomType #...up...> code_pkg_example_CustomStringWithStructReceivingMethods
+    code_pkg_example_TypeOfExternalCustomType #...up...> code_pkg_config_Transport
+    code_pkg_example_CompositionInterfaceWithUsageType #...up...> _struct
+    code_pkg_example_CompositionInterfaceWithUsageType ...up...|> code_pkg_example_CompositionInterfaceWithUsage
+    code_pkg_example_CompositionInterfaceWithUsageType ...up...|> code_pkg_example_EmbeddableInterface
+    code_pkg_example_CompositionInterfaceWithUsageType ...up...> context_Context
+    code_pkg_example_CompositionInterfaceWithUsageType ...up...> _error
+    code_pkg_example_CompositionInterfaceWithUsageType ...up...> code_pkg_example_CustomString
+}
+@enduml
