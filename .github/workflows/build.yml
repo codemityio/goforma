@@ -24,13 +24,7 @@ jobs:
         uses: docker/setup-buildx-action@v4
 
       - name: Build
-        run: make build
-
-      - name: Tag
-        run: make tag
-
-      - name: Push
-        run: make push
+        run: make buildx
 
       - name: Logout
         if: always()
