@@ -1,0 +1,285 @@
+@startuml
+top to bottom direction
+skinparam package {
+    BackgroundColor #fafafa
+}
+skinparam defaulttextalignment center
+skinparam noteTextAlignment left
+package legend {
+    class "type" as legend_Type << (T, #6d8cbf) >> {}
+    class "primitive" as legend_Primitive << (P, #74b1b5) >> {}
+    class "composite" as legend_Composite << (T, #739e78) >> {}
+    class "pointer" as legend_Pointer << (T, #fa6d57) >> {}
+    class "struct" as legend_Struct << (S, #b5558d) >> {}
+    class "interface" as legend_Interface << (I, #e4f58e) >> {}
+    class "var" as legend_Var << (V, #edb4ab) >> {}
+    class "const" as legend_Const << (C, #c5bfdb) >> {}
+    class "func" as legend_Func << (F, #dbcb8f) >> {}
+    class "external" as legend_External << (T, #999999) >> {}
+    class "TypeA" as legend_TypeA << (T, #6d8cbf) >> {
+        + <b>ExportedField</b> string
+        - <font color=#1c1c1c>notExportedField</font> string
+        + <b>ExportedMethod</b> <font color=#1f38b5>(input string)</font>
+        - <font color=#1c1c1c>notExportedMethod</font> <font color=#1f38b5>(input string)</font>
+    }
+    class "TypeB" as legend_TypeB << (T, #6d8cbf) >> {
+        + <b>TypeA</b> <font color=#1f38b5>TypeA</font>
+    }
+    class "TypeC" as legend_TypeC << (T, #6d8cbf) >> {
+        <font color=#1f38b5>TypeA</font>
+    }
+    class "TypeD" as legend_TypeD << (P, #74b1b5) >> {}
+    class "string" as legend_string << (P, #74b1b5) >> {}
+    class "TypeE" as legend_TypeE << (T, #6d8cbf) >> {
+        + <b>GetTypeD</b> <font color=#1f38b5>() TypeD</font>
+    }
+    class "Interface" as legend_Interface << (I, #e4f58e) >> {
+        + <b>ExportedMethod</b> <font color=#1f38b5>(input string)</font>
+    }
+    legend_TypeB o--> legend_TypeA: Aggregation
+    legend_TypeC *--> legend_TypeA: Composition
+    legend_TypeA ..|> legend_Interface: Inheritance / Generalisation
+    legend_TypeC ..|> legend_Interface: Inheritance / Generalisation
+    legend_TypeD #..> legend_string: Type Alias or Underlying Type Link
+    legend_TypeE ..> legend_TypeD: Dependency
+}
+package "code/pkg/edge" as code_pkg_edge {
+    class "<b><font color=#1c1c1c>TypeOfCustomType</font></b>" as code_pkg_edge_TypeOfCustomType << (T, #6d8cbf) >> {
+    }
+    class "<b><font color=#1c1c1c>TypeOfExternalCustomType</font></b>" as code_pkg_edge_TypeOfExternalCustomType << (T, #6d8cbf) >> {
+        + MaxConnsPerHost <font color=#1f38b5>int64</font>
+        + MaxIdleConns <font color=#1f38b5>int64</font>
+        + MaxIdleConnsPerHost <font color=#1f38b5>int64</font>
+        + TimeoutInSeconds <font color=#1f38b5>int64</font>
+    }
+    class "<b><font color=#1c1c1c>CompositionStructWithUsageType</font></b>" as code_pkg_edge_CompositionStructWithUsageType << (S, #b5558d) >> {
+        <font color=#1f38b5>TypeOfExternalCustomType</font>
+        <font color=#1f38b5>config.TLS</font>
+        + Name <font color=#1f38b5>string</font>
+        + String <font color=#1f38b5>() (string)</font>
+        + LoadByte <font color=#1f38b5>(context.Context, []byte) (error)</font>
+        + Function <font color=#1f38b5>(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)</font>
+        + AnotherAdditionalFunction <font color=#1f38b5>(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)</font>
+    }
+    class "<b><font color=#1c1c1c>CompositionStructWithUsageTypeDefinition</font></b>" as code_pkg_edge_CompositionStructWithUsageTypeDefinition << (T, #6d8cbf) >> {
+        <font color=#1f38b5>TypeOfExternalCustomType</font>
+        <font color=#1f38b5>config.TLS</font>
+        + Name <font color=#1f38b5>string</font>
+        + Method <font color=#1f38b5>()</font>
+    }
+    class "<b><font color=#1c1c1c>CompositionStructWithUsageTypeAlias</font></b>" as code_pkg_edge_CompositionStructWithUsageTypeAlias << (T, #6d8cbf) >> {
+        <font color=#1f38b5>TypeOfExternalCustomType</font>
+        <font color=#1f38b5>config.TLS</font>
+        + Name <font color=#1f38b5>string</font>
+        + String <font color=#1f38b5>() (string)</font>
+        + LoadByte <font color=#1f38b5>(context.Context, []byte) (error)</font>
+        + Function <font color=#1f38b5>(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)</font>
+        + AnotherAdditionalFunction <font color=#1f38b5>(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)</font>
+    }
+    class "<b><font color=#1c1c1c>TransportAlias</font></b>" as code_pkg_edge_TransportAlias << (T, #6d8cbf) >> {
+        + MaxConnsPerHost <font color=#1f38b5>int64</font>
+        + MaxIdleConns <font color=#1f38b5>int64</font>
+        + MaxIdleConnsPerHost <font color=#1f38b5>int64</font>
+        + TimeoutInSeconds <font color=#1f38b5>int64</font>
+    }
+    class "<b><font color=#1c1c1c>HandlerAlias</font></b>" as code_pkg_edge_HandlerAlias << (T, #6d8cbf) >> {
+        - config <font color=#1f38b5>*Config</font>
+        - mux <font color=#1f38b5>*chi.Mux</font>
+        - operations <font color=#1f38b5>[]integration.OperationWithHandlerRegisterer</font>
+        + ServeHTTP <font color=#1f38b5>(writer http.ResponseWriter, req *http.Request)</font>
+    }
+    class "<b><font color=#1c1c1c>HandlerDefinition</font></b>" as code_pkg_edge_HandlerDefinition << (T, #6d8cbf) >> {
+        - config <font color=#1f38b5>*Config</font>
+        - mux <font color=#1f38b5>*chi.Mux</font>
+        - operations <font color=#1f38b5>[]integration.OperationWithHandlerRegisterer</font>
+    }
+    class "<b><font color=#1c1c1c>CustomStructAlias</font></b>" as code_pkg_edge_CustomStructAlias << (T, #6d8cbf) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomStructDefinition</font></b>" as code_pkg_edge_CustomStructDefinition << (T, #6d8cbf) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionWithMethodDefinition</font></b>" as code_pkg_edge_CustomFunctionWithMethodDefinition << (T, #6d8cbf) >> {
+    }
+    class "<b><font color=#1c1c1c>CustomFunctionWithMethodAlias</font></b>" as code_pkg_edge_CustomFunctionWithMethodAlias << (T, #6d8cbf) >> {
+        + String <font color=#1f38b5>() (string)</font>
+    }
+    class "<b><font color=#1c1c1c>StringAlias</font></b>" as code_pkg_edge_StringAlias << (P, #74b1b5) >> {
+    }
+}
+package "code/pkg/edge" as code_pkg_edge {
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomStringWithStructReceivingMethods" as code_pkg_app_CustomStringWithStructReceivingMethods << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/config" as .code_pkg_config {
+        class "Transport" as code_pkg_config_Transport << (S, #b5558d) >> {}
+    }
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "struct" as _struct << (S, #b5558d) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "TLS" as code_pkg_config_TLS << (S, #b5558d) >> {}
+    }
+    class "string" as _string << (P, #74b1b5) >> {}
+    class "string" as _string << (P, #74b1b5) >> {}
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "byte" as _byte << (P, #74b1b5) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomString" as code_pkg_app_CustomString << (P, #74b1b5) >> {}
+    }
+    class "byte" as _byte << (P, #74b1b5) >> {}
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomString" as code_pkg_app_CustomString << (P, #74b1b5) >> {}
+    }
+    class "byte" as _byte << (P, #74b1b5) >> {}
+    class "CompositionStructWithUsageType" as code_pkg_edge_CompositionStructWithUsageType << (T, #6d8cbf) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "TLS" as code_pkg_config_TLS << (S, #b5558d) >> {}
+    }
+    class "string" as _string << (P, #74b1b5) >> {}
+    class "CompositionStructWithUsageType" as code_pkg_edge_CompositionStructWithUsageType << (T, #6d8cbf) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "TLS" as code_pkg_config_TLS << (S, #b5558d) >> {}
+    }
+    class "string" as _string << (P, #74b1b5) >> {}
+    class "string" as _string << (P, #74b1b5) >> {}
+    package "context" as .context {
+        class "Context" as context_Context << (I, #e4f58e) >> {}
+    }
+    class "byte" as _byte << (P, #74b1b5) >> {}
+    class "error" as _error << (I, #e4f58e) >> {}
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomString" as code_pkg_app_CustomString << (P, #74b1b5) >> {}
+    }
+    class "byte" as _byte << (P, #74b1b5) >> {}
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomString" as code_pkg_app_CustomString << (P, #74b1b5) >> {}
+    }
+    class "byte" as _byte << (P, #74b1b5) >> {}
+    package "code/pkg/config" as .code_pkg_config {
+        class "Transport" as code_pkg_config_Transport << (S, #b5558d) >> {}
+    }
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    class "int64" as _int64 << (P, #74b1b5) >> {}
+    package "code/pkg/server" as .code_pkg_server {
+        class "Handler" as code_pkg_server_Handler << (S, #b5558d) >> {}
+    }
+    package "code/pkg/server" as .code_pkg_server {
+        class "Config" as code_pkg_server_Config << (S, #b5558d) >> {}
+    }
+    package "github.com/go-chi/chi/v5" as .github_com_go_chi_chi_v5 {
+        class "Mux" as github_com_go_chi_chi_v5_Mux << (S, #b5558d) >> {}
+    }
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "OperationWithHandlerRegisterer" as code_pkg_integration_OperationWithHandlerRegisterer << (I, #e4f58e) >> {}
+    }
+    package "net/http" as .net_http {
+        class "ResponseWriter" as net_http_ResponseWriter << (I, #e4f58e) >> {}
+    }
+    package "net/http" as .net_http {
+        class "Request" as net_http_Request << (S, #b5558d) >> {}
+    }
+    package "code/pkg/server" as .code_pkg_server {
+        class "Handler" as code_pkg_server_Handler << (S, #b5558d) >> {}
+    }
+    package "code/pkg/server" as .code_pkg_server {
+        class "Config" as code_pkg_server_Config << (S, #b5558d) >> {}
+    }
+    package "github.com/go-chi/chi/v5" as .github_com_go_chi_chi_v5 {
+        class "Mux" as github_com_go_chi_chi_v5_Mux << (S, #b5558d) >> {}
+    }
+    package "code/pkg/integration" as .code_pkg_integration {
+        class "OperationWithHandlerRegisterer" as code_pkg_integration_OperationWithHandlerRegisterer << (I, #e4f58e) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "Input" as code_pkg_app_Input << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "Output" as code_pkg_app_Output << (T, #739e78) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomStruct" as code_pkg_app_CustomStruct << (S, #b5558d) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "Input" as code_pkg_app_Input << (P, #74b1b5) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "Output" as code_pkg_app_Output << (T, #739e78) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomStruct" as code_pkg_app_CustomStruct << (S, #b5558d) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomFunctionWithMethod" as code_pkg_app_CustomFunctionWithMethod << (F, #739e78) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "CustomFunctionWithMethod" as code_pkg_app_CustomFunctionWithMethod << (F, #739e78) >> {}
+    }
+    package "code/pkg/app" as .code_pkg_app {
+        class "EmbeddableInterface" as code_pkg_app_EmbeddableInterface << (I, #e4f58e) >> {}
+    }
+    class "string" as _string << (P, #74b1b5) >> {}
+    class "string" as _string << (P, #74b1b5) >> {}
+}
+package "code/pkg/edge" as code_pkg_edge {
+    code_pkg_edge_TypeOfCustomType #...up...> code_pkg_app_CustomStringWithStructReceivingMethods
+    code_pkg_edge_TypeOfExternalCustomType #...up...> code_pkg_config_Transport
+    code_pkg_edge_TypeOfExternalCustomType o---up---> _int64
+    code_pkg_edge_CompositionStructWithUsageType #...up...> _struct
+    code_pkg_edge_CompositionStructWithUsageType *---up---> code_pkg_edge_TypeOfExternalCustomType
+    code_pkg_edge_CompositionStructWithUsageType *---up---> code_pkg_config_TLS
+    code_pkg_edge_CompositionStructWithUsageType o---up---> _string
+    code_pkg_edge_CompositionStructWithUsageType ...up...> _string
+    code_pkg_edge_CompositionStructWithUsageType ...up...> context_Context
+    code_pkg_edge_CompositionStructWithUsageType ...up...> _byte
+    code_pkg_edge_CompositionStructWithUsageType ...up...> _error
+    code_pkg_edge_CompositionStructWithUsageType ...up...> code_pkg_app_CustomString
+    code_pkg_edge_CompositionStructWithUsageTypeDefinition #...up...> code_pkg_edge_CompositionStructWithUsageType
+    code_pkg_edge_CompositionStructWithUsageTypeDefinition *---up---> code_pkg_edge_TypeOfExternalCustomType
+    code_pkg_edge_CompositionStructWithUsageTypeDefinition *---up---> code_pkg_config_TLS
+    code_pkg_edge_CompositionStructWithUsageTypeDefinition o---up---> _string
+    code_pkg_edge_CompositionStructWithUsageTypeAlias #...up...> code_pkg_edge_CompositionStructWithUsageType
+    code_pkg_edge_CompositionStructWithUsageTypeAlias *---up---> code_pkg_edge_TypeOfExternalCustomType
+    code_pkg_edge_CompositionStructWithUsageTypeAlias *---up---> code_pkg_config_TLS
+    code_pkg_edge_CompositionStructWithUsageTypeAlias o---up---> _string
+    code_pkg_edge_CompositionStructWithUsageTypeAlias ...up...> _string
+    code_pkg_edge_CompositionStructWithUsageTypeAlias ...up...> context_Context
+    code_pkg_edge_CompositionStructWithUsageTypeAlias ...up...> _byte
+    code_pkg_edge_CompositionStructWithUsageTypeAlias ...up...> _error
+    code_pkg_edge_CompositionStructWithUsageTypeAlias ...up...> code_pkg_app_CustomString
+    code_pkg_edge_TransportAlias #...up...> code_pkg_config_Transport
+    code_pkg_edge_TransportAlias o---up---> _int64
+    code_pkg_edge_HandlerAlias #...up...> code_pkg_server_Handler
+    code_pkg_edge_HandlerAlias o---up---> code_pkg_server_Config
+    code_pkg_edge_HandlerAlias o---up---> github_com_go_chi_chi_v5_Mux
+    code_pkg_edge_HandlerAlias o---up---> code_pkg_integration_OperationWithHandlerRegisterer
+    code_pkg_edge_HandlerAlias ...up...> net_http_ResponseWriter
+    code_pkg_edge_HandlerAlias ...up...> net_http_Request
+    code_pkg_edge_HandlerDefinition #...up...> code_pkg_server_Handler
+    code_pkg_edge_HandlerDefinition o---up---> code_pkg_server_Config
+    code_pkg_edge_HandlerDefinition o---up---> github_com_go_chi_chi_v5_Mux
+    code_pkg_edge_HandlerDefinition o---up---> code_pkg_integration_OperationWithHandlerRegisterer
+    code_pkg_edge_CustomStructAlias #...up...> code_pkg_app_Input
+    code_pkg_edge_CustomStructAlias #...up...> code_pkg_app_Output
+    code_pkg_edge_CustomStructAlias #...up...> code_pkg_app_CustomStruct
+    code_pkg_edge_CustomStructDefinition #...up...> code_pkg_app_Input
+    code_pkg_edge_CustomStructDefinition #...up...> code_pkg_app_Output
+    code_pkg_edge_CustomStructDefinition #...up...> code_pkg_app_CustomStruct
+    code_pkg_edge_CustomFunctionWithMethodDefinition #...up...> code_pkg_app_CustomFunctionWithMethod
+    code_pkg_edge_CustomFunctionWithMethodAlias #...up...> code_pkg_app_CustomFunctionWithMethod
+    code_pkg_edge_CustomFunctionWithMethodAlias ...up...|> code_pkg_app_EmbeddableInterface
+    code_pkg_edge_CustomFunctionWithMethodAlias ...up...> _string
+    code_pkg_edge_StringAlias #...up...> _string
+}
+package "code/pkg/edge" as code_pkg_edge {
+note left of code_pkg_edge_HandlerAlias::ServeHTTP
+ServeHTTP an http handler.
+
+end note
+}
+@enduml

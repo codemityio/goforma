@@ -1,0 +1,2079 @@
+{
+  "Var": [],
+  "Type": [
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 95,
+        "Line": 10,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 159,
+        "Line": 10,
+        "Column": 65
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "TypeOfCustomType",
+      "Type": {
+        "Label": "app.CustomStringWithStructReceivingMethods",
+        "Links": [
+          {
+            "Name": "CustomStringWithStructReceivingMethods",
+            "Underlying": "string",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.TypeOfCustomType",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 161,
+        "Line": 12,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 204,
+        "Line": 12,
+        "Column": 44
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "TypeOfExternalCustomType",
+      "Type": {
+        "Label": "config.Transport",
+        "Links": [
+          {
+            "Name": "Transport",
+            "Underlying": "struct{MaxConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\\\"      json:\\\"maxConnsPerHost\\\"\"; MaxIdleConns int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS\\\"          json:\\\"maxIdleConns\\\"\"; MaxIdleConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\\\" json:\\\"maxIdleConnsPerHost\\\"\"; TimeoutInSeconds int64 \"env:\\\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\\\"      json:\\\"timeoutInSeconds\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.TypeOfExternalCustomType",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "MaxConnsPerHost",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\" json:\"maxConnsPerHost\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_MAX_CONNS_PER_HOST"
+              },
+              {
+                "Name": "json",
+                "Value": "maxConnsPerHost"
+              }
+            ]
+          },
+          "Doc": ""
+        },
+        {
+          "Name": "MaxIdleConns",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_MAX_IDLE_CONNS\" json:\"maxIdleConns\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_MAX_IDLE_CONNS"
+              },
+              {
+                "Name": "json",
+                "Value": "maxIdleConns"
+              }
+            ]
+          },
+          "Doc": ""
+        },
+        {
+          "Name": "MaxIdleConnsPerHost",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\" json:\"maxIdleConnsPerHost\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST"
+              },
+              {
+                "Name": "json",
+                "Value": "maxIdleConnsPerHost"
+              }
+            ]
+          },
+          "Doc": ""
+        },
+        {
+          "Name": "TimeoutInSeconds",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\" json:\"timeoutInSeconds\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_TIMEOUT_IN_SECONDS"
+              },
+              {
+                "Name": "json",
+                "Value": "timeoutInSeconds"
+              }
+            ]
+          },
+          "Doc": ""
+        }
+      ],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 206,
+        "Line": 14,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 300,
+        "Line": 18,
+        "Column": 2
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CompositionStructWithUsageType",
+      "Type": {
+        "Label": "struct",
+        "Links": [
+          {
+            "Name": "struct",
+            "Underlying": "struct",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CompositionStructWithUsageType",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [
+        {
+          "Label": "TypeOfExternalCustomType",
+          "Links": [
+            {
+              "Name": "TypeOfExternalCustomType",
+              "Underlying": "struct{MaxConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\\\"      json:\\\"maxConnsPerHost\\\"\"; MaxIdleConns int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS\\\"          json:\\\"maxIdleConns\\\"\"; MaxIdleConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\\\" json:\\\"maxIdleConnsPerHost\\\"\"; TimeoutInSeconds int64 \"env:\\\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\\\"      json:\\\"timeoutInSeconds\\\"\"}",
+              "PackageName": "edge",
+              "PackagePath": "code/pkg/edge",
+              "PackageAlias": ""
+            }
+          ]
+        },
+        {
+          "Label": "config.TLS",
+          "Links": [
+            {
+              "Name": "TLS",
+              "Underlying": "struct{Cert string \"env:\\\"HTTP_TLS_CERT\\\"    json:\\\"cert\\\"\"; Key string \"env:\\\"HTTP_TLS_KEY\\\"     json:\\\"key\\\"\"; CACert string \"env:\\\"HTTP_TLS_CA_CERT\\\" json:\\\"caCert\\\"\"}",
+              "PackageName": "config",
+              "PackagePath": "code/pkg/config",
+              "PackageAlias": "cfg"
+            }
+          ]
+        }
+      ],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "Name",
+          "Type": {
+            "Label": "string",
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": null,
+          "Doc": ""
+        }
+      ],
+      "Methods": [
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 302,
+            "Line": 20,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 373,
+            "Line": 22,
+            "Column": 2
+          },
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 375,
+            "Line": 24,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 471,
+            "Line": 26,
+            "Column": 2
+          },
+          "Name": "LoadByte",
+          "Signature": {
+            "Label": "(context.Context, []byte) (error)",
+            "Alt": "() (error)",
+            "Arguments": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "context.Context",
+                  "Links": [
+                    {
+                      "Name": "Context",
+                      "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+                      "PackageName": "context",
+                      "PackagePath": "context",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Context",
+                "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+                "PackageName": "context",
+                "PackagePath": "context",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 473,
+            "Line": 28,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 623,
+            "Line": 30,
+            "Column": 2
+          },
+          "Name": "Function",
+          "Signature": {
+            "Label": "(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Alt": "(app.CustomString, app.CustomString, app.CustomString, []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "app",
+                "PackagePath": "code/pkg/app",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 625,
+            "Line": 32,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 792,
+            "Line": 34,
+            "Column": 2
+          },
+          "Name": "AnotherAdditionalFunction",
+          "Signature": {
+            "Label": "(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Alt": "(app.CustomString, app.CustomString, app.CustomString, []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "app",
+                "PackagePath": "code/pkg/app",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1035,
+        "Line": 41,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1111,
+        "Line": 41,
+        "Column": 77
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CompositionStructWithUsageTypeDefinition",
+      "Type": {
+        "Label": "CompositionStructWithUsageType",
+        "Links": [
+          {
+            "Name": "CompositionStructWithUsageType",
+            "Underlying": "struct{code/pkg/edge.TypeOfExternalCustomType; code/pkg/config.TLS; Name string}",
+            "PackageName": "edge",
+            "PackagePath": "code/pkg/edge",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CompositionStructWithUsageTypeDefinition",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [
+        {
+          "Label": "TypeOfExternalCustomType",
+          "Links": [
+            {
+              "Name": "TypeOfExternalCustomType",
+              "Underlying": "struct{MaxConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\\\"      json:\\\"maxConnsPerHost\\\"\"; MaxIdleConns int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS\\\"          json:\\\"maxIdleConns\\\"\"; MaxIdleConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\\\" json:\\\"maxIdleConnsPerHost\\\"\"; TimeoutInSeconds int64 \"env:\\\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\\\"      json:\\\"timeoutInSeconds\\\"\"}",
+              "PackageName": "edge",
+              "PackagePath": "code/pkg/edge",
+              "PackageAlias": ""
+            }
+          ]
+        },
+        {
+          "Label": "config.TLS",
+          "Links": [
+            {
+              "Name": "TLS",
+              "Underlying": "struct{Cert string \"env:\\\"HTTP_TLS_CERT\\\"    json:\\\"cert\\\"\"; Key string \"env:\\\"HTTP_TLS_KEY\\\"     json:\\\"key\\\"\"; CACert string \"env:\\\"HTTP_TLS_CA_CERT\\\" json:\\\"caCert\\\"\"}",
+              "PackageName": "config",
+              "PackagePath": "code/pkg/config",
+              "PackageAlias": "cfg"
+            }
+          ]
+        }
+      ],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "Name",
+          "Type": {
+            "Label": "string",
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": null,
+          "Doc": ""
+        }
+      ],
+      "Methods": [
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 1113,
+            "Line": 43,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 1175,
+            "Line": 43,
+            "Column": 63
+          },
+          "Name": "Method",
+          "Signature": {
+            "Label": "()",
+            "Alt": "()",
+            "Arguments": [],
+            "Returns": [],
+            "Links": []
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1372,
+        "Line": 49,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1445,
+        "Line": 49,
+        "Column": 74
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CompositionStructWithUsageTypeAlias",
+      "Type": {
+        "Label": "CompositionStructWithUsageType",
+        "Links": [
+          {
+            "Name": "CompositionStructWithUsageType",
+            "Underlying": "struct{code/pkg/edge.TypeOfExternalCustomType; code/pkg/config.TLS; Name string}",
+            "PackageName": "edge",
+            "PackagePath": "code/pkg/edge",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CompositionStructWithUsageTypeAlias",
+      "IsTypeAlias": true,
+      "Interfaces": [],
+      "Embedded": [
+        {
+          "Label": "TypeOfExternalCustomType",
+          "Links": [
+            {
+              "Name": "TypeOfExternalCustomType",
+              "Underlying": "struct{MaxConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\\\"      json:\\\"maxConnsPerHost\\\"\"; MaxIdleConns int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS\\\"          json:\\\"maxIdleConns\\\"\"; MaxIdleConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\\\" json:\\\"maxIdleConnsPerHost\\\"\"; TimeoutInSeconds int64 \"env:\\\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\\\"      json:\\\"timeoutInSeconds\\\"\"}",
+              "PackageName": "edge",
+              "PackagePath": "code/pkg/edge",
+              "PackageAlias": ""
+            }
+          ]
+        },
+        {
+          "Label": "config.TLS",
+          "Links": [
+            {
+              "Name": "TLS",
+              "Underlying": "struct{Cert string \"env:\\\"HTTP_TLS_CERT\\\"    json:\\\"cert\\\"\"; Key string \"env:\\\"HTTP_TLS_KEY\\\"     json:\\\"key\\\"\"; CACert string \"env:\\\"HTTP_TLS_CA_CERT\\\" json:\\\"caCert\\\"\"}",
+              "PackageName": "config",
+              "PackagePath": "code/pkg/config",
+              "PackageAlias": "cfg"
+            }
+          ]
+        }
+      ],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "Name",
+          "Type": {
+            "Label": "string",
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": null,
+          "Doc": ""
+        }
+      ],
+      "Methods": [
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 302,
+            "Line": 20,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 373,
+            "Line": 22,
+            "Column": 2
+          },
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 375,
+            "Line": 24,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 471,
+            "Line": 26,
+            "Column": 2
+          },
+          "Name": "LoadByte",
+          "Signature": {
+            "Label": "(context.Context, []byte) (error)",
+            "Alt": "() (error)",
+            "Arguments": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "context.Context",
+                  "Links": [
+                    {
+                      "Name": "Context",
+                      "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+                      "PackageName": "context",
+                      "PackagePath": "context",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "error",
+                  "Links": [
+                    {
+                      "Name": "error",
+                      "Underlying": "interface{Error() string}",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "Context",
+                "Underlying": "interface{Deadline() (deadline time.Time, ok bool); Done() \u003c-chan struct{}; Err() error; Value(key any) any}",
+                "PackageName": "context",
+                "PackagePath": "context",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "error",
+                "Underlying": "interface{Error() string}",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 473,
+            "Line": 28,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 623,
+            "Line": 30,
+            "Column": 2
+          },
+          "Name": "Function",
+          "Signature": {
+            "Label": "(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Alt": "(app.CustomString, app.CustomString, app.CustomString, []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "app",
+                "PackagePath": "code/pkg/app",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        },
+        {
+          "FilePath": "pkg/edge/type.go",
+          "Start": {
+            "Offset": 625,
+            "Line": 32,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 792,
+            "Line": 34,
+            "Column": 2
+          },
+          "Name": "AnotherAdditionalFunction",
+          "Signature": {
+            "Label": "(_ app.CustomString, _ app.CustomString, _ app.CustomString, d []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Alt": "(app.CustomString, app.CustomString, app.CustomString, []byte) (e app.CustomString, f app.CustomString, g app.CustomString, h []byte)",
+            "Arguments": [
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "_",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "d",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [
+              {
+                "Name": "e",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "f",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "g",
+                "Type": {
+                  "Label": "app.CustomString",
+                  "Links": [
+                    {
+                      "Name": "CustomString",
+                      "Underlying": "string",
+                      "PackageName": "app",
+                      "PackagePath": "code/pkg/app",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "h",
+                "Type": {
+                  "Label": "[]byte",
+                  "Links": [
+                    {
+                      "Name": "byte",
+                      "Underlying": "byte",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "CustomString",
+                "Underlying": "string",
+                "PackageName": "app",
+                "PackagePath": "code/pkg/app",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "byte",
+                "Underlying": "byte",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1447,
+        "Line": 51,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1482,
+        "Line": 51,
+        "Column": 36
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "TransportAlias",
+      "Type": {
+        "Label": "config.Transport",
+        "Links": [
+          {
+            "Name": "Transport",
+            "Underlying": "struct{MaxConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\\\"      json:\\\"maxConnsPerHost\\\"\"; MaxIdleConns int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS\\\"          json:\\\"maxIdleConns\\\"\"; MaxIdleConnsPerHost int64 \"env:\\\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\\\" json:\\\"maxIdleConnsPerHost\\\"\"; TimeoutInSeconds int64 \"env:\\\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\\\"      json:\\\"timeoutInSeconds\\\"\"}",
+            "PackageName": "config",
+            "PackagePath": "code/pkg/config",
+            "PackageAlias": "cfg"
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.TransportAlias",
+      "IsTypeAlias": true,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "MaxConnsPerHost",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_MAX_CONNS_PER_HOST\" json:\"maxConnsPerHost\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_MAX_CONNS_PER_HOST"
+              },
+              {
+                "Name": "json",
+                "Value": "maxConnsPerHost"
+              }
+            ]
+          },
+          "Doc": ""
+        },
+        {
+          "Name": "MaxIdleConns",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_MAX_IDLE_CONNS\" json:\"maxIdleConns\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_MAX_IDLE_CONNS"
+              },
+              {
+                "Name": "json",
+                "Value": "maxIdleConns"
+              }
+            ]
+          },
+          "Doc": ""
+        },
+        {
+          "Name": "MaxIdleConnsPerHost",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST\" json:\"maxIdleConnsPerHost\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_MAX_IDLE_CONNS_PER_HOST"
+              },
+              {
+                "Name": "json",
+                "Value": "maxIdleConnsPerHost"
+              }
+            ]
+          },
+          "Doc": ""
+        },
+        {
+          "Name": "TimeoutInSeconds",
+          "Type": {
+            "Label": "int64",
+            "Links": [
+              {
+                "Name": "int64",
+                "Underlying": "int64",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": true,
+          "Tags": {
+            "Label": "`env:\"HTTP_TRANSPORT_TIMEOUT_IN_SECONDS\" json:\"timeoutInSeconds\"`",
+            "Tags": [
+              {
+                "Name": "env",
+                "Value": "HTTP_TRANSPORT_TIMEOUT_IN_SECONDS"
+              },
+              {
+                "Name": "json",
+                "Value": "timeoutInSeconds"
+              }
+            ]
+          },
+          "Doc": ""
+        }
+      ],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1484,
+        "Line": 53,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1518,
+        "Line": 53,
+        "Column": 35
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "HandlerAlias",
+      "Type": {
+        "Label": "server.Handler",
+        "Links": [
+          {
+            "Name": "Handler",
+            "Underlying": "struct{config *code/pkg/server.Config; mux *github.com/go-chi/chi/v5.Mux; operations []code/pkg/integration.OperationWithHandlerRegisterer}",
+            "PackageName": "server",
+            "PackagePath": "code/pkg/server",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.HandlerAlias",
+      "IsTypeAlias": true,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "config",
+          "Type": {
+            "Label": "*Config",
+            "Links": [
+              {
+                "Name": "Config",
+                "Underlying": "struct{Title string \"env:\\\"HUMA_TITLE\\\"          json:\\\"title\\\"\"; Version string \"env:\\\"HUMA_VERSION\\\"        json:\\\"version\\\"\"; OpenAPIPath string \"env:\\\"HUMA_OPEN_API_PATH\\\"  json:\\\"openApiPath\\\"\"; DocsPath string \"env:\\\"HUMA_DOCS_PATH\\\"      json:\\\"docsPath\\\"\"; SchemasPath string \"env:\\\"HUMA_SCHEMAS_PATH\\\"   json:\\\"schemasPath\\\"\"; DefaultFormat string \"env:\\\"HUMA_DEFAULT_FORMAT\\\" json:\\\"defaultFormat\\\"\"}",
+                "PackageName": "server",
+                "PackagePath": "code/pkg/server",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Tags": null,
+          "Doc": ""
+        },
+        {
+          "Name": "mux",
+          "Type": {
+            "Label": "*chi.Mux",
+            "Links": [
+              {
+                "Name": "Mux",
+                "Underlying": "struct{handler net/http.Handler; tree *github.com/go-chi/chi/v5.node; methodNotAllowedHandler net/http.HandlerFunc; parent *github.com/go-chi/chi/v5.Mux; pool *sync.Pool; notFoundHandler net/http.HandlerFunc; middlewares []func(net/http.Handler) net/http.Handler; inline bool}",
+                "PackageName": "chi",
+                "PackagePath": "github.com/go-chi/chi/v5",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Tags": null,
+          "Doc": ""
+        },
+        {
+          "Name": "operations",
+          "Type": {
+            "Label": "[]integration.OperationWithHandlerRegisterer",
+            "Links": [
+              {
+                "Name": "OperationWithHandlerRegisterer",
+                "Underlying": "interface{Register(api github.com/danielgtaylor/huma/v2.API)}",
+                "PackageName": "integration",
+                "PackagePath": "code/pkg/integration",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Tags": null,
+          "Doc": ""
+        }
+      ],
+      "Methods": [
+        {
+          "FilePath": "pkg/server/handler.go",
+          "Start": {
+            "Offset": 307,
+            "Line": 19,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 415,
+            "Line": 21,
+            "Column": 2
+          },
+          "Name": "ServeHTTP",
+          "Signature": {
+            "Label": "(writer http.ResponseWriter, req *http.Request)",
+            "Alt": "(http.ResponseWriter, *http.Request)",
+            "Arguments": [
+              {
+                "Name": "writer",
+                "Type": {
+                  "Label": "http.ResponseWriter",
+                  "Links": [
+                    {
+                      "Name": "ResponseWriter",
+                      "Underlying": "interface{Header() net/http.Header; Write([]byte) (int, error); WriteHeader(statusCode int)}",
+                      "PackageName": "http",
+                      "PackagePath": "net/http",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "req",
+                "Type": {
+                  "Label": "*http.Request",
+                  "Links": [
+                    {
+                      "Name": "Request",
+                      "Underlying": "struct{Method string; URL *net/url.URL; Proto string; ProtoMajor int; ProtoMinor int; Header net/http.Header; Body io.ReadCloser; GetBody func() (io.ReadCloser, error); ContentLength int64; TransferEncoding []string; Close bool; Host string; Form net/url.Values; PostForm net/url.Values; MultipartForm *mime/multipart.Form; Trailer net/http.Header; RemoteAddr string; RequestURI string; TLS *crypto/tls.ConnectionState; Cancel \u003c-chan struct{}; Response *net/http.Response; Pattern string; ctx context.Context; pat *net/http.pattern; matches []string; otherValues map[string]string}",
+                      "PackageName": "http",
+                      "PackagePath": "net/http",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Returns": [],
+            "Links": [
+              {
+                "Name": "ResponseWriter",
+                "Underlying": "interface{Header() net/http.Header; Write([]byte) (int, error); WriteHeader(statusCode int)}",
+                "PackageName": "http",
+                "PackagePath": "net/http",
+                "PackageAlias": ""
+              },
+              {
+                "Name": "Request",
+                "Underlying": "struct{Method string; URL *net/url.URL; Proto string; ProtoMajor int; ProtoMinor int; Header net/http.Header; Body io.ReadCloser; GetBody func() (io.ReadCloser, error); ContentLength int64; TransferEncoding []string; Close bool; Host string; Form net/url.Values; PostForm net/url.Values; MultipartForm *mime/multipart.Form; Trailer net/http.Header; RemoteAddr string; RequestURI string; TLS *crypto/tls.ConnectionState; Cancel \u003c-chan struct{}; Response *net/http.Response; Pattern string; ctx context.Context; pat *net/http.pattern; matches []string; otherValues map[string]string}",
+                "PackageName": "http",
+                "PackagePath": "net/http",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": "ServeHTTP an http handler.\n"
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1520,
+        "Line": 55,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1557,
+        "Line": 55,
+        "Column": 38
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "HandlerDefinition",
+      "Type": {
+        "Label": "server.Handler",
+        "Links": [
+          {
+            "Name": "Handler",
+            "Underlying": "struct{config *code/pkg/server.Config; mux *github.com/go-chi/chi/v5.Mux; operations []code/pkg/integration.OperationWithHandlerRegisterer}",
+            "PackageName": "server",
+            "PackagePath": "code/pkg/server",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.HandlerDefinition",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [
+        {
+          "Name": "config",
+          "Type": {
+            "Label": "*Config",
+            "Links": [
+              {
+                "Name": "Config",
+                "Underlying": "struct{Title string \"env:\\\"HUMA_TITLE\\\"          json:\\\"title\\\"\"; Version string \"env:\\\"HUMA_VERSION\\\"        json:\\\"version\\\"\"; OpenAPIPath string \"env:\\\"HUMA_OPEN_API_PATH\\\"  json:\\\"openApiPath\\\"\"; DocsPath string \"env:\\\"HUMA_DOCS_PATH\\\"      json:\\\"docsPath\\\"\"; SchemasPath string \"env:\\\"HUMA_SCHEMAS_PATH\\\"   json:\\\"schemasPath\\\"\"; DefaultFormat string \"env:\\\"HUMA_DEFAULT_FORMAT\\\" json:\\\"defaultFormat\\\"\"}",
+                "PackageName": "server",
+                "PackagePath": "code/pkg/server",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Tags": null,
+          "Doc": ""
+        },
+        {
+          "Name": "mux",
+          "Type": {
+            "Label": "*chi.Mux",
+            "Links": [
+              {
+                "Name": "Mux",
+                "Underlying": "struct{handler net/http.Handler; tree *github.com/go-chi/chi/v5.node; methodNotAllowedHandler net/http.HandlerFunc; parent *github.com/go-chi/chi/v5.Mux; pool *sync.Pool; notFoundHandler net/http.HandlerFunc; middlewares []func(net/http.Handler) net/http.Handler; inline bool}",
+                "PackageName": "chi",
+                "PackagePath": "github.com/go-chi/chi/v5",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Tags": null,
+          "Doc": ""
+        },
+        {
+          "Name": "operations",
+          "Type": {
+            "Label": "[]integration.OperationWithHandlerRegisterer",
+            "Links": [
+              {
+                "Name": "OperationWithHandlerRegisterer",
+                "Underlying": "interface{Register(api github.com/danielgtaylor/huma/v2.API)}",
+                "PackageName": "integration",
+                "PackagePath": "code/pkg/integration",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsExported": false,
+          "Tags": null,
+          "Doc": ""
+        }
+      ],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1559,
+        "Line": 57,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1623,
+        "Line": 57,
+        "Column": 65
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CustomStructAlias",
+      "Type": {
+        "Label": "app.CustomStruct[app.Input, app.Output]",
+        "Links": [
+          {
+            "Name": "Input",
+            "Underlying": "string",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "Output",
+            "Underlying": "[]byte",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "CustomStruct",
+            "Underlying": "struct{}",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CustomStructAlias",
+      "IsTypeAlias": true,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1625,
+        "Line": 59,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1692,
+        "Line": 59,
+        "Column": 68
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CustomStructDefinition",
+      "Type": {
+        "Label": "app.CustomStruct[app.Input, app.Output]",
+        "Links": [
+          {
+            "Name": "Input",
+            "Underlying": "string",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "Output",
+            "Underlying": "[]byte",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          },
+          {
+            "Name": "CustomStruct",
+            "Underlying": "struct{}",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CustomStructDefinition",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1694,
+        "Line": 61,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1762,
+        "Line": 61,
+        "Column": 69
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CustomFunctionWithMethodDefinition",
+      "Type": {
+        "Label": "app.CustomFunctionWithMethod",
+        "Links": [
+          {
+            "Name": "CustomFunctionWithMethod",
+            "Underlying": "func()",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CustomFunctionWithMethodDefinition",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1764,
+        "Line": 63,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1829,
+        "Line": 63,
+        "Column": 66
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "CustomFunctionWithMethodAlias",
+      "Type": {
+        "Label": "app.CustomFunctionWithMethod",
+        "Links": [
+          {
+            "Name": "CustomFunctionWithMethod",
+            "Underlying": "func()",
+            "PackageName": "app",
+            "PackagePath": "code/pkg/app",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.CustomFunctionWithMethodAlias",
+      "IsTypeAlias": true,
+      "Interfaces": [
+        {
+          "Name": "EmbeddableInterface",
+          "PackageName": "app",
+          "PackagePath": "code/pkg/app"
+        }
+      ],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [
+        {
+          "FilePath": "pkg/app/type.go",
+          "Start": {
+            "Offset": 785,
+            "Line": 50,
+            "Column": 1
+          },
+          "End": {
+            "Offset": 850,
+            "Line": 52,
+            "Column": 2
+          },
+          "Name": "String",
+          "Signature": {
+            "Label": "() (string)",
+            "Alt": "() (string)",
+            "Arguments": [],
+            "Returns": [
+              {
+                "Name": "",
+                "Type": {
+                  "Label": "string",
+                  "Links": [
+                    {
+                      "Name": "string",
+                      "Underlying": "string",
+                      "PackageName": "",
+                      "PackagePath": "",
+                      "PackageAlias": ""
+                    }
+                  ]
+                }
+              }
+            ],
+            "Links": [
+              {
+                "Name": "string",
+                "Underlying": "string",
+                "PackageName": "",
+                "PackagePath": "",
+                "PackageAlias": ""
+              }
+            ]
+          },
+          "IsPointerReceiver": true,
+          "IsExported": true,
+          "Doc": ""
+        }
+      ],
+      "IsExported": true,
+      "Doc": ""
+    },
+    {
+      "FilePath": "pkg/edge/type.go",
+      "Start": {
+        "Offset": 1831,
+        "Line": 65,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 1856,
+        "Line": 65,
+        "Column": 26
+      },
+      "PackageName": "edge",
+      "PackagePath": "code/pkg/edge",
+      "Name": "StringAlias",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/edge.StringAlias",
+      "IsTypeAlias": true,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    }
+  ],
+  "Func": [],
+  "Const": []
+}

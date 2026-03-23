@@ -1,0 +1,44 @@
+{
+  "Var": [],
+  "Type": [
+    {
+      "FilePath": "pkg/custom/type.go",
+      "Start": {
+        "Offset": 16,
+        "Line": 3,
+        "Column": 1
+      },
+      "End": {
+        "Offset": 34,
+        "Line": 3,
+        "Column": 19
+      },
+      "PackageName": "custom",
+      "PackagePath": "code/pkg/custom",
+      "Name": "String",
+      "Type": {
+        "Label": "string",
+        "Links": [
+          {
+            "Name": "string",
+            "Underlying": "string",
+            "PackageName": "",
+            "PackagePath": "",
+            "PackageAlias": ""
+          }
+        ]
+      },
+      "TypeInfo": "code/pkg/custom.String",
+      "IsTypeAlias": false,
+      "Interfaces": [],
+      "Embedded": [],
+      "Params": null,
+      "Fields": [],
+      "Methods": [],
+      "IsExported": true,
+      "Doc": ""
+    }
+  ],
+  "Func": [],
+  "Const": []
+}
