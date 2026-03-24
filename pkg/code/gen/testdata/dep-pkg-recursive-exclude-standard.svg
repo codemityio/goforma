@@ -162,8 +162,8 @@
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma -->
 <g id="node13" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="564.12,-318 32.12,-318 32.12,-322 20.12,-322 20.12,-282 564.12,-282 564.12,-318"/>
-<polyline fill="none" stroke="#949494" points="20.12,-318 32.12,-318"/>
+<polygon fill="#fcfcfc" stroke="#949494" points="564.12,-318 32.13,-318 32.13,-322 20.12,-322 20.12,-282 564.12,-282 564.12,-318"/>
+<polyline fill="none" stroke="#949494" points="20.12,-318 32.13,-318"/>
 <text text-anchor="middle" x="292.12" y="-295.32" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/danielgtaylor/huma/v2 -->

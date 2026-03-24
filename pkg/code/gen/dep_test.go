@@ -57,15 +57,12 @@ func TestDefaultDepGraphGenerator_Generate(t *testing.T) {
 
 			assert.Equal(t, tt.result, result)
 
-			err = os.WriteFile(tt.writePath, []byte(result), 0o644)
-			require.NoError(t, err)
+			require.NoError(t, os.WriteFile(tt.writePath, []byte(result), 0o644)) // #nosec G306
 		})
 	}
 }
 
 func TestStrokeColour(t *testing.T) {
-	g := &DefaultDepGraphGenerator{}
-
 	tests := []struct {
 		name     string
 		pkg      *imports.Package
@@ -110,14 +107,14 @@ func TestStrokeColour(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			g := &DefaultDepGraphGenerator{}
+
 			assert.Equal(t, tt.expected, g.strokeColour(tt.pkg))
 		})
 	}
 }
 
 func TestFillColour(t *testing.T) {
-	g := &DefaultDepGraphGenerator{}
-
 	tests := []struct {
 		name     string
 		pkg      *imports.Package
@@ -162,6 +159,8 @@ func TestFillColour(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			g := &DefaultDepGraphGenerator{}
+
 			assert.Equal(t, tt.expected, g.fillColour(tt.pkg))
 		})
 	}

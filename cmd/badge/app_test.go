@@ -2,9 +2,9 @@ package badge
 
 import (
 	"flag"
-	"fmt"
 	"os"
 	"path/filepath"
+	"strconv"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -68,9 +68,9 @@ func TestSanitizePath(t *testing.T) {
 }
 
 func TestCoverageFunction(t *testing.T) {
-	setupFiles := func(covContent, docContent string) (covPath, docPath string) {
-		covPath = "testdata/coverage.txt"
-		docPath = "testdata/README.md"
+	setupFiles := func(covContent, docContent string) (string, string) {
+		covPath := "testdata/coverage.txt"
+		docPath := "testdata/README.md"
 
 		require.NoError(t, os.WriteFile(covPath, []byte(covContent), 0o600))
 		require.NoError(t, os.WriteFile(docPath, []byte(docContent), 0o600))
@@ -174,6 +174,7 @@ Test file
 			coverageCmd := app.Commands[0]
 
 			fs := flag.NewFlagSet("coverage", flag.ContinueOnError)
+
 			for _, f := range coverageCmd.Flags {
 				switch v := f.(type) {
 				case *cli.StringFlag:
@@ -186,12 +187,12 @@ Test file
 			c := cli.NewContext(app, fs, nil)
 
 			require.NoError(t, c.Set("cov-file-path", "testdata/coverage.txt"))
-			require.NoError(t, c.Set("minimum", fmt.Sprintf("%d", tt.minimum)))
+			require.NoError(t, c.Set("minimum", strconv.FormatInt(tt.minimum, 10)))
 
 			require.ErrorIs(t, coverage(c), tt.wantErr)
 
 			// Check if document updated
-			updated, rErr := os.ReadFile(docPath)
+			updated, rErr := os.ReadFile(docPath) // #nosec G304
 			require.NoError(t, rErr)
 
 			assert.Equal(t, tt.expectUpdate, string(updated))

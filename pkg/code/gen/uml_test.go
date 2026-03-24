@@ -218,8 +218,7 @@ func TestDefaultUMLGraphGenerator_Generate(t *testing.T) {
 
 			assert.Equal(t, test.result, result)
 
-			err = os.WriteFile(test.writePath, []byte(result), 0o644)
-			require.NoError(t, err)
+			require.NoError(t, os.WriteFile(test.writePath, []byte(result), 0o644)) // #nosec G306
 		})
 	}
 }
