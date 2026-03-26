@@ -291,8 +291,8 @@
 <!-- golang.org/x/tools/internal/stdlib -->
 <g id="node24" class="node">
 <title>golang.org/x/tools/internal/stdlib</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="307.88,-130 97.62,-130 97.62,-134 85.62,-134 85.62,-94 307.88,-94 307.88,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="85.62,-130 97.62,-130"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="307.88,-130 97.63,-130 97.63,-134 85.62,-134 85.62,-94 307.88,-94 307.88,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="85.62,-130 97.63,-130"/>
 <text text-anchor="middle" x="196.75" y="-107.33" font-family="Courier New" font-size="14.00">golang.org/x/tools/stdlib</text>
 </g>
 <!-- golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/internal/stdlib -->

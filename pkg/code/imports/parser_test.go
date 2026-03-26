@@ -212,8 +212,6 @@ func TestDefaultParser_Parse(t *testing.T) {
 
 	// Iterate over test cases
 	for _, test := range tests {
-		test := test
-
 		t.Run(test.name, func(t *testing.T) {
 			parser := New(
 				WithRootPath(wd+"/testdata/code"),
@@ -233,7 +231,7 @@ func TestDefaultParser_Parse(t *testing.T) {
 
 			assert.JSONEq(t, test.expectedResult, string(result))
 
-			require.NoError(t, os.WriteFile(test.writePath, result, 0o644))
+			require.NoError(t, os.WriteFile(test.writePath, result, 0o644)) // #nosec G306
 		})
 	}
 }

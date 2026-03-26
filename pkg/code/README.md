@@ -33,13 +33,13 @@ Contains diagram generators for both imports and **UML**.
 
 #### Dependency graph
 
-The following are examples of a dependency graph.
+The following is an examples of a dependency graph.
 
 ![](gen/testdata/dep-pkg-recursive.svg) ![](gen/testdata/dep-pkg-recursive-exclude-standard.svg)
 
 #### UML graph
 
-The following are examples of an **UML** diagram generated from the test code.
+The following is an examples of a **UML** diagram generated from the test code.
 
 ![](gen/testdata/uml-pkg-app.svg) ![](gen/testdata/uml-pkg-recursive.svg)
 
@@ -49,7 +49,7 @@ Contains a tool to export dependency graph. It can be used to generate dependenc
 
 ### `parser`
 
-Contains a tool to parse a code and build a tree of relations. It can be used to generate an **UML** diagram.
+Contains a tool to parse a code and build a tree of relations. It can be used to generate a **UML** diagram.
 
 ## Dependencies
 
