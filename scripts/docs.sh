@@ -29,7 +29,7 @@ case "$1" in
 #      -w "${PWD}" \
 #      -v "${PWD}:${PWD}" \
 #      "${VENDOR}"/notatio:latest plantuml --input-path="pkg/${target}/graph.puml" --output-format=svg
-  done
+#  done
   ;;
 
 "depgraph")
