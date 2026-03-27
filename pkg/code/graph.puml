@@ -213,6 +213,7 @@ package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio
         - dedupeSliceOfMethods <font color=#1f38b5>(input []*Method) ([]*Method)</font>
         - dedupeSliceOfTypeDesc <font color=#1f38b5>(input []*TypeDesc) ([]*TypeDesc)</font>
         - getDoc <font color=#1f38b5>(doc *ast.CommentGroup) (string)</font>
+        - normalizeRootPath <font color=#1f38b5>(filename string) (string, error)</font>
     }
     class "<b><font color=#1c1c1c>Option</font></b>" as github_com_codemityio_goforma_pkg_code_parser_Option << (F, #739e78) >> {
     }
@@ -349,6 +350,7 @@ package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio
     }
     class "<b><font color=#1c1c1c>ErrPkg</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrPkg << (V, #edb4ab) >> {}
     class "<b><font color=#1c1c1c>ErrPkgLoad</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrPkgLoad << (V, #edb4ab) >> {}
+    class "<b><font color=#1c1c1c>ErrRootPathNormalise</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrRootPathNormalise << (V, #edb4ab) >> {}
     class "<b><font color=#1c1c1c>ErrGetRelPath</font></b>" as github_com_codemityio_goforma_pkg_code_parser_ErrGetRelPath << (V, #edb4ab) >> {}
     class "<font color=#1c1c1c>selectorPartsLimit</font>" as github_com_codemityio_goforma_pkg_code_parser_selectorPartsLimit << (C, #c5bfdb) >> {}
     class "<b><font color=#1c1c1c>New</font></b><font color=#1f38b5>(options ...Option) (*DefaultParser)</font>" as github_com_codemityio_goforma_pkg_code_parser_New << (F, #dbcb8f) >> {}
@@ -574,6 +576,7 @@ package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio
     package "go/ast" as .go_ast {
         class "CommentGroup" as go_ast_CommentGroup << (S, #b5558d) >> {}
     }
+    class "error" as _error << (I, #e4f58e) >> {}
     class "func(p *DefaultParser)" as github_com_codemityio_goforma_pkg_code_parser_func_p__DefaultParser_ << (F, #739e78) >> {}
     class "struct" as _struct << (S, #b5558d) >> {}
     class "struct" as _struct << (S, #b5558d) >> {}
@@ -600,6 +603,7 @@ package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio
     class "T" as github_com_codemityio_goforma_pkg_code_parser_T << (T, #fa6d57) >> {}
     class "F" as github_com_codemityio_goforma_pkg_code_parser_F << (T, #fa6d57) >> {}
     class "C" as github_com_codemityio_goforma_pkg_code_parser_C << (T, #fa6d57) >> {}
+    class "error" as error << (I, #e4f58e) >> {}
     class "error" as error << (I, #e4f58e) >> {}
     class "error" as error << (I, #e4f58e) >> {}
     class "error" as error << (I, #e4f58e) >> {}
@@ -780,6 +784,7 @@ package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio
     github_com_codemityio_goforma_pkg_code_parser_CodeMap o---up---> github_com_codemityio_goforma_pkg_code_parser_C
     github_com_codemityio_goforma_pkg_code_parser_ErrPkg ...up...|> error
     github_com_codemityio_goforma_pkg_code_parser_ErrPkgLoad ...up...|> error
+    github_com_codemityio_goforma_pkg_code_parser_ErrRootPathNormalise ...up...|> error
     github_com_codemityio_goforma_pkg_code_parser_ErrGetRelPath ...up...|> error
     github_com_codemityio_goforma_pkg_code_parser_New ....up....> github_com_codemityio_goforma_pkg_code_parser_Option
     github_com_codemityio_goforma_pkg_code_parser_New ....up....> github_com_codemityio_goforma_pkg_code_parser_DefaultParser

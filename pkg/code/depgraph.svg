@@ -8,373 +8,373 @@
  viewBox="0.00 0.00 2487.18 816.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 802.4)">
 <title>DepGraph</title>
-<polygon fill="white" stroke="none" points="-14.4,14.4 -14.4,-802.4 2472.78,-802.4 2472.78,14.4 -14.4,14.4"/>
+<polygon fill="white" stroke="none" points="-14,14 -14,-802 2473,-802 2473,14 -14,14"/>
 <!-- github.com/codemityio/goforma/pkg/code/doc -->
 <g id="node1" class="node">
 <title>github.com/codemityio/goforma/pkg/code/doc</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="851,-600 500.5,-600 500.5,-604 488.5,-604 488.5,-564 851,-564 851,-600"/>
-<polyline fill="none" stroke="#949494" points="488.5,-600 500.5,-600"/>
-<text text-anchor="middle" x="669.75" y="-577.33" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/doc</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="851,-600 501,-600 501,-604 489,-604 489,-564 851,-564 851,-600"/>
+<polyline fill="none" stroke="#949494" points="489,-600 501,-600"/>
+<text text-anchor="middle" x="670" y="-577" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/doc</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/gen -->
 <g id="node2" class="node">
 <title>github.com/codemityio/goforma/pkg/code/gen</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="625,-788 274.5,-788 274.5,-792 262.5,-792 262.5,-752 625,-752 625,-788"/>
-<polyline fill="none" stroke="#949494" points="262.5,-788 274.5,-788"/>
-<text text-anchor="middle" x="443.75" y="-765.33" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/gen</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="625,-788 275,-788 275,-792 263,-792 263,-752 625,-752 625,-788"/>
+<polyline fill="none" stroke="#949494" points="263,-788 275,-788"/>
+<text text-anchor="middle" x="444" y="-765" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/gen</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports -->
 <g id="node3" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="395.5,-694 12,-694 12,-698 0,-698 0,-658 395.5,-658 395.5,-694"/>
+<polygon fill="#fcfcfc" stroke="#949494" points="396,-694 12,-694 12,-698 0,-698 0,-658 396,-658 396,-694"/>
 <polyline fill="none" stroke="#949494" points="0,-694 12,-694"/>
-<text text-anchor="middle" x="197.75" y="-671.33" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports</text>
+<text text-anchor="middle" x="198" y="-671" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/gen&#45;&gt;github.com/codemityio/goforma/pkg/code/imports -->
 <g id="edge1" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/gen&#45;&gt;github.com/codemityio/goforma/pkg/code/imports</title>
-<path fill="none" stroke="#a8a8a8" d="M329,-751.88C329,-751.88 329,-701.9 329,-701.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="331.1,-701.9 329,-695.9 326.9,-701.9 331.1,-701.9"/>
+<path fill="none" stroke="#a8a8a8" d="M329,-752C329,-752 329,-702 329,-702"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="331,-702 329,-696 327,-702 331,-702"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/parser -->
 <g id="node4" class="node">
 <title>github.com/codemityio/goforma/pkg/code/parser</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="883.38,-694 508.12,-694 508.12,-698 496.12,-698 496.12,-658 883.38,-658 883.38,-694"/>
-<polyline fill="none" stroke="#949494" points="496.12,-694 508.12,-694"/>
-<text text-anchor="middle" x="689.75" y="-671.33" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/parser</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="883,-694 508,-694 508,-698 496,-698 496,-658 883,-658 883,-694"/>
+<polyline fill="none" stroke="#949494" points="496,-694 508,-694"/>
+<text text-anchor="middle" x="690" y="-671" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/parser</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/gen&#45;&gt;github.com/codemityio/goforma/pkg/code/parser -->
 <g id="edge2" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/gen&#45;&gt;github.com/codemityio/goforma/pkg/code/parser</title>
-<path fill="none" stroke="#a8a8a8" d="M560.56,-751.88C560.56,-751.88 560.56,-701.9 560.56,-701.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="562.66,-701.9 560.56,-695.9 558.46,-701.9 562.66,-701.9"/>
+<path fill="none" stroke="#a8a8a8" d="M561,-752C561,-752 561,-702 561,-702"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="563,-702 561,-696 558,-702 563,-702"/>
 </g>
 <!-- golang.org/x/tools/go/packages -->
 <g id="node5" class="node">
 <title>golang.org/x/tools/go/packages</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="368.5,-600 117,-600 117,-604 105,-604 105,-564 368.5,-564 368.5,-600"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="369,-600 117,-600 117,-604 105,-604 105,-564 369,-564 369,-600"/>
 <polyline fill="none" stroke="#a6a6a6" points="105,-600 117,-600"/>
-<text text-anchor="middle" x="236.75" y="-577.33" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/packages</text>
+<text text-anchor="middle" x="237" y="-577" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/packages</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports&#45;&gt;golang.org/x/tools/go/packages -->
 <g id="edge3" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports&#45;&gt;golang.org/x/tools/go/packages</title>
-<path fill="none" stroke="#a8a8a8" d="M236.75,-657.88C236.75,-657.88 236.75,-607.9 236.75,-607.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="238.85,-607.9 236.75,-601.9 234.65,-607.9 238.85,-607.9"/>
+<path fill="none" stroke="#a8a8a8" d="M237,-658C237,-658 237,-608 237,-608"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="239,-608 237,-602 235,-608 239,-608"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/parser&#45;&gt;github.com/codemityio/goforma/pkg/code/doc -->
 <g id="edge4" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/parser&#45;&gt;github.com/codemityio/goforma/pkg/code/doc</title>
-<path fill="none" stroke="#a8a8a8" d="M673.56,-657.88C673.56,-657.88 673.56,-607.9 673.56,-607.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="675.66,-607.9 673.56,-601.9 671.46,-607.9 675.66,-607.9"/>
+<path fill="none" stroke="#a8a8a8" d="M674,-658C674,-658 674,-608 674,-608"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="676,-608 674,-602 671,-608 676,-608"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/parser&#45;&gt;golang.org/x/tools/go/packages -->
 <g id="edge5" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/parser&#45;&gt;golang.org/x/tools/go/packages</title>
-<path fill="none" stroke="#a8a8a8" d="M495.94,-676C486.54,-676 480.92,-676 480.92,-676 480.92,-676 480.92,-588 480.92,-588 480.92,-588 376.35,-588 376.35,-588"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="376.35,-585.9 370.35,-588 376.35,-590.1 376.35,-585.9"/>
+<path fill="none" stroke="#a8a8a8" d="M496,-676C487,-676 481,-676 481,-676 481,-676 481,-588 481,-588 481,-588 376,-588 376,-588"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="376,-586 370,-588 376,-590 376,-586"/>
 </g>
 <!-- golang.org/x/sync/errgroup -->
 <g id="node7" class="node">
 <title>golang.org/x/sync/errgroup</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="305,-224 86.5,-224 86.5,-228 74.5,-228 74.5,-188 305,-188 305,-224"/>
-<polyline fill="none" stroke="#a6a6a6" points="74.5,-224 86.5,-224"/>
-<text text-anchor="middle" x="189.75" y="-201.32" font-family="Courier New" font-size="14.00">golang.org/x/sync/errgroup</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="305,-224 87,-224 87,-228 75,-228 75,-188 305,-188 305,-224"/>
+<polyline fill="none" stroke="#a6a6a6" points="75,-224 87,-224"/>
+<text text-anchor="middle" x="190" y="-201" font-family="Courier New" font-size="14.00">golang.org/x/sync/errgroup</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/sync/errgroup -->
 <g id="edge8" class="edge">
 <title>golang.org/x/tools/go/packages&#45;&gt;golang.org/x/sync/errgroup</title>
-<path fill="none" stroke="#a8a8a8" d="M205,-563.61C205,-563.61 205,-231.87 205,-231.87"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="207.1,-231.87 205,-225.87 202.9,-231.87 207.1,-231.87"/>
+<path fill="none" stroke="#a8a8a8" d="M205,-564C205,-564 205,-232 205,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="207,-232 205,-226 203,-232 207,-232"/>
 </g>
 <!-- golang.org/x/tools/go/gcexportdata -->
 <g id="node10" class="node">
 <title>golang.org/x/tools/go/gcexportdata</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1043,-506 758.5,-506 758.5,-510 746.5,-510 746.5,-470 1043,-470 1043,-506"/>
-<polyline fill="none" stroke="#a6a6a6" points="746.5,-506 758.5,-506"/>
-<text text-anchor="middle" x="894.75" y="-483.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/gcexportdata</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1043,-506 759,-506 759,-510 747,-510 747,-470 1043,-470 1043,-506"/>
+<polyline fill="none" stroke="#a6a6a6" points="747,-506 759,-506"/>
+<text text-anchor="middle" x="895" y="-483" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/gcexportdata</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/go/gcexportdata -->
 <g id="edge9" class="edge">
 <title>golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/go/gcexportdata</title>
-<path fill="none" stroke="#a8a8a8" d="M358.47,-563.88C358.47,-536.56 358.47,-488 358.47,-488 358.47,-488 738.56,-488 738.56,-488"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="738.56,-490.1 744.56,-488 738.56,-485.9 738.56,-490.1"/>
+<path fill="none" stroke="#a8a8a8" d="M358,-564C358,-537 358,-488 358,-488 358,-488 739,-488 739,-488"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="739,-490 745,-488 739,-486 739,-490"/>
 </g>
 <!-- golang.org/x/tools/internal/gocommand -->
 <g id="node12" class="node">
 <title>golang.org/x/tools/internal/gocommand</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1516.25,-506 1281.25,-506 1281.25,-510 1269.25,-510 1269.25,-470 1516.25,-470 1516.25,-506"/>
-<polyline fill="none" stroke="#a6a6a6" points="1269.25,-506 1281.25,-506"/>
-<text text-anchor="middle" x="1392.75" y="-483.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/gocommand</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1516,-506 1281,-506 1281,-510 1269,-510 1269,-470 1516,-470 1516,-506"/>
+<polyline fill="none" stroke="#a6a6a6" points="1269,-506 1281,-506"/>
+<text text-anchor="middle" x="1393" y="-483" font-family="Courier New" font-size="14.00">golang.org/x/tools/gocommand</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/internal/gocommand -->
 <g id="edge10" class="edge">
 <title>golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/internal/gocommand</title>
-<path fill="none" stroke="#a8a8a8" d="M348.44,-563.69C348.44,-550.5 348.44,-535 348.44,-535 348.44,-535 1392.75,-535 1392.75,-535 1392.75,-535 1392.75,-513.82 1392.75,-513.82"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1394.85,-513.82 1392.75,-507.82 1390.65,-513.82 1394.85,-513.82"/>
+<path fill="none" stroke="#a8a8a8" d="M348,-564C348,-551 348,-535 348,-535 348,-535 1393,-535 1393,-535 1393,-535 1393,-514 1393,-514"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1395,-514 1393,-508 1391,-514 1395,-514"/>
 </g>
 <!-- golang.org/x/tools/internal/packagesinternal -->
 <g id="node13" class="node">
 <title>golang.org/x/tools/internal/packagesinternal</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1876.12,-36 1583.38,-36 1583.38,-40 1571.38,-40 1571.38,0 1876.12,0 1876.12,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="1571.38,-36 1583.38,-36"/>
-<text text-anchor="middle" x="1723.75" y="-13.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/packagesinternal</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1876,-36 1583,-36 1583,-40 1571,-40 1571,0 1876,0 1876,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="1571,-36 1583,-36"/>
+<text text-anchor="middle" x="1724" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/tools/packagesinternal</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/internal/packagesinternal -->
 <g id="edge11" class="edge">
 <title>golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/internal/packagesinternal</title>
-<path fill="none" stroke="#a8a8a8" d="M338.41,-563.57C338.41,-525.35 338.41,-441 338.41,-441 338.41,-441 1621.19,-441 1621.19,-441 1621.19,-441 1621.19,-43.96 1621.19,-43.96"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1623.29,-43.96 1621.19,-37.96 1619.09,-43.96 1623.29,-43.96"/>
+<path fill="none" stroke="#a8a8a8" d="M338,-564C338,-525 338,-441 338,-441 338,-441 1621,-441 1621,-441 1621,-441 1621,-44 1621,-44"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1623,-44 1621,-38 1619,-44 1623,-44"/>
 </g>
 <!-- golang.org/x/tools/internal/typesinternal -->
 <g id="node14" class="node">
 <title>golang.org/x/tools/internal/typesinternal</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="745.75,-224 477.75,-224 477.75,-228 465.75,-228 465.75,-188 745.75,-188 745.75,-224"/>
-<polyline fill="none" stroke="#a6a6a6" points="465.75,-224 477.75,-224"/>
-<text text-anchor="middle" x="605.75" y="-201.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/typesinternal</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="746,-224 478,-224 478,-228 466,-228 466,-188 746,-188 746,-224"/>
+<polyline fill="none" stroke="#a6a6a6" points="466,-224 478,-224"/>
+<text text-anchor="middle" x="606" y="-201" font-family="Courier New" font-size="14.00">golang.org/x/tools/typesinternal</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/internal/typesinternal -->
 <g id="edge12" class="edge">
 <title>golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/internal/typesinternal</title>
-<path fill="none" stroke="#a8a8a8" d="M368.88,-576C423.07,-576 473.33,-576 473.33,-576 473.33,-576 473.33,-231.86 473.33,-231.86"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="475.43,-231.86 473.33,-225.86 471.23,-231.86 475.43,-231.86"/>
+<path fill="none" stroke="#a8a8a8" d="M369,-576C423,-576 473,-576 473,-576 473,-576 473,-232 473,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="475,-232 473,-226 471,-232 475,-232"/>
 </g>
 <!-- golang.org/x/mod/semver -->
 <g id="node6" class="node">
 <title>golang.org/x/mod/semver</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1092.62,-412 898.88,-412 898.88,-416 886.88,-416 886.88,-376 1092.62,-376 1092.62,-412"/>
-<polyline fill="none" stroke="#a6a6a6" points="886.88,-412 898.88,-412"/>
-<text text-anchor="middle" x="989.75" y="-389.32" font-family="Courier New" font-size="14.00">golang.org/x/mod/semver</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1093,-412 899,-412 899,-416 887,-416 887,-376 1093,-376 1093,-412"/>
+<polyline fill="none" stroke="#a6a6a6" points="887,-412 899,-412"/>
+<text text-anchor="middle" x="990" y="-389" font-family="Courier New" font-size="14.00">golang.org/x/mod/semver</text>
 </g>
 <!-- golang.org/x/tools/go/ast/edge -->
 <g id="node8" class="node">
 <title>golang.org/x/tools/go/ast/edge</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="931.5,-36 680,-36 680,-40 668,-40 668,0 931.5,0 931.5,-36"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="932,-36 680,-36 680,-40 668,-40 668,0 932,0 932,-36"/>
 <polyline fill="none" stroke="#a6a6a6" points="668,-36 680,-36"/>
-<text text-anchor="middle" x="799.75" y="-13.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/ast/edge</text>
+<text text-anchor="middle" x="800" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/ast/edge</text>
 </g>
 <!-- golang.org/x/tools/go/ast/inspector -->
 <g id="node9" class="node">
 <title>golang.org/x/tools/go/ast/inspector</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="940.12,-130 647.38,-130 647.38,-134 635.38,-134 635.38,-94 940.12,-94 940.12,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="635.38,-130 647.38,-130"/>
-<text text-anchor="middle" x="787.75" y="-107.33" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/ast/inspector</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="940,-130 647,-130 647,-134 635,-134 635,-94 940,-94 940,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="635,-130 647,-130"/>
+<text text-anchor="middle" x="788" y="-107" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/ast/inspector</text>
 </g>
 <!-- golang.org/x/tools/go/ast/inspector&#45;&gt;golang.org/x/tools/go/ast/edge -->
 <g id="edge6" class="edge">
 <title>golang.org/x/tools/go/ast/inspector&#45;&gt;golang.org/x/tools/go/ast/edge</title>
-<path fill="none" stroke="#a8a8a8" d="M799.75,-93.88C799.75,-93.88 799.75,-43.9 799.75,-43.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="801.85,-43.9 799.75,-37.9 797.65,-43.9 801.85,-43.9"/>
+<path fill="none" stroke="#a8a8a8" d="M800,-94C800,-94 800,-44 800,-44"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="802,-44 800,-38 798,-44 802,-44"/>
 </g>
 <!-- golang.org/x/tools/internal/gcimporter -->
 <g id="node11" class="node">
 <title>golang.org/x/tools/internal/gcimporter</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="763.38,-412 520.12,-412 520.12,-416 508.12,-416 508.12,-376 763.38,-376 763.38,-412"/>
-<polyline fill="none" stroke="#a6a6a6" points="508.12,-412 520.12,-412"/>
-<text text-anchor="middle" x="635.75" y="-389.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/gcimporter</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="763,-412 520,-412 520,-416 508,-416 508,-376 763,-376 763,-412"/>
+<polyline fill="none" stroke="#a6a6a6" points="508,-412 520,-412"/>
+<text text-anchor="middle" x="636" y="-389" font-family="Courier New" font-size="14.00">golang.org/x/tools/gcimporter</text>
 </g>
 <!-- golang.org/x/tools/go/gcexportdata&#45;&gt;golang.org/x/tools/internal/gcimporter -->
 <g id="edge7" class="edge">
 <title>golang.org/x/tools/go/gcexportdata&#45;&gt;golang.org/x/tools/internal/gcimporter</title>
-<path fill="none" stroke="#a8a8a8" d="M754.94,-469.88C754.94,-469.88 754.94,-419.9 754.94,-419.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="757.04,-419.9 754.94,-413.9 752.84,-419.9 757.04,-419.9"/>
+<path fill="none" stroke="#a8a8a8" d="M755,-470C755,-470 755,-420 755,-420"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="757,-420 755,-414 753,-420 757,-420"/>
 </g>
 <!-- golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/internal/typesinternal -->
 <g id="edge24" class="edge">
 <title>golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/internal/typesinternal</title>
-<path fill="none" stroke="#a8a8a8" d="M568.56,-375.63C568.56,-375.63 568.56,-231.96 568.56,-231.96"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="570.66,-231.96 568.56,-225.96 566.46,-231.96 570.66,-231.96"/>
+<path fill="none" stroke="#a8a8a8" d="M569,-376C569,-376 569,-232 569,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="571,-232 569,-226 566,-232 571,-232"/>
 </g>
 <!-- golang.org/x/tools/go/types/objectpath -->
 <g id="node15" class="node">
 <title>golang.org/x/tools/go/types/objectpath</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="958.5,-318 641,-318 641,-322 629,-322 629,-282 958.5,-282 958.5,-318"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="959,-318 641,-318 641,-322 629,-322 629,-282 959,-282 959,-318"/>
 <polyline fill="none" stroke="#a6a6a6" points="629,-318 641,-318"/>
-<text text-anchor="middle" x="793.75" y="-295.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/types/objectpath</text>
+<text text-anchor="middle" x="794" y="-295" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/types/objectpath</text>
 </g>
 <!-- golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/go/types/objectpath -->
 <g id="edge21" class="edge">
 <title>golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/go/types/objectpath</title>
-<path fill="none" stroke="#a8a8a8" d="M662.59,-375.88C662.59,-375.88 662.59,-325.9 662.59,-325.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="664.69,-325.9 662.59,-319.9 660.49,-325.9 664.69,-325.9"/>
+<path fill="none" stroke="#a8a8a8" d="M663,-376C663,-376 663,-326 663,-326"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="665,-326 663,-320 660,-326 665,-326"/>
 </g>
 <!-- golang.org/x/tools/internal/aliases -->
 <g id="node18" class="node">
 <title>golang.org/x/tools/internal/aliases</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1138,-224 919.5,-224 919.5,-228 907.5,-228 907.5,-188 1138,-188 1138,-224"/>
-<polyline fill="none" stroke="#a6a6a6" points="907.5,-224 919.5,-224"/>
-<text text-anchor="middle" x="1022.75" y="-201.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/aliases</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1138,-224 920,-224 920,-228 908,-228 908,-188 1138,-188 1138,-224"/>
+<polyline fill="none" stroke="#a6a6a6" points="908,-224 920,-224"/>
+<text text-anchor="middle" x="1023" y="-201" font-family="Courier New" font-size="14.00">golang.org/x/tools/aliases</text>
 </g>
 <!-- golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/internal/aliases -->
 <g id="edge22" class="edge">
 <title>golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/internal/aliases</title>
-<path fill="none" stroke="#a8a8a8" d="M696.19,-375.65C696.19,-358.99 696.19,-337 696.19,-337 696.19,-337 1025.56,-337 1025.56,-337 1025.56,-337 1025.56,-232 1025.56,-232"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1027.66,-232 1025.56,-226 1023.46,-232 1027.66,-232"/>
+<path fill="none" stroke="#a8a8a8" d="M696,-376C696,-359 696,-337 696,-337 696,-337 1026,-337 1026,-337 1026,-337 1026,-232 1026,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1028,-232 1026,-226 1023,-232 1028,-232"/>
 </g>
 <!-- golang.org/x/tools/internal/pkgbits -->
 <g id="node23" class="node">
 <title>golang.org/x/tools/internal/pkgbits</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1493,-318 1274.5,-318 1274.5,-322 1262.5,-322 1262.5,-282 1493,-282 1493,-318"/>
-<polyline fill="none" stroke="#a6a6a6" points="1262.5,-318 1274.5,-318"/>
-<text text-anchor="middle" x="1377.75" y="-295.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/pkgbits</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1493,-318 1275,-318 1275,-322 1263,-322 1263,-282 1493,-282 1493,-318"/>
+<polyline fill="none" stroke="#a6a6a6" points="1263,-318 1275,-318"/>
+<text text-anchor="middle" x="1378" y="-295" font-family="Courier New" font-size="14.00">golang.org/x/tools/pkgbits</text>
 </g>
 <!-- golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/internal/pkgbits -->
 <g id="edge23" class="edge">
 <title>golang.org/x/tools/internal/gcimporter&#45;&gt;golang.org/x/tools/internal/pkgbits</title>
-<path fill="none" stroke="#a8a8a8" d="M729.78,-375.5C729.78,-366.25 729.78,-357 729.78,-357 729.78,-357 1381.12,-357 1381.12,-357 1381.12,-357 1381.12,-325.86 1381.12,-325.86"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1383.23,-325.86 1381.13,-319.86 1379.03,-325.86 1383.23,-325.86"/>
+<path fill="none" stroke="#a8a8a8" d="M730,-376C730,-366 730,-357 730,-357 730,-357 1381,-357 1381,-357 1381,-357 1381,-326 1381,-326"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1383,-326 1381,-320 1379,-326 1383,-326"/>
 </g>
 <!-- golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/mod/semver -->
 <g id="edge25" class="edge">
 <title>golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/mod/semver</title>
-<path fill="none" stroke="#a8a8a8" d="M1268.98,-488C1177.15,-488 1067.81,-488 1067.81,-488 1067.81,-488 1067.81,-419.64 1067.81,-419.64"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1069.91,-419.64 1067.81,-413.64 1065.71,-419.64 1069.91,-419.64"/>
+<path fill="none" stroke="#a8a8a8" d="M1269,-488C1177,-488 1068,-488 1068,-488 1068,-488 1068,-420 1068,-420"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1070,-420 1068,-414 1066,-420 1070,-420"/>
 </g>
 <!-- golang.org/x/tools/internal/event -->
 <g id="node19" class="node">
 <title>golang.org/x/tools/internal/event</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="2020.75,-412 1818.75,-412 1818.75,-416 1806.75,-416 1806.75,-376 2020.75,-376 2020.75,-412"/>
-<polyline fill="none" stroke="#a6a6a6" points="1806.75,-412 1818.75,-412"/>
-<text text-anchor="middle" x="1913.75" y="-389.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/event</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="2021,-412 1819,-412 1819,-416 1807,-416 1807,-376 2021,-376 2021,-412"/>
+<polyline fill="none" stroke="#a6a6a6" points="1807,-412 1819,-412"/>
+<text text-anchor="middle" x="1914" y="-389" font-family="Courier New" font-size="14.00">golang.org/x/tools/event</text>
 </g>
 <!-- golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/tools/internal/event -->
 <g id="edge26" class="edge">
 <title>golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/tools/internal/event</title>
-<path fill="none" stroke="#a8a8a8" d="M1508.5,-469.77C1508.5,-443.99 1508.5,-400 1508.5,-400 1508.5,-400 1798.97,-400 1798.97,-400"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1798.97,-402.1 1804.97,-400 1798.97,-397.9 1798.97,-402.1"/>
+<path fill="none" stroke="#a8a8a8" d="M1509,-470C1509,-444 1509,-400 1509,-400 1509,-400 1799,-400 1799,-400"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1799,-402 1805,-400 1799,-398 1799,-402"/>
 </g>
 <!-- golang.org/x/tools/internal/event/keys -->
 <g id="node21" class="node">
 <title>golang.org/x/tools/internal/event/keys</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1525.38,-224 1282.12,-224 1282.12,-228 1270.12,-228 1270.12,-188 1525.38,-188 1525.38,-224"/>
-<polyline fill="none" stroke="#a6a6a6" points="1270.12,-224 1282.12,-224"/>
-<text text-anchor="middle" x="1397.75" y="-201.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/event/keys</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1525,-224 1282,-224 1282,-228 1270,-228 1270,-188 1525,-188 1525,-224"/>
+<polyline fill="none" stroke="#a6a6a6" points="1270,-224 1282,-224"/>
+<text text-anchor="middle" x="1398" y="-201" font-family="Courier New" font-size="14.00">golang.org/x/tools/event/keys</text>
 </g>
 <!-- golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/tools/internal/event/keys -->
 <g id="edge27" class="edge">
 <title>golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/tools/internal/event/keys</title>
-<path fill="none" stroke="#a8a8a8" d="M1500.75,-469.93C1500.75,-469.93 1500.75,-231.8 1500.75,-231.8"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1502.85,-231.8 1500.75,-225.8 1498.65,-231.8 1502.85,-231.8"/>
+<path fill="none" stroke="#a8a8a8" d="M1501,-470C1501,-470 1501,-232 1501,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1503,-232 1501,-226 1499,-232 1503,-232"/>
 </g>
 <!-- golang.org/x/tools/internal/event/label -->
 <g id="node22" class="node">
 <title>golang.org/x/tools/internal/event/label</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1934.5,-130 1683,-130 1683,-134 1671,-134 1671,-94 1934.5,-94 1934.5,-130"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1935,-130 1683,-130 1683,-134 1671,-134 1671,-94 1935,-94 1935,-130"/>
 <polyline fill="none" stroke="#a6a6a6" points="1671,-130 1683,-130"/>
-<text text-anchor="middle" x="1802.75" y="-107.33" font-family="Courier New" font-size="14.00">golang.org/x/tools/event/label</text>
+<text text-anchor="middle" x="1803" y="-107" font-family="Courier New" font-size="14.00">golang.org/x/tools/event/label</text>
 </g>
 <!-- golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/tools/internal/event/label -->
 <g id="edge28" class="edge">
 <title>golang.org/x/tools/internal/gocommand&#45;&gt;golang.org/x/tools/internal/event/label</title>
-<path fill="none" stroke="#a8a8a8" d="M1516.73,-488C1616.05,-488 1738.88,-488 1738.88,-488 1738.88,-488 1738.88,-137.9 1738.88,-137.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1740.98,-137.9 1738.88,-131.9 1736.78,-137.9 1740.98,-137.9"/>
+<path fill="none" stroke="#a8a8a8" d="M1517,-488C1616,-488 1739,-488 1739,-488 1739,-488 1739,-138 1739,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1741,-138 1739,-132 1737,-138 1741,-138"/>
 </g>
 <!-- golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/go/ast/inspector -->
 <g id="edge29" class="edge">
 <title>golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/go/ast/inspector</title>
-<path fill="none" stroke="#a8a8a8" d="M672.17,-187.88C672.17,-187.88 672.17,-137.9 672.17,-137.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="674.27,-137.9 672.17,-131.9 670.07,-137.9 674.27,-137.9"/>
+<path fill="none" stroke="#a8a8a8" d="M672,-188C672,-188 672,-138 672,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="674,-138 672,-132 670,-138 674,-138"/>
 </g>
 <!-- golang.org/x/tools/go/types/typeutil -->
 <g id="node16" class="node">
 <title>golang.org/x/tools/go/types/typeutil</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1498.25,-130 1197.25,-130 1197.25,-134 1185.25,-134 1185.25,-94 1498.25,-94 1498.25,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="1185.25,-130 1197.25,-130"/>
-<text text-anchor="middle" x="1341.75" y="-107.33" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/types/typeutil</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1498,-130 1197,-130 1197,-134 1185,-134 1185,-94 1498,-94 1498,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="1185,-130 1197,-130"/>
+<text text-anchor="middle" x="1342" y="-107" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/types/typeutil</text>
 </g>
 <!-- golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/go/types/typeutil -->
 <g id="edge30" class="edge">
 <title>golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/go/types/typeutil</title>
-<path fill="none" stroke="#a8a8a8" d="M708.96,-187.69C708.96,-174.5 708.96,-159 708.96,-159 708.96,-159 1223.88,-159 1223.88,-159 1223.88,-159 1223.88,-137.82 1223.88,-137.82"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1225.98,-137.82 1223.88,-131.82 1221.78,-137.82 1225.98,-137.82"/>
+<path fill="none" stroke="#a8a8a8" d="M709,-188C709,-175 709,-159 709,-159 709,-159 1224,-159 1224,-159 1224,-159 1224,-138 1224,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1226,-138 1224,-132 1222,-138 1226,-138"/>
 </g>
 <!-- golang.org/x/tools/internal/stdlib -->
 <g id="node24" class="node">
 <title>golang.org/x/tools/internal/stdlib</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="307.88,-130 97.62,-130 97.62,-134 85.62,-134 85.62,-94 307.88,-94 307.88,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="85.62,-130 97.62,-130"/>
-<text text-anchor="middle" x="196.75" y="-107.33" font-family="Courier New" font-size="14.00">golang.org/x/tools/stdlib</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="308,-130 98,-130 98,-134 86,-134 86,-94 308,-94 308,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="86,-130 98,-130"/>
+<text text-anchor="middle" x="197" y="-107" font-family="Courier New" font-size="14.00">golang.org/x/tools/stdlib</text>
 </g>
 <!-- golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/internal/stdlib -->
 <g id="edge31" class="edge">
 <title>golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/internal/stdlib</title>
-<path fill="none" stroke="#a8a8a8" d="M499.54,-187.88C499.54,-160.56 499.54,-112 499.54,-112 499.54,-112 315.72,-112 315.72,-112"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="315.72,-109.9 309.72,-112 315.72,-114.1 315.72,-109.9"/>
+<path fill="none" stroke="#a8a8a8" d="M500,-188C500,-161 500,-112 500,-112 500,-112 316,-112 316,-112"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="316,-110 310,-112 316,-114 316,-110"/>
 </g>
 <!-- golang.org/x/tools/internal/versions -->
 <g id="node25" class="node">
 <title>golang.org/x/tools/internal/versions</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="567.12,-36 340.38,-36 340.38,-40 328.38,-40 328.38,0 567.12,0 567.12,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="328.38,-36 340.38,-36"/>
-<text text-anchor="middle" x="447.75" y="-13.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/versions</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="567,-36 340,-36 340,-40 328,-40 328,0 567,0 567,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="328,-36 340,-36"/>
+<text text-anchor="middle" x="448" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/tools/versions</text>
 </g>
 <!-- golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/internal/versions -->
 <g id="edge32" class="edge">
 <title>golang.org/x/tools/internal/typesinternal&#45;&gt;golang.org/x/tools/internal/versions</title>
-<path fill="none" stroke="#a8a8a8" d="M533.33,-187.63C533.33,-187.63 533.33,-43.96 533.33,-43.96"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="535.43,-43.96 533.33,-37.96 531.23,-43.96 535.43,-43.96"/>
+<path fill="none" stroke="#a8a8a8" d="M533,-188C533,-188 533,-44 533,-44"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="535,-44 533,-38 531,-44 535,-44"/>
 </g>
 <!-- golang.org/x/tools/go/types/objectpath&#45;&gt;golang.org/x/tools/internal/typesinternal -->
 <g id="edge13" class="edge">
 <title>golang.org/x/tools/go/types/objectpath&#45;&gt;golang.org/x/tools/internal/typesinternal</title>
-<path fill="none" stroke="#a8a8a8" d="M687.38,-281.88C687.38,-281.88 687.38,-231.9 687.38,-231.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="689.48,-231.9 687.38,-225.9 685.28,-231.9 689.48,-231.9"/>
+<path fill="none" stroke="#a8a8a8" d="M687,-282C687,-282 687,-232 687,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="689,-232 687,-226 685,-232 689,-232"/>
 </g>
 <!-- golang.org/x/tools/internal/typeparams -->
 <g id="node17" class="node">
 <title>golang.org/x/tools/internal/typeparams</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1312.38,-36 1069.12,-36 1069.12,-40 1057.12,-40 1057.12,0 1312.38,0 1312.38,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="1057.12,-36 1069.12,-36"/>
-<text text-anchor="middle" x="1184.75" y="-13.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/typeparams</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1312,-36 1069,-36 1069,-40 1057,-40 1057,0 1312,0 1312,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="1057,-36 1069,-36"/>
+<text text-anchor="middle" x="1185" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/tools/typeparams</text>
 </g>
 <!-- golang.org/x/tools/go/types/typeutil&#45;&gt;golang.org/x/tools/internal/typeparams -->
 <g id="edge14" class="edge">
 <title>golang.org/x/tools/go/types/typeutil&#45;&gt;golang.org/x/tools/internal/typeparams</title>
-<path fill="none" stroke="#a8a8a8" d="M1248.81,-93.88C1248.81,-93.88 1248.81,-43.9 1248.81,-43.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1250.91,-43.9 1248.81,-37.9 1246.71,-43.9 1250.91,-43.9"/>
+<path fill="none" stroke="#a8a8a8" d="M1249,-94C1249,-94 1249,-44 1249,-44"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1251,-44 1249,-38 1247,-44 1251,-44"/>
 </g>
 <!-- golang.org/x/tools/internal/event/core -->
 <g id="node20" class="node">
 <title>golang.org/x/tools/internal/event/core</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="2458.38,-318 2215.12,-318 2215.12,-322 2203.12,-322 2203.12,-282 2458.38,-282 2458.38,-318"/>
-<polyline fill="none" stroke="#a6a6a6" points="2203.12,-318 2215.12,-318"/>
-<text text-anchor="middle" x="2330.75" y="-295.32" font-family="Courier New" font-size="14.00">golang.org/x/tools/event/core</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="2458,-318 2215,-318 2215,-322 2203,-322 2203,-282 2458,-282 2458,-318"/>
+<polyline fill="none" stroke="#a6a6a6" points="2203,-318 2215,-318"/>
+<text text-anchor="middle" x="2331" y="-295" font-family="Courier New" font-size="14.00">golang.org/x/tools/event/core</text>
 </g>
 <!-- golang.org/x/tools/internal/event&#45;&gt;golang.org/x/tools/internal/event/core -->
 <g id="edge15" class="edge">
 <title>golang.org/x/tools/internal/event&#45;&gt;golang.org/x/tools/internal/event/core</title>
-<path fill="none" stroke="#a8a8a8" d="M1977.62,-375.56C1977.62,-350.56 1977.62,-309 1977.62,-309 1977.62,-309 2195.25,-309 2195.25,-309"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="2195.25,-311.1 2201.25,-309 2195.25,-306.9 2195.25,-311.1"/>
+<path fill="none" stroke="#a8a8a8" d="M1978,-376C1978,-351 1978,-309 1978,-309 1978,-309 2195,-309 2195,-309"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="2195,-311 2201,-309 2195,-307 2195,-311"/>
 </g>
 <!-- golang.org/x/tools/internal/event&#45;&gt;golang.org/x/tools/internal/event/keys -->
 <g id="edge16" class="edge">
 <title>golang.org/x/tools/internal/event&#45;&gt;golang.org/x/tools/internal/event/keys</title>
-<path fill="none" stroke="#a8a8a8" d="M1806.48,-388C1689.68,-388 1519.29,-388 1519.29,-388 1519.29,-388 1519.29,-231.97 1519.29,-231.97"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1521.39,-231.97 1519.29,-225.97 1517.19,-231.97 1521.39,-231.97"/>
+<path fill="none" stroke="#a8a8a8" d="M1806,-388C1690,-388 1519,-388 1519,-388 1519,-388 1519,-232 1519,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1521,-232 1519,-226 1517,-232 1521,-232"/>
 </g>
 <!-- golang.org/x/tools/internal/event&#45;&gt;golang.org/x/tools/internal/event/label -->
 <g id="edge17" class="edge">
 <title>golang.org/x/tools/internal/event&#45;&gt;golang.org/x/tools/internal/event/label</title>
-<path fill="none" stroke="#a8a8a8" d="M1849.33,-375.93C1849.33,-375.93 1849.33,-137.8 1849.33,-137.8"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1851.43,-137.8 1849.33,-131.8 1847.23,-137.8 1851.43,-137.8"/>
+<path fill="none" stroke="#a8a8a8" d="M1849,-376C1849,-376 1849,-138 1849,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1851,-138 1849,-132 1847,-138 1851,-138"/>
 </g>
 <!-- golang.org/x/tools/internal/event/core&#45;&gt;golang.org/x/tools/internal/event/keys -->
 <g id="edge18" class="edge">
 <title>golang.org/x/tools/internal/event/core&#45;&gt;golang.org/x/tools/internal/event/keys</title>
-<path fill="none" stroke="#a8a8a8" d="M2202.65,-300C1974.7,-300 1522.33,-300 1522.33,-300 1522.33,-300 1522.33,-231.64 1522.33,-231.64"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1524.43,-231.64 1522.33,-225.64 1520.23,-231.64 1524.43,-231.64"/>
+<path fill="none" stroke="#a8a8a8" d="M2203,-300C1975,-300 1522,-300 1522,-300 1522,-300 1522,-232 1522,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1524,-232 1522,-226 1520,-232 1524,-232"/>
 </g>
 <!-- golang.org/x/tools/internal/event/core&#45;&gt;golang.org/x/tools/internal/event/label -->
 <g id="edge19" class="edge">
 <title>golang.org/x/tools/internal/event/core&#45;&gt;golang.org/x/tools/internal/event/label</title>
-<path fill="none" stroke="#a8a8a8" d="M2202.64,-291C2073.11,-291 1891.92,-291 1891.92,-291 1891.92,-291 1891.92,-138 1891.92,-138"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1894.02,-138 1891.92,-132 1889.82,-138 1894.02,-138"/>
+<path fill="none" stroke="#a8a8a8" d="M2203,-291C2073,-291 1892,-291 1892,-291 1892,-291 1892,-138 1892,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1894,-138 1892,-132 1890,-138 1894,-138"/>
 </g>
 <!-- golang.org/x/tools/internal/event/keys&#45;&gt;golang.org/x/tools/internal/event/label -->
 <g id="edge20" class="edge">
 <title>golang.org/x/tools/internal/event/keys&#45;&gt;golang.org/x/tools/internal/event/label</title>
-<path fill="none" stroke="#a8a8a8" d="M1511.81,-187.88C1511.81,-160.56 1511.81,-112 1511.81,-112 1511.81,-112 1663.39,-112 1663.39,-112"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1663.39,-114.1 1669.39,-112 1663.39,-109.9 1663.39,-114.1"/>
+<path fill="none" stroke="#a8a8a8" d="M1512,-188C1512,-161 1512,-112 1512,-112 1512,-112 1663,-112 1663,-112"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1663,-114 1669,-112 1663,-110 1663,-114"/>
 </g>
 </g>
 </svg>

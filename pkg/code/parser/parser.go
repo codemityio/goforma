@@ -137,11 +137,18 @@ func (p *DefaultParser) inspect(
 		start := pkg.Fset.Position(node.Pos())
 		end := pkg.Fset.Position(node.End())
 
-		relativePath, err := filepath.Rel(p.rootPath, start.Filename)
+		rootPath, err := p.normalizeRootPath(start.Filename)
+		if err != nil {
+			errs <- err
+
+			return true
+		}
+
+		relativePath, err := filepath.Rel(rootPath, start.Filename)
 		if err != nil {
 			errs <- fmt.Errorf(
 				"%w: %w: with root path `%s` and file name `%s`",
-				ErrGetRelPath, err, p.rootPath, start.Filename,
+				ErrGetRelPath, err, rootPath, start.Filename,
 			)
 
 			return true
@@ -796,11 +803,18 @@ func (p *DefaultParser) describeMethodDecl(
 	start := pkg.Fset.Position(decl.Pos())
 	end := pkg.Fset.Position(decl.End())
 
-	relativePath, err := filepath.Rel(p.rootPath, start.Filename)
+	rootPath, err := p.normalizeRootPath(start.Filename)
+	if err != nil {
+		errs <- err
+
+		return "", nil
+	}
+
+	relativePath, err := filepath.Rel(rootPath, start.Filename)
 	if err != nil {
 		errs <- fmt.Errorf(
 			"%w: %w: with root path `%s` and file name `%s`",
-			ErrGetRelPath, err, p.rootPath, start.Filename,
+			ErrGetRelPath, err, rootPath, start.Filename,
 		)
 
 		return "", nil
@@ -1197,11 +1211,18 @@ func (p *DefaultParser) getInterfaceMethods(
 				start := pkg.Fset.Position(funcType.Pos())
 				end := pkg.Fset.Position(funcType.End())
 
-				relativePath, err := filepath.Rel(p.rootPath, start.Filename)
+				rootPath, err := p.normalizeRootPath(start.Filename)
+				if err != nil {
+					errs <- err
+
+					return nil
+				}
+
+				relativePath, err := filepath.Rel(rootPath, start.Filename)
 				if err != nil {
 					errs <- fmt.Errorf(
 						"%w: %w: with root path `%s` and file name `%s`",
-						ErrGetRelPath, err, p.rootPath, start.Filename,
+						ErrGetRelPath, err, rootPath, start.Filename,
 					)
 
 					return nil
@@ -1372,4 +1393,17 @@ func (p *DefaultParser) getDoc(doc *ast.CommentGroup) string {
 	}
 
 	return strings.Join(lines, "\n")
+}
+
+func (p *DefaultParser) normalizeRootPath(filename string) (string, error) {
+	if filepath.IsAbs(filename) && !filepath.IsAbs(p.rootPath) {
+		path, err := filepath.Abs(p.rootPath)
+		if err != nil {
+			return "", fmt.Errorf("%w: `%s`", ErrRootPathNormalise, path)
+		}
+
+		return path, nil
+	}
+
+	return p.rootPath, nil
 }
