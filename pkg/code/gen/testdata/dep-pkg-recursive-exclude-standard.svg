@@ -8,206 +8,206 @@
  viewBox="0.00 0.00 2519.05 346.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 332.4)">
 <title>DepGraph</title>
-<polygon fill="white" stroke="none" points="-14.4,14.4 -14.4,-332.4 2504.65,-332.4 2504.65,14.4 -14.4,14.4"/>
+<polygon fill="white" stroke="none" points="-14,14 -14,-332 2505,-332 2505,14 -14,14"/>
 <!-- github.com/danielgtaylor/huma/v2 -->
 <g id="node1" class="node">
 <title>github.com/danielgtaylor/huma/v2</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1162.12,-130 894.12,-130 894.12,-134 882.12,-134 882.12,-94 1162.12,-94 1162.12,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="882.12,-130 894.12,-130"/>
-<text text-anchor="middle" x="1022.12" y="-107.33" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1162,-130 894,-130 894,-134 882,-134 882,-94 1162,-94 1162,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="882,-130 894,-130"/>
+<text text-anchor="middle" x="1022" y="-107" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/casing -->
 <g id="node2" class="node">
 <title>github.com/danielgtaylor/huma/v2/casing</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="382,-36 56.25,-36 56.25,-40 44.25,-40 44.25,0 382,0 382,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="44.25,-36 56.25,-36"/>
-<text text-anchor="middle" x="213.12" y="-13.32" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/casing</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="382,-36 56,-36 56,-40 44,-40 44,0 382,0 382,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="44,-36 56,-36"/>
+<text text-anchor="middle" x="213" y="-13" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/casing</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/casing -->
 <g id="edge1" class="edge">
 <title>github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/casing</title>
-<path fill="none" stroke="#a8a8a8" d="M909,-93.69C909,-80.5 909,-65 909,-65 909,-65 346.06,-65 346.06,-65 346.06,-65 346.06,-43.82 346.06,-43.82"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="348.16,-43.82 346.06,-37.82 343.96,-43.82 348.16,-43.82"/>
+<path fill="none" stroke="#a8a8a8" d="M909,-94C909,-81 909,-65 909,-65 909,-65 346,-65 346,-65 346,-65 346,-44 346,-44"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="348,-44 346,-38 344,-44 348,-44"/>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/negotiation -->
 <g id="node3" class="node">
 <title>github.com/danielgtaylor/huma/v2/negotiation</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="861.62,-36 494.62,-36 494.62,-40 482.62,-40 482.62,0 861.62,0 861.62,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="482.62,-36 494.62,-36"/>
-<text text-anchor="middle" x="672.12" y="-13.32" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/negotiation</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="862,-36 495,-36 495,-40 483,-40 483,0 862,0 862,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="483,-36 495,-36"/>
+<text text-anchor="middle" x="672" y="-13" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/negotiation</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/negotiation -->
 <g id="edge2" class="edge">
 <title>github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/negotiation</title>
-<path fill="none" stroke="#a8a8a8" d="M935.88,-93.88C935.88,-66.56 935.88,-18 935.88,-18 935.88,-18 869.57,-18 869.57,-18"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="869.57,-15.9 863.57,-18 869.57,-20.1 869.57,-15.9"/>
+<path fill="none" stroke="#a8a8a8" d="M936,-94C936,-67 936,-18 936,-18 936,-18 870,-18 870,-18"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="870,-16 864,-18 870,-20 870,-16"/>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/validation -->
 <g id="node4" class="node">
 <title>github.com/danielgtaylor/huma/v2/validation</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1333.5,-36 974.75,-36 974.75,-40 962.75,-40 962.75,0 1333.5,0 1333.5,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="962.75,-36 974.75,-36"/>
-<text text-anchor="middle" x="1148.12" y="-13.32" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/validation</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1334,-36 975,-36 975,-40 963,-40 963,0 1334,0 1334,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="963,-36 975,-36"/>
+<text text-anchor="middle" x="1148" y="-13" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/validation</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/validation -->
 <g id="edge3" class="edge">
 <title>github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/validation</title>
-<path fill="none" stroke="#a8a8a8" d="M1062.44,-93.88C1062.44,-93.88 1062.44,-43.9 1062.44,-43.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1064.54,-43.9 1062.44,-37.9 1060.34,-43.9 1064.54,-43.9"/>
+<path fill="none" stroke="#a8a8a8" d="M1062,-94C1062,-94 1062,-44 1062,-44"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1065,-44 1062,-38 1060,-44 1065,-44"/>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/yaml -->
 <g id="node5" class="node">
 <title>github.com/danielgtaylor/huma/v2/yaml</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1755.75,-36 1446.5,-36 1446.5,-40 1434.5,-40 1434.5,0 1755.75,0 1755.75,-36"/>
-<polyline fill="none" stroke="#a6a6a6" points="1434.5,-36 1446.5,-36"/>
-<text text-anchor="middle" x="1595.12" y="-13.32" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/yaml</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1756,-36 1447,-36 1447,-40 1435,-40 1435,0 1756,0 1756,-36"/>
+<polyline fill="none" stroke="#a6a6a6" points="1435,-36 1447,-36"/>
+<text text-anchor="middle" x="1595" y="-13" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/yaml</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/yaml -->
 <g id="edge4" class="edge">
 <title>github.com/danielgtaylor/huma/v2&#45;&gt;github.com/danielgtaylor/huma/v2/yaml</title>
-<path fill="none" stroke="#a8a8a8" d="M1162.55,-112C1264.27,-112 1384,-112 1384,-112 1384,-112 1384,-18 1384,-18 1384,-18 1426.52,-18 1426.52,-18"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1426.52,-20.1 1432.52,-18 1426.52,-15.9 1426.52,-20.1"/>
+<path fill="none" stroke="#a8a8a8" d="M1163,-112C1264,-112 1384,-112 1384,-112 1384,-112 1384,-18 1384,-18 1384,-18 1427,-18 1427,-18"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1427,-20 1433,-18 1427,-16 1427,-20"/>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/adapters/humachi -->
 <g id="node6" class="node">
 <title>github.com/danielgtaylor/huma/v2/adapters/humachi</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1093.25,-224 685,-224 685,-228 673,-228 673,-188 1093.25,-188 1093.25,-224"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="1093,-224 685,-224 685,-228 673,-228 673,-188 1093,-188 1093,-224"/>
 <polyline fill="none" stroke="#a6a6a6" points="673,-224 685,-224"/>
-<text text-anchor="middle" x="883.12" y="-201.32" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/adapters/humachi</text>
+<text text-anchor="middle" x="883" y="-201" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/adapters/humachi</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/adapters/humachi&#45;&gt;github.com/danielgtaylor/huma/v2 -->
 <g id="edge5" class="edge">
 <title>github.com/danielgtaylor/huma/v2/adapters/humachi&#45;&gt;github.com/danielgtaylor/huma/v2</title>
-<path fill="none" stroke="#a8a8a8" d="M1022.88,-187.88C1022.88,-187.88 1022.88,-137.9 1022.88,-137.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1024.98,-137.9 1022.88,-131.9 1020.78,-137.9 1024.98,-137.9"/>
+<path fill="none" stroke="#a8a8a8" d="M1023,-188C1023,-188 1023,-138 1023,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1025,-138 1023,-132 1021,-138 1025,-138"/>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/queryparam -->
 <g id="node7" class="node">
 <title>github.com/danielgtaylor/huma/v2/queryparam</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="781.5,-130 422.75,-130 422.75,-134 410.75,-134 410.75,-94 781.5,-94 781.5,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="410.75,-130 422.75,-130"/>
-<text text-anchor="middle" x="596.12" y="-107.33" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/queryparam</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="782,-130 423,-130 423,-134 411,-134 411,-94 782,-94 782,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="411,-130 423,-130"/>
+<text text-anchor="middle" x="596" y="-107" font-family="Courier New" font-size="14.00">github.com/danielgtaylor/huma/v2/queryparam</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/adapters/humachi&#45;&gt;github.com/danielgtaylor/huma/v2/queryparam -->
 <g id="edge6" class="edge">
 <title>github.com/danielgtaylor/huma/v2/adapters/humachi&#45;&gt;github.com/danielgtaylor/huma/v2/queryparam</title>
-<path fill="none" stroke="#a8a8a8" d="M727.25,-187.88C727.25,-187.88 727.25,-137.9 727.25,-137.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="729.35,-137.9 727.25,-131.9 725.15,-137.9 729.35,-137.9"/>
+<path fill="none" stroke="#a8a8a8" d="M727,-188C727,-188 727,-138 727,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="729,-138 727,-132 725,-138 729,-138"/>
 </g>
 <!-- github.com/go&#45;chi/chi/v5 -->
 <g id="node8" class="node">
 <title>github.com/go&#45;chi/chi/v5</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="310.12,-130 108.12,-130 108.12,-134 96.12,-134 96.12,-94 310.12,-94 310.12,-130"/>
-<polyline fill="none" stroke="#a6a6a6" points="96.12,-130 108.12,-130"/>
-<text text-anchor="middle" x="203.12" y="-107.33" font-family="Courier New" font-size="14.00">github.com/go&#45;chi/chi/v5</text>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="310,-130 108,-130 108,-134 96,-134 96,-94 310,-94 310,-130"/>
+<polyline fill="none" stroke="#a6a6a6" points="96,-130 108,-130"/>
+<text text-anchor="middle" x="203" y="-107" font-family="Courier New" font-size="14.00">github.com/go&#45;chi/chi/v5</text>
 </g>
 <!-- github.com/danielgtaylor/huma/v2/adapters/humachi&#45;&gt;github.com/go&#45;chi/chi/v5 -->
 <g id="edge7" class="edge">
 <title>github.com/danielgtaylor/huma/v2/adapters/humachi&#45;&gt;github.com/go&#45;chi/chi/v5</title>
-<path fill="none" stroke="#a8a8a8" d="M672.81,-200C506.74,-200 302.83,-200 302.83,-200 302.83,-200 302.83,-137.75 302.83,-137.75"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="304.93,-137.75 302.83,-131.75 300.73,-137.75 304.93,-137.75"/>
+<path fill="none" stroke="#a8a8a8" d="M673,-200C507,-200 303,-200 303,-200 303,-200 303,-138 303,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="305,-138 303,-132 301,-138 305,-138"/>
 </g>
 <!-- github.com/sethvargo/go&#45;envconfig -->
 <g id="node9" class="node">
 <title>github.com/sethvargo/go&#45;envconfig</title>
-<polygon fill="#d4d4d4" stroke="#a6a6a6" points="288.25,-224 12,-224 12,-228 0,-228 0,-188 288.25,-188 288.25,-224"/>
+<polygon fill="#d4d4d4" stroke="#a6a6a6" points="288,-224 12,-224 12,-228 0,-228 0,-188 288,-188 288,-224"/>
 <polyline fill="none" stroke="#a6a6a6" points="0,-224 12,-224"/>
-<text text-anchor="middle" x="144.12" y="-201.32" font-family="Courier New" font-size="14.00">github.com/sethvargo/go&#45;envconfig</text>
+<text text-anchor="middle" x="144" y="-201" font-family="Courier New" font-size="14.00">github.com/sethvargo/go&#45;envconfig</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config -->
 <g id="node10" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="2000.38,-130 1451.88,-130 1451.88,-134 1439.88,-134 1439.88,-94 2000.38,-94 2000.38,-130"/>
-<polyline fill="none" stroke="#949494" points="1439.88,-130 1451.88,-130"/>
-<text text-anchor="middle" x="1720.12" y="-107.33" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="2000,-130 1452,-130 1452,-134 1440,-134 1440,-94 2000,-94 2000,-130"/>
+<polyline fill="none" stroke="#949494" points="1440,-130 1452,-130"/>
+<text text-anchor="middle" x="1720" y="-107" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example -->
 <g id="node11" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="1635.5,-318 1078.75,-318 1078.75,-322 1066.75,-322 1066.75,-282 1635.5,-282 1635.5,-318"/>
-<polyline fill="none" stroke="#949494" points="1066.75,-318 1078.75,-318"/>
-<text text-anchor="middle" x="1351.12" y="-295.32" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="1636,-318 1079,-318 1079,-322 1067,-322 1067,-282 1636,-282 1636,-318"/>
+<polyline fill="none" stroke="#949494" points="1067,-318 1079,-318"/>
+<text text-anchor="middle" x="1351" y="-295" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config -->
 <g id="edge8" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config</title>
-<path fill="none" stroke="#a8a8a8" d="M1449.06,-281.63C1449.06,-281.63 1449.06,-137.96 1449.06,-137.96"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1451.16,-137.96 1449.06,-131.96 1446.96,-137.96 1451.16,-137.96"/>
+<path fill="none" stroke="#a8a8a8" d="M1449,-282C1449,-282 1449,-138 1449,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1451,-138 1449,-132 1447,-138 1451,-138"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration -->
 <g id="node12" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="2060,-224 1470.25,-224 1470.25,-228 1458.25,-228 1458.25,-188 2060,-188 2060,-224"/>
-<polyline fill="none" stroke="#949494" points="1458.25,-224 1470.25,-224"/>
-<text text-anchor="middle" x="1759.12" y="-201.32" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="2060,-224 1470,-224 1470,-228 1458,-228 1458,-188 2060,-188 2060,-224"/>
+<polyline fill="none" stroke="#949494" points="1458,-224 1470,-224"/>
+<text text-anchor="middle" x="1759" y="-201" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration -->
 <g id="edge9" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/example&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration</title>
-<path fill="none" stroke="#a8a8a8" d="M1576.42,-281.88C1576.42,-281.88 1576.42,-231.9 1576.42,-231.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1578.52,-231.9 1576.42,-225.9 1574.32,-231.9 1578.52,-231.9"/>
+<path fill="none" stroke="#a8a8a8" d="M1576,-282C1576,-282 1576,-232 1576,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1579,-232 1576,-226 1574,-232 1579,-232"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration&#45;&gt;github.com/danielgtaylor/huma/v2 -->
 <g id="edge15" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration&#45;&gt;github.com/danielgtaylor/huma/v2</title>
-<path fill="none" stroke="#a8a8a8" d="M1458.2,-206C1295.57,-206 1127.69,-206 1127.69,-206 1127.69,-206 1127.69,-137.64 1127.69,-137.64"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1129.79,-137.64 1127.69,-131.64 1125.59,-137.64 1129.79,-137.64"/>
+<path fill="none" stroke="#a8a8a8" d="M1458,-206C1296,-206 1128,-206 1128,-206 1128,-206 1128,-138 1128,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1130,-138 1128,-132 1126,-138 1130,-138"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config -->
 <g id="edge16" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config</title>
-<path fill="none" stroke="#a8a8a8" d="M1729.31,-187.88C1729.31,-187.88 1729.31,-137.9 1729.31,-137.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1731.41,-137.9 1729.31,-131.9 1727.21,-137.9 1731.41,-137.9"/>
+<path fill="none" stroke="#a8a8a8" d="M1729,-188C1729,-188 1729,-138 1729,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1731,-138 1729,-132 1727,-138 1731,-138"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma -->
 <g id="node13" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="564.12,-318 32.12,-318 32.12,-322 20.12,-322 20.12,-282 564.12,-282 564.12,-318"/>
-<polyline fill="none" stroke="#949494" points="20.12,-318 32.12,-318"/>
-<text text-anchor="middle" x="292.12" y="-295.32" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma</text>
+<polygon fill="#fcfcfc" stroke="#949494" points="564,-318 32,-318 32,-322 20,-322 20,-282 564,-282 564,-318"/>
+<polyline fill="none" stroke="#949494" points="20,-318 32,-318"/>
+<text text-anchor="middle" x="292" y="-295" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/danielgtaylor/huma/v2 -->
 <g id="edge10" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/danielgtaylor/huma/v2</title>
-<path fill="none" stroke="#a8a8a8" d="M487.44,-281.57C487.44,-243.35 487.44,-159 487.44,-159 487.44,-159 952.5,-159 952.5,-159 952.5,-159 952.5,-137.82 952.5,-137.82"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="954.6,-137.82 952.5,-131.82 950.4,-137.82 954.6,-137.82"/>
+<path fill="none" stroke="#a8a8a8" d="M487,-282C487,-243 487,-159 487,-159 487,-159 953,-159 953,-159 953,-159 953,-138 953,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="955,-138 953,-132 950,-138 955,-138"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/danielgtaylor/huma/v2/adapters/humachi -->
 <g id="edge11" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/danielgtaylor/huma/v2/adapters/humachi</title>
-<path fill="none" stroke="#a8a8a8" d="M525.78,-281.77C525.78,-255.99 525.78,-212 525.78,-212 525.78,-212 665.16,-212 665.16,-212"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="665.16,-214.1 671.16,-212 665.16,-209.9 665.16,-214.1"/>
+<path fill="none" stroke="#a8a8a8" d="M526,-282C526,-256 526,-212 526,-212 526,-212 665,-212 665,-212"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="665,-214 671,-212 665,-210 665,-214"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/go&#45;chi/chi/v5 -->
 <g id="edge12" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/go&#45;chi/chi/v5</title>
-<path fill="none" stroke="#a8a8a8" d="M295.54,-281.63C295.54,-281.63 295.54,-137.96 295.54,-137.96"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="297.64,-137.96 295.54,-131.96 293.44,-137.96 297.64,-137.96"/>
+<path fill="none" stroke="#a8a8a8" d="M296,-282C296,-282 296,-138 296,-138"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="298,-138 296,-132 293,-138 298,-138"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/sethvargo/go&#45;envconfig -->
 <g id="edge13" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/sethvargo/go&#45;envconfig</title>
-<path fill="none" stroke="#a8a8a8" d="M154.19,-281.88C154.19,-281.88 154.19,-231.9 154.19,-231.9"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="156.29,-231.9 154.19,-225.9 152.09,-231.9 156.29,-231.9"/>
+<path fill="none" stroke="#a8a8a8" d="M154,-282C154,-282 154,-232 154,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="156,-232 154,-226 152,-232 156,-232"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration -->
 <g id="edge14" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/huma&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/integration</title>
-<path fill="none" stroke="#a8a8a8" d="M449.09,-281.69C449.09,-268.5 449.09,-253 449.09,-253 449.09,-253 1517.33,-253 1517.33,-253 1517.33,-253 1517.33,-231.82 1517.33,-231.82"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1519.43,-231.82 1517.33,-225.82 1515.23,-231.82 1519.43,-231.82"/>
+<path fill="none" stroke="#a8a8a8" d="M449,-282C449,-269 449,-253 449,-253 449,-253 1517,-253 1517,-253 1517,-253 1517,-232 1517,-232"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="1519,-232 1517,-226 1515,-232 1519,-232"/>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local -->
 <g id="node14" class="node">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local</title>
-<polygon fill="#fcfcfc" stroke="#949494" points="2490.25,-318 1950,-318 1950,-322 1938,-322 1938,-282 2490.25,-282 2490.25,-318"/>
+<polygon fill="#fcfcfc" stroke="#949494" points="2490,-318 1950,-318 1950,-322 1938,-322 1938,-282 2490,-282 2490,-318"/>
 <polyline fill="none" stroke="#949494" points="1938,-318 1950,-318"/>
-<text text-anchor="middle" x="2214.12" y="-295.32" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local</text>
+<text text-anchor="middle" x="2214" y="-295" font-family="Courier New" font-size="14.00">github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config -->
 <g id="edge17" class="edge">
 <title>github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/local&#45;&gt;github.com/codemityio/goforma/pkg/code/imports/testdata/pkg/config</title>
-<path fill="none" stroke="#a8a8a8" d="M2275.12,-281.63C2275.12,-234.33 2275.12,-112 2275.12,-112 2275.12,-112 2007.98,-112 2007.98,-112"/>
-<polygon fill="#a8a8a8" stroke="#a8a8a8" points="2007.98,-109.9 2001.98,-112 2007.98,-114.1 2007.98,-109.9"/>
+<path fill="none" stroke="#a8a8a8" d="M2275,-282C2275,-234 2275,-112 2275,-112 2275,-112 2008,-112 2008,-112"/>
+<polygon fill="#a8a8a8" stroke="#a8a8a8" points="2008,-110 2002,-112 2008,-114 2008,-110"/>
 </g>
 </g>
 </svg>

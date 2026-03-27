@@ -1,6 +1,6 @@
 # ![GoForma](logo.jpg)
 
-![coverage-badge-do-not-edit](https://img.shields.io/badge/Coverage-88%25-green.svg?longCache=true&style=flat)
+![coverage-badge-do-not-edit](https://img.shields.io/badge/Coverage-87%25-green.svg?longCache=true&style=flat)
 
 ## Table of contents
 
