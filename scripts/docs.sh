@@ -26,6 +26,7 @@ case "$1" in
       --json-output-path "pkg/${target}/graph.json" \
       --path "./pkg/${target}/..." >"pkg/${target}/graph.puml"
     docker run --rm \
+      --name "${BASE_NAME}-notatio-plantuml" \
       -w "${PWD}" \
       -v "${PWD}:${PWD}" \
       "${VENDOR}"/notatio:latest plantuml --input-path="pkg/${target}/graph.puml" --output-format=svg
@@ -50,6 +51,7 @@ case "$1" in
       --owned "${GOPRIVATE}" \
       >"pkg/${target}/depgraph.dot"
     docker run --rm \
+      --name "${BASE_NAME}-notatio-graphviz" \
       -v "${PWD}:${PWD}" \
       -w "${PWD}" \
       "${VENDOR}"/notatio:latest graphviz --input-path="pkg/${target}/depgraph.dot" --output-format=svg
@@ -74,9 +76,10 @@ case "$1" in
     notatio toc --document="cmd/${target}/README.md" --header="Table of contents" --limiter-left="##" --limiter-right="## Summary" --index=1 \
       int --start-from-level=1 --start-from-item=1
     docker run --rm \
+      --name "${BASE_NAME}-pandoc" \
       -v "${PWD}:${PWD}" \
       -w "${PWD}" \
-      "${VENDOR}"/pandoc \
+      "${VENDOR}"/pandoc:latest \
       --wrap=auto --columns=120 \
       --from=markdown-implicit_figures \
       --to=gfm --output="cmd/${target}/README.md" "cmd/${target}/README.md"
@@ -102,7 +105,7 @@ case "$1" in
     docker run --rm \
       -v "${PWD}:${PWD}" \
       -w "${PWD}" \
-      "${VENDOR}"/pandoc \
+      "${VENDOR}"/pandoc:latest \
       --wrap=auto --columns=120 \
       --from=markdown-implicit_figures \
       --to=gfm --output="pkg/${target}/README.md" "pkg/${target}/README.md"
@@ -120,14 +123,17 @@ case "$1" in
   for target in ${targets//,/ }; do
     echo "pkg/${target}/..."
     docker run --rm \
+      --name "${BASE_NAME}-notatio-mermaid" \
       -w "${PWD}" \
       -v "${PWD}:${PWD}" \
       "${VENDOR}"/notatio:latest mermaid --input-path="pkg/${target}" --output-format=svg --recursive
     docker run --rm \
+      --name "${BASE_NAME}-notatio-plantuml" \
       -w "${PWD}" \
       -v "${PWD}:${PWD}" \
       "${VENDOR}"/notatio:latest plantuml --input-path="pkg/${target}" --output-format=svg --recursive
     docker run --rm \
+      --name "${BASE_NAME}-notatio-graphviz" \
       -v "${PWD}:${PWD}" \
       -w "${PWD}" \
       "${VENDOR}"/notatio:latest graphviz --input-path="pkg/${target}" --output-format=svg --recursive
@@ -135,7 +141,7 @@ case "$1" in
   ;;
 
 "main")
-  # summaries
+# summaries
   packages=$(find "cmd" -mindepth 1 -maxdepth 1 -type d -exec basename {} \;)
   paths=
   for target in ${packages//,/ }; do
@@ -148,17 +154,18 @@ case "$1" in
   for target in ${packages//,/ }; do
     paths+=" --path=pkg/${target}/README.md"
   done
-  notatio toc --document=README.md --header="Packages" --limiter-left="##" --limiter-right="##" --index=1 \
+  notatio toc --document=README.md --header="Packages" --limiter-left="##" --limiter-right="## " --index=1 \
     ext --summary-header="Summary" --summary-limiter-left="##" --summary-limiter-right="##" ${paths}
   # command
-  notatio coi --command="${BASE_NAME} --help" --document=README.md --header=Manual --limiter-left=### --limiter-right="###" --index=1
+  notatio coi --command="${BASE_NAME} --help" --document=README.md --header=Manual --limiter-left=### --limiter-right="### " --index=1
   # table of contents
   notatio toc --document=README.md --header="Table of contents" --limiter-right="## Summary" --index=1 \
     int --start-from-level=1 --start-from-item=1
   docker run --rm \
+    --name "${BASE_NAME}-pandoc" \
     -v "${PWD}:${PWD}" \
     -w "${PWD}" \
-    "${VENDOR}"/pandoc \
+    "${VENDOR}"/pandoc:latest \
     --wrap=auto --columns=120 \
     --from=markdown-implicit_figures \
     --to=gfm --output=README.md README.md
