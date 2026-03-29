@@ -5,8 +5,7 @@ check() {
   local missing_packages=()
 
   for package in $packages; do
-    echo "checking: ${package}...."
-    if ! command -v "$package"; then
+    if ! command -v "$package" &>/dev/null; then
       missing_packages+=("$package")
     fi
   done
@@ -17,8 +16,6 @@ check() {
     done
 
     exit 1
-  else
-    echo "success: all required packages are installed.."
   fi
 }
 

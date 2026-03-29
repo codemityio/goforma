@@ -1,6 +1,7 @@
 ARG VENDOR="vendor"
 ARG BASE_IMAGE_VERSION="latest"
 
+FROM ${VENDOR}/golang:latest AS golang
 FROM ${VENDOR}/golang:${BASE_IMAGE_VERSION} AS build
 
 ARG VENDOR="vendor"
@@ -30,8 +31,9 @@ FROM ${VENDOR}/alpine:${BASE_IMAGE_VERSION} AS final
 
 WORKDIR /opt/app/bin
 
-ENV PATH="/opt/app/bin:${PATH}"
+ENV PATH="/usr/local/go/bin:/opt/app/bin:${PATH}"
 
+COPY --from=golang /usr/local/go /usr/local/go
 COPY --from=build /tmp/build/bin/app /opt/app/bin/app
 
 COPY entrypoint.sh /
