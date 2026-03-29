@@ -8,6 +8,8 @@
   - [`uml`](#uml)
   - [`dep`](#dep)
 - [Usage](#usage)
+  - [`uml`](#uml)
+  - [`dep`](#dep)
 
 ## Summary
 
@@ -86,6 +88,10 @@ OPTIONS:
 
 ## Usage
 
+### `uml`
+
+Use the following command to generate a diagram.
+
 ``` bash
 goforma code uml \
   --workdir=${PWD} \
@@ -94,11 +100,35 @@ goforma code uml \
   --include-func \
   --include-not-exported \
   --path "./..." >"graph.puml"
+```
+
+Alternatively use a containerised tool.
+
+``` bash
+docker run --rm \
+  -w "${PWD}" \
+  -v "${PWD}:${PWD}" \
+  codemityio/goforma:latest code uml \
+  --workdir=${PWD} \
+  --include-var \
+  --include-const \
+  --include-func \
+  --include-not-exported \
+  --path "./..." >"graph.puml"
+```
+
+The following command will convert it from `puml` to `svg`.
+
+``` bash
 docker run --rm \
   -w "${PWD}" \
   -v "${PWD}:${PWD}" \
   codemityio/notatio:latest plantuml --input-path="graph.puml" --output-format=svg
 ```
+
+### `dep`
+
+Use the following command to generate a diagram.
 
 ``` bash
 goforma code dep \
@@ -106,6 +136,24 @@ goforma code dep \
   --exclude-standard \
   --exclude-vendor \
   --path "./..." >"depgraph.dot"
+```
+
+Alternatively use a containerised tool.
+
+``` bash
+docker run --rm \
+  -w "${PWD}" \
+  -v "${PWD}:${PWD}" \
+  codemityio/goforma:latest code dep \
+  --workdir=${PWD} \
+  --exclude-standard \
+  --exclude-vendor \
+  --path "./..." >"depgraph.dot"
+```
+
+The following command will convert it from `dot` to `svg`.
+
+``` bash
 docker run --rm \
   -w "${PWD}" \
   -v "${PWD}:${PWD}" \
