@@ -21,7 +21,7 @@ func coverage(c *cli.Context) error {
 		return fmt.Errorf("%w: unable to determine working directory: %w", errPkg, err)
 	}
 
-	covPath, err := sanitizePath(baseDir, coverageFilePath)
+	covPath, err := sanitisePath(baseDir, coverageFilePath)
 	if err != nil {
 		return fmt.Errorf("%w: invalid coverage file path `%s`", err, coverageFilePath)
 	}
@@ -57,7 +57,7 @@ func coverage(c *cli.Context) error {
 		return fmt.Errorf("%w: unable to parse coverage total `%s`: %w", errPkg, total, err)
 	}
 
-	docPath, err := sanitizePath(baseDir, documentPath)
+	docPath, err := sanitisePath(baseDir, documentPath)
 	if err != nil {
 		return fmt.Errorf("%w: invalid document path `%s`", err, documentPath)
 	}
@@ -86,7 +86,7 @@ func coverage(c *cli.Context) error {
 	return nil
 }
 
-func sanitizePath(baseDir, p string) (string, error) {
+func sanitisePath(baseDir, p string) (string, error) {
 	if filepath.IsAbs(p) {
 		return "", errPathOutsideBase
 	}

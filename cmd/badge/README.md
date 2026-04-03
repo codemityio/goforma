@@ -31,9 +31,9 @@ COMMANDS:
    help, h   Shows a list of commands or help for one command
 
 OPTIONS:
-   --document value  markdown file path to be updated
-   --id value        placeholder identifier
-   --help, -h        show help
+   --document-path value  markdown file path to be updated
+   --id value             placeholder identifier
+   --help, -h             show help
 ```
 
 ## Subcommands
@@ -41,7 +41,7 @@ OPTIONS:
 ### `coverage`
 
 ``` bash
-$ goforma badge --document=README.MD --id=id coverage --help
+$ goforma badge --document-path=README.MD --id=id coverage --help
 NAME:
    goforma badge coverage - Generate coverage badge within a document
 
@@ -71,7 +71,7 @@ Pass that converted output as input to the coverage badge command.
 
 ``` bash
 goforma badge \
-  --document=README.md \
+  --document-path=README.md \
   --id=example-badge-id \
   coverage \
   --cov-file-path=tmp/coverage.in \
