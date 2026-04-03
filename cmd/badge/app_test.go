@@ -75,7 +75,7 @@ func TestCoverageFunction(t *testing.T) {
 		require.NoError(t, os.WriteFile(covPath, []byte(covContent), 0o600))
 		require.NoError(t, os.WriteFile(docPath, []byte(docContent), 0o600))
 
-		document = "testdata/README.md"
+		documentPath = "testdata/README.md"
 		id = "coverage-badge-do-not-edit"
 
 		return covPath, docPath
