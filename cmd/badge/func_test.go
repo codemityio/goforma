@@ -30,7 +30,7 @@ func TestBadgeColour(t *testing.T) {
 	}
 }
 
-func TestSanitizePath(t *testing.T) {
+func TestSanitisePath(t *testing.T) {
 	baseDir := t.TempDir()
 
 	tests := []struct {
@@ -59,7 +59,7 @@ func TestSanitizePath(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := sanitizePath(baseDir, tt.inputPath)
+			got, err := sanitisePath(baseDir, tt.inputPath)
 
 			require.ErrorIs(t, err, tt.wantErr)
 			require.Equal(t, tt.wantPath, got)
@@ -75,7 +75,7 @@ func TestCoverageFunction(t *testing.T) {
 		require.NoError(t, os.WriteFile(covPath, []byte(covContent), 0o600))
 		require.NoError(t, os.WriteFile(docPath, []byte(docContent), 0o600))
 
-		document = "testdata/README.md"
+		documentPath = "testdata/README.md"
 		id = "coverage-badge-do-not-edit"
 
 		return covPath, docPath
