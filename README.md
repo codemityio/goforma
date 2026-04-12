@@ -97,9 +97,9 @@ $ docker run codemityio/goforma
 | github.com/russross/blackfriday/v2      | https://github.com/russross/blackfriday/blob/v2.1.0/LICENSE.txt | BSD-2-Clause |
 | github.com/urfave/cli/v2                | https://github.com/urfave/cli/blob/v2.27.7/LICENSE              | MIT          |
 | github.com/xrash/smetrics               | https://github.com/xrash/smetrics/blob/686a1a2994c1/LICENSE     | MIT          |
-| golang.org/x/mod/semver                 | https://cs.opensource.google/go/x/mod/+/v0.34.0:LICENSE         | BSD-3-Clause |
+| golang.org/x/mod/semver                 | https://cs.opensource.google/go/x/mod/+/v0.35.0:LICENSE         | BSD-3-Clause |
 | golang.org/x/sync/errgroup              | https://cs.opensource.google/go/x/sync/+/v0.20.0:LICENSE        | BSD-3-Clause |
-| golang.org/x/tools                      | https://cs.opensource.google/go/x/tools/+/v0.43.0:LICENSE       | BSD-3-Clause |
+| golang.org/x/tools                      | https://cs.opensource.google/go/x/tools/+/v0.44.0:LICENSE       | BSD-3-Clause |
 
 ## License
 
