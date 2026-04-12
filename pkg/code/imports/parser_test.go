@@ -116,6 +116,7 @@ func TestDefaultParser_Parse(t *testing.T) {
 		"internal/cpu",
 		"internal/abi",
 		"internal/routebsd",
+		"internal/strconv",
 		"sync/atomic",
 		"unique",
 		"slices",

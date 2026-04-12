@@ -79,7 +79,6 @@
     "internal/reflectlite",
     "internal/saferio",
     "internal/singleflight",
-    "internal/strconv",
     "internal/syscall/unix",
     "internal/unsafeheader",
     "io",
@@ -1429,7 +1428,6 @@
       "IsVendor": false,
       "DepPaths": [
         "errors",
-        "internal/strconv",
         "internal/syscall/unix",
         "io",
         "syscall",
@@ -1480,18 +1478,6 @@
       "Name": "singleflight",
       "Path": "internal/singleflight",
       "Label": "singleflight",
-      "IsLocal": false,
-      "IsOwned": false,
-      "IsExternal": false,
-      "IsStandard": true,
-      "IsInternal": true,
-      "IsVendor": false,
-      "DepPaths": []
-    },
-    {
-      "Name": "strconv",
-      "Path": "internal/strconv",
-      "Label": "strconv",
       "IsLocal": false,
       "IsOwned": false,
       "IsExternal": false,
@@ -1732,7 +1718,6 @@
         "internal/nettrace",
         "internal/poll",
         "internal/singleflight",
-        "internal/strconv",
         "internal/syscall/unix",
         "io",
         "net/netip",
@@ -2032,7 +2017,6 @@
       "DepPaths": [
         "errors",
         "internal/bytealg",
-        "internal/strconv",
         "unicode/utf8"
       ]
     },
@@ -2071,8 +2055,7 @@
         "internal/bytealg",
         "internal/msan",
         "internal/oserror",
-        "internal/race",
-        "internal/strconv"
+        "internal/race"
       ]
     },
     {
