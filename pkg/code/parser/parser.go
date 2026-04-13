@@ -503,7 +503,15 @@ func (p *DefaultParser) getInterfaces(namedType *types.Named) []*Interface {
 
 	// added to ensure deterministic output
 	sort.Slice(interfaces, func(i, j int) bool {
-		return interfaces[i].Name < interfaces[j].Name
+		if interfaces[i].Name != interfaces[j].Name {
+			return interfaces[i].Name < interfaces[j].Name
+		}
+
+		if interfaces[i].PackageName != interfaces[j].PackageName {
+			return interfaces[i].PackageName < interfaces[j].PackageName
+		}
+
+		return interfaces[i].PackagePath < interfaces[j].PackagePath
 	})
 
 	return interfaces
@@ -1338,8 +1346,10 @@ func (p *DefaultParser) dedupeSliceOfInterfaces(input []*Interface) []*Interface
 	result := make([]*Interface, 0)
 
 	for _, val := range input {
-		if _, exists := unique[val.Name]; !exists {
-			unique[val.Name] = struct{}{}
+		key := val.PackagePath + val.Name // include cross packages linking
+
+		if _, exists := unique[key]; !exists {
+			unique[key] = struct{}{}
 
 			result = append(result, val)
 		}
