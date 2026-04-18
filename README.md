@@ -5,12 +5,12 @@
 ## Table of contents
 
 - [Summary](#summary)
-- [Development](#development)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Manual](#manual)
   - [Subcommands](#subcommands)
   - [Docker](#docker)
+- [Development](#development)
 - [Packages](#packages)
 - [Dependencies](#dependencies)
   - [Graph](#graph)
@@ -29,7 +29,6 @@ To install the package, run `make install` (directly from the repository clone) 
 ## Usage
 
 Once installed, use the `goforma` command to get started.
-
 
 ### Manual
 
