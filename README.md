@@ -21,20 +21,15 @@
 
 Tool to support work with Go code.
 
-## Development
-
-To work with the codebase, use `make` command as the primary entry point for all project tools.
-
-Navigate the available options using the arrow keys: `↓ ↑ → ←`. Use `/` to toggle search.
-
 ## Installation
 
-To install the tool use `make install` (directly from the repository clone) or use
+To install the package, run `make install` (directly from the repository clone) or use
 `go install github.com/codemityio/goforma@latest`.
 
 ## Usage
 
-Once you have the tool installed, just use the `goforma` command to get started.
+Once installed, use the `goforma` command to get started.
+
 
 ### Manual
 
@@ -78,6 +73,12 @@ COPYRIGHT:
 ``` bash
 $ docker run codemityio/goforma
 ```
+
+## Development
+
+To work with the codebase, use `make` command as the primary entry point for all project tools.
+
+Navigate the available options using the arrow keys: `↓ ↑ → ←`. Use `/` to toggle search.
 
 ## Packages
 

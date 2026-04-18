@@ -29,7 +29,7 @@ RUN go build \
 
 FROM ${VENDOR}/alpine:${BASE_IMAGE_VERSION} AS final
 
-WORKDIR /opt/app/bin
+WORKDIR /opt/app
 
 ENV PATH="/usr/local/go/bin:/opt/app/bin:${PATH}"
 
