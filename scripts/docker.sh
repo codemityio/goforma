@@ -2,8 +2,6 @@
 
 set -e
 
-source scripts/func.sh
-
 # Note: the set [-/+] x is purely there to turn on and off outputting of the commands being executed.
 if [ "${DEBUG}" = "true" ]; then
   set -x
@@ -35,11 +33,6 @@ case "$1" in
     --build-arg BUILD_TIME="$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
     -t "${IMAGE_NAME}:latest" \
     -f Dockerfile .
-  ;;
-
-"push")
-  pushImage "${IMAGE_NAME}:latest"
-  pushImage "${IMAGE_NAME}:$(scripts/tools.sh version)"
   ;;
 
 *)
