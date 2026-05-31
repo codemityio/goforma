@@ -19,7 +19,6 @@
     "crypto/ecdsa",
     "crypto/ed25519",
     "crypto/elliptic",
-    "crypto/fips140",
     "crypto/hkdf",
     "crypto/hmac",
     "crypto/hpke",
@@ -434,20 +433,6 @@
       ]
     },
     {
-      "Name": "fips140",
-      "Path": "crypto/fips140",
-      "Label": "crypto/fips140",
-      "IsLocal": false,
-      "IsOwned": false,
-      "IsExternal": false,
-      "IsStandard": true,
-      "IsInternal": false,
-      "IsVendor": false,
-      "DepPaths": [
-        "internal/godebug"
-      ]
-    },
-    {
       "Name": "hkdf",
       "Path": "crypto/hkdf",
       "Label": "crypto/hkdf",
@@ -491,7 +476,6 @@
         "crypto",
         "crypto/cipher",
         "crypto/ecdh",
-        "crypto/fips140",
         "crypto/hkdf",
         "crypto/internal/rand",
         "crypto/mlkem",
@@ -1061,7 +1045,6 @@
       "IsVendor": true,
       "DepPaths": [
         "crypto/cipher",
-        "crypto/fips140",
         "encoding/binary",
         "errors",
         "golang.org/x/crypto/chacha20",

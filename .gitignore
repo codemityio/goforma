@@ -1,5 +1,6 @@
-.idea
 .DS_Store
+.idea
+.claude
 /Makefile.env.*
 /bin
 /var
