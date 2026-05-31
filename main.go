@@ -28,6 +28,10 @@ func main() {
 		&code.App,
 	}
 
+	application.CommandNotFound = func(_ *cli.Context, cmd string) {
+		log.Fatalf("error: unknown command %q", cmd)
+	}
+
 	if e := application.Run(os.Args); e != nil {
 		log.Fatalf("error: %v", e)
 	}

@@ -10,42 +10,45 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-//go:embed testdata/pkg.json
-var pkg string
+var (
+	//go:embed testdata/pkg.json
+	pkg string
 
-//go:embed testdata/pkg-app.json
-var pkgApp string
+	//go:embed testdata/pkg-app.json
+	pkgApp string
 
-//go:embed testdata/pkg-integration.json
-var pkgIntegration string
+	//go:embed testdata/pkg-integration.json
+	pkgIntegration string
 
-//go:embed testdata/pkg-recursive.json
-var pkgRecursive string
+	//go:embed testdata/pkg-recursive.json
+	pkgRecursive string
 
-//go:embed testdata/pkg-recursive-depth-1.json
-var pkgRecursiveDepth1 string
+	//go:embed testdata/pkg-recursive-depth-1.json
+	pkgRecursiveDepth1 string
 
-//go:embed testdata/pkg-recursive-exclude-standard.json
-var pkgRecursiveExcludeStandard string
+	//go:embed testdata/pkg-recursive-exclude-standard.json
+	pkgRecursiveExcludeStandard string
 
-//go:embed testdata/pkg-recursive-exclude-vendor.json
-var pkgRecursiveExcludeVendor string
+	//go:embed testdata/pkg-recursive-exclude-vendor.json
+	pkgRecursiveExcludeVendor string
 
-//go:embed testdata/pkg-recursive-exclude-internal.json
-var pkgRecursiveExcludeInternal string
+	//go:embed testdata/pkg-recursive-exclude-internal.json
+	pkgRecursiveExcludeInternal string
+)
 
 func TestDefaultParser_Parse(t *testing.T) {
 	wd, err := os.Getwd()
 	require.NoError(t, err)
 
 	toMakeTheTestPassOnDifferentOS := []string{
-		"runtime",
-		"crypto/x509/internal/macos",
-		"crypto/subtle",
-		"crypto/sha3",
+		"crypto/fips140",
+		"crypto/internal/alias",
+		"crypto/internal/bigmod",
 		"crypto/internal/boring",
 		"crypto/internal/boring/bbig",
 		"crypto/internal/boring/sig",
+		"crypto/internal/edwards25519",
+		"crypto/internal/edwards25519/field",
 		"crypto/internal/entropy",
 		"crypto/internal/fips140",
 		"crypto/internal/fips140/aes",
@@ -78,49 +81,49 @@ func TestDefaultParser_Parse(t *testing.T) {
 		"crypto/internal/fips140only",
 		"crypto/internal/hpke",
 		"crypto/internal/impl",
-		"crypto/internal/randutil",
-		"crypto/internal/sysrand",
-		"crypto/internal/alias",
-		"crypto/internal/bigmod",
-		"crypto/internal/edwards25519",
-		"crypto/internal/edwards25519/field",
 		"crypto/internal/mlkem768",
 		"crypto/internal/nistec",
 		"crypto/internal/nistec/fiat",
+		"crypto/internal/randutil",
+		"crypto/internal/sysrand",
+		"crypto/sha3",
+		"crypto/subtle",
 		"crypto/tls/internal/fips140tls",
+		"crypto/x509/internal/macos",
 		"embed",
-		"golang.org/x/crypto/sha3",
 		"golang.org/x/crypto/hkdf",
-		"internal/goos",
-		"io/fs",
-		"path/filepath",
+		"golang.org/x/crypto/internal/poly1305",
+		"golang.org/x/crypto/sha3",
+		"golang.org/x/net/route",
 		"golang.org/x/sys/cpu",
-		"os",
-		"internal/runtime/syscall",
+		"internal/abi",
+		"internal/byteorder",
+		"internal/chacha8rand",
 		"internal/concurrent",
-		"internal/weak",
-		"internal/sync",
+		"internal/cpu",
+		"internal/goarch",
+		"internal/goos",
+		"internal/routebsd",
 		"internal/runtime/maps",
 		"internal/runtime/math",
 		"internal/runtime/sys",
-		"golang.org/x/net/route",
-		"internal/byteorder",
-		"internal/goarch",
+		"internal/runtime/syscall",
+		"internal/strconv",
 		"internal/stringslite",
-		"internal/chacha8rand",
-		"golang.org/x/crypto/internal/poly1305",
+		"internal/sync",
+		"internal/weak",
+		"io/fs",
 		"math/bits",
 		"math/rand/v2",
+		"os",
+		"path/filepath",
+		"reflect",
+		"runtime",
+		"slices",
 		"sync",
-		"unsafe",
-		"internal/cpu",
-		"internal/abi",
-		"internal/routebsd",
-		"internal/strconv",
 		"sync/atomic",
 		"unique",
-		"slices",
-		"reflect",
+		"unsafe",
 	}
 
 	// Define test cases
