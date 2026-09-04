@@ -34,7 +34,7 @@ func (p *DefaultParser) Parse(path string) (*CodeMap[*Var, *Type, *Func, *Const]
 	}
 
 	pkgs, err := packages.Load(
-		&packages.Config{ //nolint:exhaustruct // not required to be exhaustive...
+		&packages.Config{ //nolint:exhaustruct_v5 // not required to be exhaustive...
 			Mode: packages.NeedName |
 				packages.NeedFiles |
 				packages.NeedImports |
@@ -378,25 +378,28 @@ func (p *DefaultParser) describeConstDecl(
 	return items
 }
 
-func (p *DefaultParser) resolveTypeInfo( //nolint:nonamedreturns
+func (p *DefaultParser) resolveTypeInfo(
 	specType ast.Expr,
 	doc *ast.CommentGroup,
 	name *ast.Ident,
 	typesInfo *types.Info,
-) (typ *TypeDesc, typeInfo string, docStr string) {
+) (*TypeDesc, string, string) {
+	var typ *TypeDesc
 	if specType != nil {
 		typ = p.describeType(specType, typesInfo)
 	}
 
+	var typeInfo string
 	if obj, ok := typesInfo.Defs[name]; ok && obj != nil {
 		typeInfo = obj.Type().String()
 	}
 
+	var docStr string
 	if doc != nil {
 		docStr = p.getDoc(doc)
 	}
 
-	return
+	return typ, typeInfo, docStr
 }
 
 // Helper method to describe types declaration.

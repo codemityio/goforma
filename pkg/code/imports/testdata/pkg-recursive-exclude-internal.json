@@ -27,6 +27,7 @@
     "crypto/hmac",
     "crypto/hpke",
     "crypto/md5",
+    "crypto/mldsa",
     "crypto/mlkem",
     "crypto/rand",
     "crypto/rc4",
@@ -39,10 +40,13 @@
     "crypto/x509/pkix",
     "encoding",
     "encoding/asn1",
+    "encoding/base32",
     "encoding/base64",
     "encoding/binary",
     "encoding/hex",
     "encoding/json",
+    "encoding/json/jsontext",
+    "encoding/json/v2",
     "encoding/pem",
     "errors",
     "flag",
@@ -66,7 +70,6 @@
     "golang.org/x/net/dns/dnsmessage",
     "golang.org/x/net/http/httpguts",
     "golang.org/x/net/http/httpproxy",
-    "golang.org/x/net/http2/hpack",
     "golang.org/x/net/idna",
     "golang.org/x/text/secure/bidirule",
     "golang.org/x/text/transform",
@@ -285,7 +288,6 @@
         "fmt",
         "io",
         "math",
-        "sort",
         "strconv"
       ]
     },
@@ -560,6 +562,22 @@
       ]
     },
     {
+      "Name": "mldsa",
+      "Path": "crypto/mldsa",
+      "Label": "crypto/mldsa",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "crypto",
+        "errors",
+        "io"
+      ]
+    },
+    {
       "Name": "mlkem",
       "Path": "crypto/mlkem",
       "Label": "crypto/mlkem",
@@ -697,6 +715,7 @@
         "crypto/hmac",
         "crypto/hpke",
         "crypto/md5",
+        "crypto/mldsa",
         "crypto/mlkem",
         "crypto/rand",
         "crypto/rc4",
@@ -742,6 +761,7 @@
         "crypto/ed25519",
         "crypto/elliptic",
         "crypto/md5",
+        "crypto/mldsa",
         "crypto/rsa",
         "crypto/sha1",
         "crypto/sha256",
@@ -785,6 +805,7 @@
         "encoding/hex",
         "fmt",
         "math/big",
+        "strings",
         "time"
       ]
     },
@@ -821,6 +842,21 @@
         "time",
         "unicode/utf16",
         "unicode/utf8"
+      ]
+    },
+    {
+      "Name": "base32",
+      "Path": "encoding/base32",
+      "Label": "encoding/base32",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "io",
+        "strconv"
       ]
     },
     {
@@ -885,15 +921,63 @@
         "bytes",
         "cmp",
         "encoding",
+        "encoding/json/jsontext",
+        "encoding/json/v2",
+        "errors",
+        "fmt",
+        "io",
+        "strconv",
+        "strings"
+      ]
+    },
+    {
+      "Name": "jsontext",
+      "Path": "encoding/json/jsontext",
+      "Label": "encoding/json/jsontext",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "bytes",
+        "errors",
+        "io",
+        "iter",
+        "math",
+        "strconv",
+        "strings",
+        "unicode/utf8"
+      ]
+    },
+    {
+      "Name": "json",
+      "Path": "encoding/json/v2",
+      "Label": "encoding/json/v2",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "bytes",
+        "cmp",
+        "encoding",
+        "encoding/base32",
         "encoding/base64",
+        "encoding/binary",
+        "encoding/hex",
+        "encoding/json/jsontext",
         "errors",
         "fmt",
         "io",
         "math",
         "strconv",
         "strings",
+        "time",
         "unicode",
-        "unicode/utf16",
         "unicode/utf8"
       ]
     },
@@ -1334,23 +1418,6 @@
       ]
     },
     {
-      "Name": "hpack",
-      "Path": "golang.org/x/net/http2/hpack",
-      "Label": "golang.org/x/net/http2/hpack",
-      "IsLocal": false,
-      "IsOwned": false,
-      "IsExternal": true,
-      "IsStandard": false,
-      "IsInternal": false,
-      "IsVendor": true,
-      "DepPaths": [
-        "bytes",
-        "errors",
-        "fmt",
-        "io"
-      ]
-    },
-    {
       "Name": "idna",
       "Path": "golang.org/x/net/idna",
       "Label": "golang.org/x/net/idna",
@@ -1367,6 +1434,7 @@
         "golang.org/x/text/unicode/norm",
         "math",
         "strings",
+        "unicode",
         "unicode/utf8"
       ]
     },
@@ -1692,21 +1760,17 @@
         "compress/gzip",
         "container/list",
         "context",
-        "crypto/rand",
         "crypto/tls",
         "encoding/base64",
-        "encoding/binary",
         "errors",
         "fmt",
         "golang.org/x/net/http/httpguts",
         "golang.org/x/net/http/httpproxy",
-        "golang.org/x/net/http2/hpack",
         "golang.org/x/net/idna",
         "io",
         "log",
         "maps",
         "math",
-        "math/rand",
         "mime",
         "mime/multipart",
         "net",
@@ -1814,6 +1878,7 @@
       "IsInternal": false,
       "IsVendor": false,
       "DepPaths": [
+        "bytes",
         "errors",
         "fmt",
         "net/netip",
@@ -1850,6 +1915,7 @@
       "DepPaths": [
         "bytes",
         "io",
+        "iter",
         "regexp/syntax",
         "strconv",
         "strings",

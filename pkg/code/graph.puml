@@ -183,7 +183,7 @@ package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio
         - describeFuncDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, funcDecl *ast.FuncDecl) (*Func)</font>
         - describeVarDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, varSpec *ast.ValueSpec) ([]*Var)</font>
         - describeConstDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, constSpec *ast.ValueSpec) ([]*Const)</font>
-        - resolveTypeInfo <font color=#1f38b5>(specType ast.Expr, doc *ast.CommentGroup, name *ast.Ident, typesInfo *types.Info) (typ *TypeDesc, typeInfo string, docStr string)</font>
+        - resolveTypeInfo <font color=#1f38b5>(specType ast.Expr, doc *ast.CommentGroup, name *ast.Ident, typesInfo *types.Info) (*TypeDesc, string, string)</font>
         - describeTypeDecl <font color=#1f38b5>(path string, pkg *packages.Package, start token.Position, end token.Position, typeSpec *ast.TypeSpec, packageMethods map[string][]*Method, errs *ast.ChanType) (*Type)</font>
         - getInterfaces <font color=#1f38b5>(namedType *types.Named) ([]*Interface)</font>
         - collectMethodSet <font color=#1f38b5>(t types.Type) ([]*types.Func)</font>
@@ -398,7 +398,7 @@ package "github.com/codemityio/goforma/pkg/code/imports" as github_com_codemityi
 }
 package "github.com/codemityio/goforma/pkg/code/parser" as github_com_codemityio_goforma_pkg_code_parser {
     class "interface" as _interface << (I, #e4f58e) >> {}
-    class "any" as _any << (T, #6d8cbf) >> {}
+    class "any" as _any << (I, #e4f58e) >> {}
     class "error" as _error << (I, #e4f58e) >> {}
     class "struct" as _struct << (S, #b5558d) >> {}
     class "error" as _error << (I, #e4f58e) >> {}

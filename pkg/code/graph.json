@@ -659,7 +659,7 @@
             "Column": 1
           },
           "End": {
-            "Offset": 1157,
+            "Offset": 1160,
             "Line": 43,
             "Column": 2
           },
@@ -747,12 +747,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 1215,
+            "Offset": 1218,
             "Line": 46,
             "Column": 1
           },
           "End": {
-            "Offset": 1819,
+            "Offset": 1822,
             "Line": 69,
             "Column": 2
           },
@@ -832,12 +832,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 1879,
+            "Offset": 1882,
             "Line": 72,
             "Column": 1
           },
           "End": {
-            "Offset": 3029,
+            "Offset": 3032,
             "Line": 124,
             "Column": 2
           },
@@ -880,12 +880,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 3109,
+            "Offset": 3112,
             "Line": 127,
             "Column": 1
           },
           "End": {
-            "Offset": 3295,
+            "Offset": 3298,
             "Line": 132,
             "Column": 2
           },
@@ -951,12 +951,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 3348,
+            "Offset": 3351,
             "Line": 135,
             "Column": 1
           },
           "End": {
-            "Offset": 3529,
+            "Offset": 3532,
             "Line": 147,
             "Column": 2
           },
@@ -1022,12 +1022,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 3582,
+            "Offset": 3585,
             "Line": 150,
             "Column": 1
           },
           "End": {
-            "Offset": 3932,
+            "Offset": 3935,
             "Line": 170,
             "Column": 2
           },
@@ -1093,12 +1093,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 4017,
+            "Offset": 4020,
             "Line": 173,
             "Column": 1
           },
           "End": {
-            "Offset": 4121,
+            "Offset": 4124,
             "Line": 175,
             "Column": 2
           },
@@ -1164,12 +1164,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 4194,
+            "Offset": 4197,
             "Line": 178,
             "Column": 1
           },
           "End": {
-            "Offset": 4287,
+            "Offset": 4290,
             "Line": 180,
             "Column": 2
           },
@@ -1235,12 +1235,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 4362,
+            "Offset": 4365,
             "Line": 183,
             "Column": 1
           },
           "End": {
-            "Offset": 4496,
+            "Offset": 4499,
             "Line": 187,
             "Column": 2
           },
@@ -1306,12 +1306,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 4569,
+            "Offset": 4572,
             "Line": 190,
             "Column": 1
           },
           "End": {
-            "Offset": 4695,
+            "Offset": 4698,
             "Line": 194,
             "Column": 2
           },
@@ -1377,12 +1377,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 4755,
+            "Offset": 4758,
             "Line": 197,
             "Column": 1
           },
           "End": {
-            "Offset": 4990,
+            "Offset": 4993,
             "Line": 205,
             "Column": 2
           },
@@ -1441,12 +1441,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 5085,
+            "Offset": 5088,
             "Line": 208,
             "Column": 1
           },
           "End": {
-            "Offset": 5535,
+            "Offset": 5538,
             "Line": 221,
             "Column": 2
           },
@@ -1505,12 +1505,12 @@
         {
           "FilePath": "pkg/code/imports/parser.go",
           "Start": {
-            "Offset": 5588,
+            "Offset": 5591,
             "Line": 224,
             "Column": 1
           },
           "End": {
-            "Offset": 5882,
+            "Offset": 5885,
             "Line": 238,
             "Column": 2
           },
@@ -1981,7 +1981,7 @@
                     },
                     {
                       "Name": "any",
-                      "Underlying": "any",
+                      "Underlying": "interface{}",
                       "PackageName": "",
                       "PackagePath": "",
                       "PackageAlias": ""
@@ -2015,7 +2015,7 @@
               },
               {
                 "Name": "any",
-                "Underlying": "any",
+                "Underlying": "interface{}",
                 "PackageName": "",
                 "PackagePath": "",
                 "PackageAlias": ""
@@ -2166,7 +2166,7 @@
             "Column": 1
           },
           "End": {
-            "Offset": 1736,
+            "Offset": 1739,
             "Line": 82,
             "Column": 2
           },
@@ -2310,12 +2310,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 1782,
+            "Offset": 1785,
             "Line": 85,
             "Column": 1
           },
           "End": {
-            "Offset": 2399,
+            "Offset": 2402,
             "Line": 111,
             "Column": 2
           },
@@ -2395,12 +2395,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 2401,
+            "Offset": 2404,
             "Line": 113,
             "Column": 1
           },
           "End": {
-            "Offset": 2782,
+            "Offset": 2785,
             "Line": 124,
             "Column": 2
           },
@@ -2528,12 +2528,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 2784,
+            "Offset": 2787,
             "Line": 126,
             "Column": 1
           },
           "End": {
-            "Offset": 3840,
+            "Offset": 3843,
             "Line": 169,
             "Column": 2
           },
@@ -2719,12 +2719,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 3842,
+            "Offset": 3845,
             "Line": 171,
             "Column": 1
           },
           "End": {
-            "Offset": 4973,
+            "Offset": 4976,
             "Line": 216,
             "Column": 2
           },
@@ -2962,12 +2962,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 5067,
+            "Offset": 5070,
             "Line": 219,
             "Column": 1
           },
           "End": {
-            "Offset": 6253,
+            "Offset": 6256,
             "Line": 260,
             "Column": 2
           },
@@ -3055,12 +3055,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 6307,
+            "Offset": 6310,
             "Line": 263,
             "Column": 1
           },
           "End": {
-            "Offset": 7057,
+            "Offset": 7060,
             "Line": 294,
             "Column": 2
           },
@@ -3207,12 +3207,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 7111,
+            "Offset": 7114,
             "Line": 297,
             "Column": 1
           },
           "End": {
-            "Offset": 8024,
+            "Offset": 8027,
             "Line": 338,
             "Column": 2
           },
@@ -3359,12 +3359,12 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 8078,
+            "Offset": 8081,
             "Line": 341,
             "Column": 1
           },
           "End": {
-            "Offset": 8917,
+            "Offset": 8920,
             "Line": 379,
             "Column": 2
           },
@@ -3511,19 +3511,19 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 8919,
+            "Offset": 8922,
             "Line": 381,
             "Column": 1
           },
           "End": {
-            "Offset": 9340,
-            "Line": 400,
+            "Offset": 9380,
+            "Line": 403,
             "Column": 2
           },
           "Name": "resolveTypeInfo",
           "Signature": {
-            "Label": "(specType ast.Expr, doc *ast.CommentGroup, name *ast.Ident, typesInfo *types.Info) (typ *TypeDesc, typeInfo string, docStr string)",
-            "Alt": "(ast.Expr, *ast.CommentGroup, *ast.Ident, *types.Info) (typ *TypeDesc, typeInfo string, docStr string)",
+            "Label": "(specType ast.Expr, doc *ast.CommentGroup, name *ast.Ident, typesInfo *types.Info) (*TypeDesc, string, string)",
+            "Alt": "(ast.Expr, *ast.CommentGroup, *ast.Ident, *types.Info) (*TypeDesc, string, string)",
             "Arguments": [
               {
                 "Name": "specType",
@@ -3588,7 +3588,7 @@
             ],
             "Returns": [
               {
-                "Name": "typ",
+                "Name": "",
                 "Type": {
                   "Label": "*TypeDesc",
                   "Links": [
@@ -3603,7 +3603,7 @@
                 }
               },
               {
-                "Name": "typeInfo",
+                "Name": "",
                 "Type": {
                   "Label": "string",
                   "Links": [
@@ -3618,7 +3618,7 @@
                 }
               },
               {
-                "Name": "docStr",
+                "Name": "",
                 "Type": {
                   "Label": "string",
                   "Links": [
@@ -3685,13 +3685,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 9390,
-            "Line": 403,
+            "Offset": 9430,
+            "Line": 406,
             "Column": 1
           },
           "End": {
-            "Offset": 11251,
-            "Line": 469,
+            "Offset": 11291,
+            "Line": 472,
             "Column": 2
           },
           "Name": "describeTypeDecl",
@@ -3873,13 +3873,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 11306,
-            "Line": 472,
+            "Offset": 11346,
+            "Line": 475,
             "Column": 1
           },
           "End": {
-            "Offset": 12766,
-            "Line": 518,
+            "Offset": 12806,
+            "Line": 521,
             "Column": 2
           },
           "Name": "getInterfaces",
@@ -3894,7 +3894,7 @@
                   "Links": [
                     {
                       "Name": "Named",
-                      "Underlying": "struct{check *go/types.Checker; obj *go/types.TypeName; allowNilRHS bool; allowNilUnderlying bool; inst *go/types.instance; mu sync.Mutex; state_ uint32; fromRHS go/types.Type; tparams *go/types.TypeParamList; underlying go/types.Type; finite bool; methods []*go/types.Func; loader func(*go/types.Named) ([]*go/types.TypeParam, go/types.Type, []*go/types.Func, []func())}",
+                      "Underlying": "struct{check *go/types.Checker; obj *go/types.TypeName; allowNilRHS bool; inst *go/types.instance; mu sync.Mutex; state_ uint32; fromRHS go/types.Type; tparams *go/types.TypeParamList; underlying go/types.Type; varSize bool; methods []*go/types.Func; loader func(*go/types.Named) ([]*go/types.TypeParam, go/types.Type, []*go/types.Func, []func())}",
                       "PackageName": "types",
                       "PackagePath": "go/types",
                       "PackageAlias": ""
@@ -3923,7 +3923,7 @@
             "Links": [
               {
                 "Name": "Named",
-                "Underlying": "struct{check *go/types.Checker; obj *go/types.TypeName; allowNilRHS bool; allowNilUnderlying bool; inst *go/types.instance; mu sync.Mutex; state_ uint32; fromRHS go/types.Type; tparams *go/types.TypeParamList; underlying go/types.Type; finite bool; methods []*go/types.Func; loader func(*go/types.Named) ([]*go/types.TypeParam, go/types.Type, []*go/types.Func, []func())}",
+                "Underlying": "struct{check *go/types.Checker; obj *go/types.TypeName; allowNilRHS bool; inst *go/types.instance; mu sync.Mutex; state_ uint32; fromRHS go/types.Type; tparams *go/types.TypeParamList; underlying go/types.Type; varSize bool; methods []*go/types.Func; loader func(*go/types.Named) ([]*go/types.TypeParam, go/types.Type, []*go/types.Func, []func())}",
                 "PackageName": "types",
                 "PackagePath": "go/types",
                 "PackageAlias": ""
@@ -3944,13 +3944,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 12829,
-            "Line": 521,
+            "Offset": 12869,
+            "Line": 524,
             "Column": 1
           },
           "End": {
-            "Offset": 13126,
-            "Line": 533,
+            "Offset": 13166,
+            "Line": 536,
             "Column": 2
           },
           "Name": "collectMethodSet",
@@ -3982,7 +3982,7 @@
                   "Links": [
                     {
                       "Name": "Func",
-                      "Underlying": "struct{go/types.object; hasPtrRecv_ bool; origin *go/types.Func}",
+                      "Underlying": "struct{go/types.object; origin *go/types.Func; hasPtrRecv_ bool; nointerface bool}",
                       "PackageName": "types",
                       "PackagePath": "go/types",
                       "PackageAlias": ""
@@ -4001,7 +4001,7 @@
               },
               {
                 "Name": "Func",
-                "Underlying": "struct{go/types.object; hasPtrRecv_ bool; origin *go/types.Func}",
+                "Underlying": "struct{go/types.object; origin *go/types.Func; hasPtrRecv_ bool; nointerface bool}",
                 "PackageName": "types",
                 "PackagePath": "go/types",
                 "PackageAlias": ""
@@ -4015,13 +4015,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 13230,
-            "Line": 536,
+            "Offset": 13270,
+            "Line": 539,
             "Column": 1
           },
           "End": {
-            "Offset": 16610,
-            "Line": 652,
+            "Offset": 16650,
+            "Line": 655,
             "Column": 2
           },
           "Name": "describeType",
@@ -4108,13 +4108,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 16612,
-            "Line": 654,
+            "Offset": 16652,
+            "Line": 657,
             "Column": 1
           },
           "End": {
-            "Offset": 17796,
-            "Line": 695,
+            "Offset": 17836,
+            "Line": 698,
             "Column": 2
           },
           "Name": "enrichType",
@@ -4156,13 +4156,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 17798,
-            "Line": 697,
+            "Offset": 17838,
+            "Line": 700,
             "Column": 1
           },
           "End": {
-            "Offset": 18045,
-            "Line": 707,
+            "Offset": 18085,
+            "Line": 710,
             "Column": 2
           },
           "Name": "findSelector",
@@ -4242,13 +4242,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 18090,
-            "Line": 710,
+            "Offset": 18130,
+            "Line": 713,
             "Column": 1
           },
           "End": {
-            "Offset": 18274,
-            "Line": 716,
+            "Offset": 18314,
+            "Line": 719,
             "Column": 2
           },
           "Name": "getUnderlying",
@@ -4335,13 +4335,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 18312,
-            "Line": 719,
+            "Offset": 18352,
+            "Line": 722,
             "Column": 1
           },
           "End": {
-            "Offset": 18554,
-            "Line": 727,
+            "Offset": 18594,
+            "Line": 730,
             "Column": 2
           },
           "Name": "prepareLink",
@@ -4466,13 +4466,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 18692,
-            "Line": 731,
+            "Offset": 18732,
+            "Line": 734,
             "Column": 1
           },
           "End": {
-            "Offset": 19360,
-            "Line": 758,
+            "Offset": 19400,
+            "Line": 761,
             "Column": 2
           },
           "Name": "describePkg",
@@ -4611,13 +4611,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 19427,
-            "Line": 761,
+            "Offset": 19467,
+            "Line": 764,
             "Column": 1
           },
           "End": {
-            "Offset": 19944,
-            "Line": 782,
+            "Offset": 19984,
+            "Line": 785,
             "Column": 2
           },
           "Name": "collectAllPackageMethods",
@@ -4703,13 +4703,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 19995,
-            "Line": 785,
+            "Offset": 20035,
+            "Line": 788,
             "Column": 1
           },
           "End": {
-            "Offset": 21501,
-            "Line": 855,
+            "Offset": 21541,
+            "Line": 858,
             "Column": 2
           },
           "Name": "describeMethodDecl",
@@ -4847,13 +4847,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 21553,
-            "Line": 858,
+            "Offset": 21593,
+            "Line": 861,
             "Column": 1
           },
           "End": {
-            "Offset": 23030,
-            "Line": 911,
+            "Offset": 23070,
+            "Line": 914,
             "Column": 2
           },
           "Name": "getFuncSignature",
@@ -4940,13 +4940,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 23091,
-            "Line": 914,
+            "Offset": 23131,
+            "Line": 917,
             "Column": 1
           },
           "End": {
-            "Offset": 24032,
-            "Line": 954,
+            "Offset": 24072,
+            "Line": 957,
             "Column": 2
           },
           "Name": "getFuncSignatureArguments",
@@ -5092,13 +5092,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 24091,
-            "Line": 957,
+            "Offset": 24131,
+            "Line": 960,
             "Column": 1
           },
           "End": {
-            "Offset": 24868,
-            "Line": 990,
+            "Offset": 24908,
+            "Line": 993,
             "Column": 2
           },
           "Name": "getFuncSignatureReturns",
@@ -5229,13 +5229,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 24958,
-            "Line": 993,
+            "Offset": 24998,
+            "Line": 996,
             "Column": 1
           },
           "End": {
-            "Offset": 26112,
-            "Line": 1041,
+            "Offset": 26152,
+            "Line": 1044,
             "Column": 2
           },
           "Name": "getVarParamsWithConstraints",
@@ -5322,13 +5322,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 26202,
-            "Line": 1044,
+            "Offset": 26242,
+            "Line": 1047,
             "Column": 1
           },
           "End": {
-            "Offset": 26869,
-            "Line": 1076,
+            "Offset": 26909,
+            "Line": 1079,
             "Column": 2
           },
           "Name": "getTypeParamsWithConstraints",
@@ -5415,13 +5415,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 26917,
-            "Line": 1079,
+            "Offset": 26957,
+            "Line": 1082,
             "Column": 1
           },
           "End": {
-            "Offset": 27571,
-            "Line": 1108,
+            "Offset": 27611,
+            "Line": 1111,
             "Column": 2
           },
           "Name": "getFuncTypeParams",
@@ -5508,13 +5508,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 27628,
-            "Line": 1111,
+            "Offset": 27668,
+            "Line": 1114,
             "Column": 1
           },
           "End": {
-            "Offset": 28245,
-            "Line": 1138,
+            "Offset": 28285,
+            "Line": 1141,
             "Column": 2
           },
           "Name": "getStructFields",
@@ -5601,13 +5601,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 28326,
-            "Line": 1141,
+            "Offset": 28366,
+            "Line": 1144,
             "Column": 1
           },
           "End": {
-            "Offset": 29295,
-            "Line": 1176,
+            "Offset": 29335,
+            "Line": 1179,
             "Column": 2
           },
           "Name": "parseTags",
@@ -5672,13 +5672,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 29341,
-            "Line": 1179,
+            "Offset": 29381,
+            "Line": 1182,
             "Column": 1
           },
           "End": {
-            "Offset": 29873,
-            "Line": 1201,
+            "Offset": 29913,
+            "Line": 1204,
             "Column": 2
           },
           "Name": "getEmbeddedTypes",
@@ -5765,13 +5765,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 29943,
-            "Line": 1204,
+            "Offset": 29983,
+            "Line": 1207,
             "Column": 1
           },
           "End": {
-            "Offset": 31520,
-            "Line": 1268,
+            "Offset": 31560,
+            "Line": 1271,
             "Column": 2
           },
           "Name": "getInterfaceMethods",
@@ -5865,13 +5865,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 31522,
-            "Line": 1270,
+            "Offset": 31562,
+            "Line": 1273,
             "Column": 1
           },
           "End": {
-            "Offset": 32049,
-            "Line": 1289,
+            "Offset": 32089,
+            "Line": 1292,
             "Column": 2
           },
           "Name": "isSelector",
@@ -5936,13 +5936,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 32051,
-            "Line": 1291,
+            "Offset": 32091,
+            "Line": 1294,
             "Column": 1
           },
           "End": {
-            "Offset": 32472,
-            "Line": 1309,
+            "Offset": 32512,
+            "Line": 1312,
             "Column": 2
           },
           "Name": "isValidIdentifier",
@@ -6007,13 +6007,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 32521,
-            "Line": 1312,
+            "Offset": 32561,
+            "Line": 1315,
             "Column": 1
           },
           "End": {
-            "Offset": 32820,
-            "Line": 1325,
+            "Offset": 32860,
+            "Line": 1328,
             "Column": 2
           },
           "Name": "dedupeSliceOfLinks",
@@ -6071,13 +6071,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 32871,
-            "Line": 1328,
+            "Offset": 32911,
+            "Line": 1331,
             "Column": 1
           },
           "End": {
-            "Offset": 33174,
-            "Line": 1341,
+            "Offset": 33214,
+            "Line": 1344,
             "Column": 2
           },
           "Name": "dedupeSliceOfFields",
@@ -6135,13 +6135,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 33229,
-            "Line": 1344,
+            "Offset": 33269,
+            "Line": 1347,
             "Column": 1
           },
           "End": {
-            "Offset": 33609,
-            "Line": 1359,
+            "Offset": 33649,
+            "Line": 1362,
             "Column": 2
           },
           "Name": "dedupeSliceOfInterfaces",
@@ -6199,13 +6199,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 33661,
-            "Line": 1362,
+            "Offset": 33701,
+            "Line": 1365,
             "Column": 1
           },
           "End": {
-            "Offset": 33968,
-            "Line": 1375,
+            "Offset": 34008,
+            "Line": 1378,
             "Column": 2
           },
           "Name": "dedupeSliceOfMethods",
@@ -6263,13 +6263,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 34022,
-            "Line": 1378,
+            "Offset": 34062,
+            "Line": 1381,
             "Column": 1
           },
           "End": {
-            "Offset": 34338,
-            "Line": 1391,
+            "Offset": 34378,
+            "Line": 1394,
             "Column": 2
           },
           "Name": "dedupeSliceOfTypeDesc",
@@ -6327,13 +6327,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 34374,
-            "Line": 1394,
+            "Offset": 34414,
+            "Line": 1397,
             "Column": 1
           },
           "End": {
-            "Offset": 34642,
-            "Line": 1406,
+            "Offset": 34682,
+            "Line": 1409,
             "Column": 2
           },
           "Name": "getDoc",
@@ -6398,13 +6398,13 @@
         {
           "FilePath": "pkg/code/parser/parser.go",
           "Start": {
-            "Offset": 34644,
-            "Line": 1408,
+            "Offset": 34684,
+            "Line": 1411,
             "Column": 1
           },
           "End": {
-            "Offset": 34959,
-            "Line": 1419,
+            "Offset": 34999,
+            "Line": 1422,
             "Column": 2
           },
           "Name": "normalizeRootPath",

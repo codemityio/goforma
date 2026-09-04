@@ -21,7 +21,7 @@ type DefaultParser struct {
 }
 
 func (p *DefaultParser) Parse(path string) (*Packages, error) {
-	cfg := &packages.Config{ //nolint:exhaustruct // not required to be exhaustive...
+	cfg := &packages.Config{ //nolint:exhaustruct_v5 // not required to be exhaustive...
 		Mode: packages.NeedImports | packages.NeedDeps | packages.NeedName | packages.NeedFiles,
 		Dir:  p.rootPath,
 		Fset: token.NewFileSet(),
