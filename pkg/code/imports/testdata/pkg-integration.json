@@ -24,6 +24,7 @@
     "crypto/hpke",
     "crypto/internal/rand",
     "crypto/md5",
+    "crypto/mldsa",
     "crypto/mlkem",
     "crypto/rand",
     "crypto/rc4",
@@ -36,10 +37,17 @@
     "crypto/x509/pkix",
     "encoding",
     "encoding/asn1",
+    "encoding/base32",
     "encoding/base64",
     "encoding/binary",
     "encoding/hex",
     "encoding/json",
+    "encoding/json/internal",
+    "encoding/json/internal/jsonflags",
+    "encoding/json/internal/jsonopts",
+    "encoding/json/internal/jsonwire",
+    "encoding/json/jsontext",
+    "encoding/json/v2",
     "encoding/pem",
     "errors",
     "fmt",
@@ -96,7 +104,9 @@
     "net/http/httptrace",
     "net/http/internal",
     "net/http/internal/ascii",
+    "net/http/internal/http2",
     "net/http/internal/httpcommon",
+    "net/http/internal/httpsfv",
     "net/mail",
     "net/netip",
     "net/textproto",
@@ -222,7 +232,6 @@
         "fmt",
         "io",
         "math",
-        "sort",
         "strconv"
       ]
     },
@@ -519,6 +528,22 @@
       ]
     },
     {
+      "Name": "mldsa",
+      "Path": "crypto/mldsa",
+      "Label": "crypto/mldsa",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "crypto",
+        "errors",
+        "io"
+      ]
+    },
+    {
       "Name": "mlkem",
       "Path": "crypto/mlkem",
       "Label": "crypto/mlkem",
@@ -659,6 +684,7 @@
         "crypto/hmac",
         "crypto/hpke",
         "crypto/md5",
+        "crypto/mldsa",
         "crypto/mlkem",
         "crypto/rand",
         "crypto/rc4",
@@ -705,6 +731,7 @@
         "crypto/ed25519",
         "crypto/elliptic",
         "crypto/md5",
+        "crypto/mldsa",
         "crypto/rsa",
         "crypto/sha1",
         "crypto/sha256",
@@ -749,6 +776,7 @@
         "encoding/hex",
         "fmt",
         "math/big",
+        "strings",
         "time"
       ]
     },
@@ -786,6 +814,21 @@
         "time",
         "unicode/utf16",
         "unicode/utf8"
+      ]
+    },
+    {
+      "Name": "base32",
+      "Path": "encoding/base32",
+      "Label": "encoding/base32",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "io",
+        "strconv"
       ]
     },
     {
@@ -850,15 +893,141 @@
         "bytes",
         "cmp",
         "encoding",
-        "encoding/base64",
+        "encoding/json/internal",
+        "encoding/json/internal/jsonflags",
+        "encoding/json/internal/jsonopts",
+        "encoding/json/internal/jsonwire",
+        "encoding/json/jsontext",
+        "encoding/json/v2",
         "errors",
         "fmt",
+        "io",
+        "strconv",
+        "strings"
+      ]
+    },
+    {
+      "Name": "internal",
+      "Path": "encoding/json/internal",
+      "Label": "encoding/json",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": true,
+      "IsVendor": false,
+      "DepPaths": [
+        "errors"
+      ]
+    },
+    {
+      "Name": "jsonflags",
+      "Path": "encoding/json/internal/jsonflags",
+      "Label": "encoding/json/jsonflags",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": true,
+      "IsVendor": false,
+      "DepPaths": [
+        "encoding/json/internal"
+      ]
+    },
+    {
+      "Name": "jsonopts",
+      "Path": "encoding/json/internal/jsonopts",
+      "Label": "encoding/json/jsonopts",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": true,
+      "IsVendor": false,
+      "DepPaths": [
+        "encoding/json/internal",
+        "encoding/json/internal/jsonflags"
+      ]
+    },
+    {
+      "Name": "jsonwire",
+      "Path": "encoding/json/internal/jsonwire",
+      "Label": "encoding/json/jsonwire",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": true,
+      "IsVendor": false,
+      "DepPaths": [
+        "cmp",
+        "encoding/json/internal/jsonflags",
+        "errors",
         "io",
         "math",
         "strconv",
         "strings",
         "unicode",
         "unicode/utf16",
+        "unicode/utf8"
+      ]
+    },
+    {
+      "Name": "jsontext",
+      "Path": "encoding/json/jsontext",
+      "Label": "encoding/json/jsontext",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "bytes",
+        "encoding/json/internal",
+        "encoding/json/internal/jsonflags",
+        "encoding/json/internal/jsonopts",
+        "encoding/json/internal/jsonwire",
+        "errors",
+        "io",
+        "iter",
+        "math",
+        "strconv",
+        "strings",
+        "unicode/utf8"
+      ]
+    },
+    {
+      "Name": "json",
+      "Path": "encoding/json/v2",
+      "Label": "encoding/json/v2",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": false,
+      "IsVendor": false,
+      "DepPaths": [
+        "bytes",
+        "cmp",
+        "encoding",
+        "encoding/base32",
+        "encoding/base64",
+        "encoding/binary",
+        "encoding/hex",
+        "encoding/json/internal",
+        "encoding/json/internal/jsonflags",
+        "encoding/json/internal/jsonopts",
+        "encoding/json/internal/jsonwire",
+        "encoding/json/jsontext",
+        "errors",
+        "fmt",
+        "io",
+        "math",
+        "strconv",
+        "strings",
+        "time",
+        "unicode",
         "unicode/utf8"
       ]
     },
@@ -1181,6 +1350,7 @@
         "golang.org/x/text/unicode/norm",
         "math",
         "strings",
+        "unicode",
         "unicode/utf8"
       ]
     },
@@ -1725,29 +1895,25 @@
         "compress/gzip",
         "container/list",
         "context",
-        "crypto/rand",
         "crypto/tls",
         "encoding/base64",
-        "encoding/binary",
         "errors",
         "fmt",
         "golang.org/x/net/http/httpguts",
         "golang.org/x/net/http/httpproxy",
-        "golang.org/x/net/http2/hpack",
         "golang.org/x/net/idna",
         "internal/godebug",
         "io",
         "log",
         "maps",
         "math",
-        "math/rand",
         "mime",
         "mime/multipart",
         "net",
         "net/http/httptrace",
         "net/http/internal",
         "net/http/internal/ascii",
-        "net/http/internal/httpcommon",
+        "net/http/internal/http2",
         "net/textproto",
         "net/url",
         "path",
@@ -1791,6 +1957,7 @@
       "DepPaths": [
         "bufio",
         "bytes",
+        "encoding/binary",
         "errors",
         "fmt",
         "io"
@@ -1809,6 +1976,47 @@
       "DepPaths": [
         "strings",
         "unicode"
+      ]
+    },
+    {
+      "Name": "http2",
+      "Path": "net/http/internal/http2",
+      "Label": "net/http/http2",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": true,
+      "IsVendor": false,
+      "DepPaths": [
+        "bufio",
+        "bytes",
+        "compress/flate",
+        "compress/gzip",
+        "context",
+        "crypto/rand",
+        "crypto/tls",
+        "encoding/binary",
+        "errors",
+        "fmt",
+        "golang.org/x/net/http/httpguts",
+        "golang.org/x/net/http2/hpack",
+        "golang.org/x/net/idna",
+        "io",
+        "log",
+        "math",
+        "math/rand",
+        "mime/multipart",
+        "net",
+        "net/http/httptrace",
+        "net/http/internal",
+        "net/http/internal/httpcommon",
+        "net/http/internal/httpsfv",
+        "net/textproto",
+        "net/url",
+        "strconv",
+        "strings",
+        "time"
       ]
     },
     {
@@ -1833,6 +2041,23 @@
         "sort",
         "strconv",
         "strings"
+      ]
+    },
+    {
+      "Name": "httpsfv",
+      "Path": "net/http/internal/httpsfv",
+      "Label": "net/http/httpsfv",
+      "IsLocal": false,
+      "IsOwned": false,
+      "IsExternal": false,
+      "IsStandard": true,
+      "IsInternal": true,
+      "IsVendor": false,
+      "DepPaths": [
+        "strconv",
+        "strings",
+        "time",
+        "unicode/utf8"
       ]
     },
     {
@@ -1910,6 +2135,7 @@
       "IsInternal": false,
       "IsVendor": false,
       "DepPaths": [
+        "bytes",
         "errors",
         "fmt",
         "internal/godebug",
@@ -1948,6 +2174,7 @@
       "DepPaths": [
         "bytes",
         "io",
+        "iter",
         "regexp/syntax",
         "strconv",
         "strings",
@@ -2054,7 +2281,6 @@
       "DepPaths": [
         "errors",
         "internal/bytealg",
-        "internal/godebug",
         "syscall"
       ]
     },

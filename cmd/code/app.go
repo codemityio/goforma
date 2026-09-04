@@ -8,7 +8,7 @@ import (
 )
 
 // App main application.
-var App = cli.Command{ //nolint:exhaustruct,gochecknoglobals
+var App = cli.Command{ //nolint:exhaustruct_v5,gochecknoglobals
 	Name:         "code",
 	Aliases:      nil,
 	Usage:        "",
@@ -25,23 +25,23 @@ var App = cli.Command{ //nolint:exhaustruct,gochecknoglobals
 	OnUsageError: nil,
 	Flags:        []cli.Flag{},
 	Subcommands: []*cli.Command{
-		{
+		{ //nolint:exhaustruct_v5
 			Name:  "dep",
 			Usage: `Generate dependency graph`,
 			Flags: []cli.Flag{
-				&cli.StringFlag{ //nolint:exhaustruct
+				&cli.StringFlag{ //nolint:exhaustruct_v5
 					Name:     "path",
 					Usage:    "Path to be scanned (e.g. ./pkg/example, ./pkg/example/...)",
 					Required: true,
 					Value:    ".",
 				},
-				&cli.StringFlag{ //nolint:exhaustruct
+				&cli.StringFlag{ //nolint:exhaustruct_v5
 					Name:     "workdir",
 					Usage:    "Working directory (e.g. absolute path of the current project root directory)",
 					Required: false,
 					Value:    ".",
 				},
-				&cli.IntFlag{ //nolint:exhaustruct
+				&cli.IntFlag{ //nolint:exhaustruct_v5
 					Name: "depth",
 					Usage: "Depth to scan for dependencies (default " + strconv.Itoa(
 						imports.DefaultDepth,
@@ -49,27 +49,27 @@ var App = cli.Command{ //nolint:exhaustruct,gochecknoglobals
 					Required: false,
 					Value:    imports.DefaultDepth,
 				},
-				&cli.StringSliceFlag{ //nolint:exhaustruct
+				&cli.StringSliceFlag{ //nolint:exhaustruct_v5
 					Name:     "owned",
 					Usage:    "Indicate owned packages/prefixes (e.g. --owned=github.com/example-one --owned=github.com/example-two)",
 					Required: false,
 				},
-				&cli.StringSliceFlag{ //nolint:exhaustruct
+				&cli.StringSliceFlag{ //nolint:exhaustruct_v5
 					Name:     "exclude-path",
 					Usage:    "Indicate packages/prefixes to be excluded (e.g. --exclude-path=github.com/example-one --exclude-path=github.com/example-two)", //nolint:lll
 					Required: false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "exclude-standard",
 					Usage:    "Exclude standard library packages",
 					Required: false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "exclude-vendor",
 					Usage:    "Exclude vendor packages",
 					Required: false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "exclude-internal",
 					Usage:    "Exclude internal packages",
 					Required: false,
@@ -77,70 +77,70 @@ var App = cli.Command{ //nolint:exhaustruct,gochecknoglobals
 			},
 			Action: dep,
 		},
-		{
+		{ //nolint:exhaustruct_v5
 			Name:  "uml",
 			Usage: `Generate UML graph`,
 			Flags: []cli.Flag{
-				&cli.StringFlag{ //nolint:exhaustruct
+				&cli.StringFlag{ //nolint:exhaustruct_v5
 					Name:     "path",
 					Usage:    "Path to be scanned (e.g. ./pkg/example, ./pkg/example/...)",
 					Required: true,
 					Value:    ".",
 				},
-				&cli.StringFlag{ //nolint:exhaustruct
+				&cli.StringFlag{ //nolint:exhaustruct_v5
 					Name:     "workdir",
 					Usage:    "Working directory (e.g. absolute path of the current project root directory)",
 					Required: false,
 					Value:    ".",
 				},
-				&cli.StringFlag{ //nolint:exhaustruct
+				&cli.StringFlag{ //nolint:exhaustruct_v5
 					Name:     "json-output-path",
 					Usage:    "Path to output code tree in json format",
 					Required: false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-legend",
 					Usage:    "Include diagram legend",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-primitive",
 					Usage:    "Include primitive types",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-var",
 					Usage:    "Include declared variables",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-const",
 					Usage:    "include declared constants",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-func",
 					Usage:    "Include declared functions",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-not-exported",
 					Usage:    "Include all not exported variables, types, fields, methods, etc...",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-doc",
 					Usage:    "Include all code doc blocks",
 					Required: false,
 					Value:    false,
 				},
-				&cli.BoolFlag{ //nolint:exhaustruct
+				&cli.BoolFlag{ //nolint:exhaustruct_v5
 					Name:     "include-doc-comment-slashes",
 					Usage:    "Include all code doc blocks comment slashes",
 					Required: false,

@@ -1818,14 +1818,14 @@
           },
           {
             "Name": "I",
-            "Underlying": "any",
+            "Underlying": "interface{}",
             "PackageName": "app",
             "PackagePath": "code/pkg/app",
             "PackageAlias": ""
           },
           {
             "Name": "O",
-            "Underlying": "any",
+            "Underlying": "interface{}",
             "PackageName": "app",
             "PackagePath": "code/pkg/app",
             "PackageAlias": ""
@@ -1853,7 +1853,7 @@
               "Links": [
                 {
                   "Name": "any",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "",
                   "PackagePath": "",
                   "PackageAlias": ""
@@ -1868,7 +1868,7 @@
               "Links": [
                 {
                   "Name": "any",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "",
                   "PackagePath": "",
                   "PackageAlias": ""
@@ -6247,7 +6247,7 @@
               "Links": [
                 {
                   "Name": "any",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "",
                   "PackagePath": "",
                   "PackageAlias": ""
@@ -6262,7 +6262,7 @@
               "Links": [
                 {
                   "Name": "any",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "",
                   "PackagePath": "",
                   "PackageAlias": ""
@@ -6287,14 +6287,14 @@
               },
               {
                 "Name": "I",
-                "Underlying": "any",
+                "Underlying": "interface{}",
                 "PackageName": "server",
                 "PackagePath": "code/pkg/server",
                 "PackageAlias": ""
               },
               {
                 "Name": "O",
-                "Underlying": "any",
+                "Underlying": "interface{}",
                 "PackageName": "server",
                 "PackagePath": "code/pkg/server",
                 "PackageAlias": ""
@@ -9703,7 +9703,7 @@
               "Links": [
                 {
                   "Name": "T",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "app",
                   "PackagePath": "code/pkg/app",
                   "PackageAlias": ""
@@ -9718,7 +9718,7 @@
               "Links": [
                 {
                   "Name": "U",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "app",
                   "PackagePath": "code/pkg/app",
                   "PackageAlias": ""
@@ -9735,7 +9735,7 @@
               "Links": [
                 {
                   "Name": "U",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "app",
                   "PackagePath": "code/pkg/app",
                   "PackageAlias": ""
@@ -9750,7 +9750,7 @@
               "Links": [
                 {
                   "Name": "T",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "app",
                   "PackagePath": "code/pkg/app",
                   "PackageAlias": ""
@@ -9762,14 +9762,14 @@
         "Links": [
           {
             "Name": "T",
-            "Underlying": "any",
+            "Underlying": "interface{}",
             "PackageName": "app",
             "PackagePath": "code/pkg/app",
             "PackageAlias": ""
           },
           {
             "Name": "U",
-            "Underlying": "any",
+            "Underlying": "interface{}",
             "PackageName": "app",
             "PackagePath": "code/pkg/app",
             "PackageAlias": ""
@@ -9786,7 +9786,7 @@
               "Links": [
                 {
                   "Name": "any",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "",
                   "PackagePath": "",
                   "PackageAlias": ""
@@ -9801,7 +9801,7 @@
               "Links": [
                 {
                   "Name": "any",
-                  "Underlying": "any",
+                  "Underlying": "interface{}",
                   "PackageName": "",
                   "PackagePath": "",
                   "PackageAlias": ""
