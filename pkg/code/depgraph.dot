@@ -16,9 +16,9 @@ digraph DepGraph {
         "github.com/codemityio/goforma/pkg/code/parser" [label="github.com/codemityio/goforma/pkg/code/parser", color="gray58", fillcolor="gray99", penwidth=1]
               "github.com/codemityio/goforma/pkg/code/parser" -> "github.com/codemityio/goforma/pkg/code/doc"
               "github.com/codemityio/goforma/pkg/code/parser" -> "golang.org/x/tools/go/packages"
-        "golang.org/x/sync/errgroup" [label="golang.org/x/sync/errgroup@v0.22.0", color="gray65", fillcolor="gray83", penwidth=1]
-        "golang.org/x/tools/go/gcexportdata" [label="golang.org/x/tools/go/gcexportdata@v0.49.0", color="gray65", fillcolor="gray83", penwidth=1]
-        "golang.org/x/tools/go/packages" [label="golang.org/x/tools/go/packages@v0.49.0", color="gray65", fillcolor="gray83", penwidth=1]
+        "golang.org/x/sync/errgroup" [label="golang.org/x/sync/errgroup@v0.24.0", color="gray65", fillcolor="gray83", penwidth=1]
+        "golang.org/x/tools/go/gcexportdata" [label="golang.org/x/tools/go/gcexportdata@v0.52.0", color="gray65", fillcolor="gray83", penwidth=1]
+        "golang.org/x/tools/go/packages" [label="golang.org/x/tools/go/packages@v0.52.0", color="gray65", fillcolor="gray83", penwidth=1]
               "golang.org/x/tools/go/packages" -> "golang.org/x/sync/errgroup"
               "golang.org/x/tools/go/packages" -> "golang.org/x/tools/go/gcexportdata"
     }
