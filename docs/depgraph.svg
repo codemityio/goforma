@@ -162,7 +162,7 @@
 <title>golang.org/x/tools/go/packages</title>
 <polygon fill="#d4d4d4" stroke="#a6a6a6" points="1159,-130 842,-130 842,-134 830,-134 830,-94 1159,-94 1159,-130"/>
 <polyline fill="none" stroke="#a6a6a6" points="830,-130 842,-130"/>
-<text text-anchor="middle" x="995" y="-107" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/packages@v0.49.0</text>
+<text text-anchor="middle" x="995" y="-107" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/packages@v0.52.0</text>
 </g>
 <!-- github.com/codemityio/goforma/pkg/code/imports&#45;&gt;golang.org/x/tools/go/packages -->
 <g id="edge12" class="edge">
@@ -187,7 +187,7 @@
 <title>golang.org/x/sync/errgroup</title>
 <polygon fill="#d4d4d4" stroke="#a6a6a6" points="1456,-36 1171,-36 1171,-40 1159,-40 1159,0 1456,0 1456,-36"/>
 <polyline fill="none" stroke="#a6a6a6" points="1159,-36 1171,-36"/>
-<text text-anchor="middle" x="1308" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/sync/errgroup@v0.22.0</text>
+<text text-anchor="middle" x="1308" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/sync/errgroup@v0.24.0</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/sync/errgroup -->
 <g id="edge18" class="edge">
@@ -200,7 +200,7 @@
 <title>golang.org/x/tools/go/gcexportdata</title>
 <polygon fill="#d4d4d4" stroke="#a6a6a6" points="1058,-36 707,-36 707,-40 695,-40 695,0 1058,0 1058,-36"/>
 <polyline fill="none" stroke="#a6a6a6" points="695,-36 707,-36"/>
-<text text-anchor="middle" x="877" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/gcexportdata@v0.49.0</text>
+<text text-anchor="middle" x="877" y="-13" font-family="Courier New" font-size="14.00">golang.org/x/tools/go/gcexportdata@v0.52.0</text>
 </g>
 <!-- golang.org/x/tools/go/packages&#45;&gt;golang.org/x/tools/go/gcexportdata -->
 <g id="edge19" class="edge">

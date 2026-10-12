@@ -35,9 +35,9 @@ digraph DepGraph {
               "github.com/urfave/cli/v2" -> "github.com/cpuguy83/go-md2man/v2/md2man"
               "github.com/urfave/cli/v2" -> "github.com/xrash/smetrics"
         "github.com/xrash/smetrics" [label="github.com/xrash/smetrics@v0.0.0-20240521201337-686a1a2994c1", color="gray65", fillcolor="gray83", penwidth=1]
-        "golang.org/x/sync/errgroup" [label="golang.org/x/sync/errgroup@v0.22.0", color="gray65", fillcolor="gray83", penwidth=1]
-        "golang.org/x/tools/go/gcexportdata" [label="golang.org/x/tools/go/gcexportdata@v0.49.0", color="gray65", fillcolor="gray83", penwidth=1]
-        "golang.org/x/tools/go/packages" [label="golang.org/x/tools/go/packages@v0.49.0", color="gray65", fillcolor="gray83", penwidth=1]
+        "golang.org/x/sync/errgroup" [label="golang.org/x/sync/errgroup@v0.24.0", color="gray65", fillcolor="gray83", penwidth=1]
+        "golang.org/x/tools/go/gcexportdata" [label="golang.org/x/tools/go/gcexportdata@v0.52.0", color="gray65", fillcolor="gray83", penwidth=1]
+        "golang.org/x/tools/go/packages" [label="golang.org/x/tools/go/packages@v0.52.0", color="gray65", fillcolor="gray83", penwidth=1]
               "golang.org/x/tools/go/packages" -> "golang.org/x/sync/errgroup"
               "golang.org/x/tools/go/packages" -> "golang.org/x/tools/go/gcexportdata"
     }
